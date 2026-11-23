@@ -261,4 +261,10 @@ ready-evaluation/
 
 ## ライセンス・出典
 
-BANKING77（PolyAI、CC BY 4.0）を使用。論文は CC BY 4.0。詳細は [docs/references.md](docs/references.md)。
+| 対象 | ライセンス |
+|---|---|
+| このリポジトリのために書いたコード（`src/`・`tests/`・設定ファイルなど） | MIT（[LICENSE](LICENSE)） |
+| `data/raw/` の BANKING77（PolyAI） | CC BY 4.0（元のライセンスのまま） |
+| 資料のうち READY 論文（arXiv:2609.02095）から引用・要約した部分 | CC BY 4.0（元のライセンスのまま） |
+
+出典の詳細は [docs/references.md](docs/references.md)。
