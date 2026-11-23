@@ -1,0 +1,35 @@
+{
+ "model_key": "sonnet-5-5",
+ "model_id": "claude-sonnet-5-5",
+ "provider": "anthropic",
+ "case_id": "test-01549",
+ "split": "test",
+ "label_id": 44,
+ "timestamp": "2026-11-23T06:34:04.556123+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default"
+ },
+ "latency_s": 1.383487833008985,
+ "response_model": "claude-sonnet-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKPoc9psh2jeA79svsXr",
+ "usage": {
+  "input_tokens": 25,
+  "output_tokens": 28,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0007394000000000001,
+ "raw_text": "{\"predicted_label\":\"passcode_forgotten\",\"confidence\":0.93}",
+ "status": "ok",
+ "predicted_id": 44,
+ "predicted_label": "passcode_forgotten",
+ "confidence": 0.93,
+ "confidence_raw": 0.93,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "e4bc46704f679dda99946c14",
+ "prompt_version": "v1"
+}

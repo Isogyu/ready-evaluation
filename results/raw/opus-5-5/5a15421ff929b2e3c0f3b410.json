@@ -1,0 +1,37 @@
+{
+ "model_key": "opus-5-5",
+ "model_id": "claude-opus-5-5",
+ "provider": "anthropic",
+ "case_id": "test-00975",
+ "split": "test",
+ "label_id": 10,
+ "timestamp": "2026-11-23T09:25:01.131292+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 0
+ },
+ "latency_s": 0.898449416999938,
+ "response_model": "claude-opus-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKcqfZ2hvAeToL7BDdcr",
+ "usage": {
+  "input_tokens": 22,
+  "output_tokens": 26,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0014268,
+ "raw_text": "{\"predicted_label\":\"card_acceptance\",\"confidence\":0.8}",
+ "status": "ok",
+ "predicted_id": 10,
+ "predicted_label": "card_acceptance",
+ "confidence": 0.8,
+ "confidence_raw": 0.8,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "5a15421ff929b2e3c0f3b410",
+ "prompt_version": "v1"
+}

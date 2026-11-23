@@ -1,0 +1,37 @@
+{
+ "model_key": "haiku-5-5__verify",
+ "model_id": "claude-haiku-5-5",
+ "provider": "anthropic",
+ "case_id": "train-00927",
+ "split": "dev",
+ "label_id": 36,
+ "timestamp": "2026-11-23T08:34:05.397178+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "verify",
+  "sample": 0
+ },
+ "latency_s": 1.440988499991363,
+ "response_model": "claude-haiku-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKYxQokdAj849ioTUeap",
+ "usage": {
+  "input_tokens": 45,
+  "output_tokens": 15,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 1038
+ },
+ "cost_usd": 2.238e-05,
+ "raw_text": "{\"probability_correct\": 0.35}",
+ "status": "ok",
+ "predicted_id": -1,
+ "predicted_label": "fiat_currency_support",
+ "confidence": 0.35,
+ "confidence_raw": 0.35,
+ "label_match": null,
+ "parse_note": "",
+ "cache_key": "7412ae120c3fefb414ee7a71",
+ "prompt_version": "v1"
+}

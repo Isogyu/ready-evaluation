@@ -1,0 +1,37 @@
+{
+ "model_key": "sonnet-5-5",
+ "model_id": "claude-sonnet-5-5",
+ "provider": "anthropic",
+ "case_id": "test-00581",
+ "split": "test",
+ "label_id": 23,
+ "timestamp": "2026-11-23T09:01:27.474434+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 0
+ },
+ "latency_s": 0.896253250000882,
+ "response_model": "claude-sonnet-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKb3TXL6tpow6mmX8dvb",
+ "usage": {
+  "input_tokens": 29,
+  "output_tokens": 27,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0007374,
+ "raw_text": "{\"predicted_label\":\"contactless_not_working\",\"confidence\":0.97}",
+ "status": "ok",
+ "predicted_id": 23,
+ "predicted_label": "contactless_not_working",
+ "confidence": 0.97,
+ "confidence_raw": 0.97,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "641adcf8477c2ef5f651a7d4",
+ "prompt_version": "v1"
+}

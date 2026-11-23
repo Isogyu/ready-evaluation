@@ -1,0 +1,901 @@
+model_key,model_id,response_model,case_id,split,text,label_id,label,status,predicted_id,predicted_label,confidence,confidence_raw,label_match,parse_note,stop_reason,input_tokens,output_tokens,cache_creation_input_tokens,cache_read_input_tokens,cost_usd,latency_s,timestamp,error,correct,score
+sim-A,simulation:sim-A,,train-00008,dev,Does the package with my card have tracking?,11,card_arrival,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708096+00:00,,0,0.0
+sim-A,simulation:sim-A,,train-00261,dev,help me link my card,13,card_linking,ok,13,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708115+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-00266,dev,Where do I go to get my new card linked?,13,card_linking,ok,13,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708122+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-00321,dev,How is the exchange rate calculated?,32,exchange_rate,ok,68,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708132+00:00,,0,0.81
+sim-A,simulation:sim-A,,train-00368,dev,How do you do exchanges?,32,exchange_rate,ok,32,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708137+00:00,,1,0.85
+sim-A,simulation:sim-A,,train-00486,dev,What do i do if the exchange rate was wrong for the item i bought overseas?,17,card_payment_wrong_exchange_rate,ok,17,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708141+00:00,,1,0.94
+sim-A,simulation:sim-A,,train-00614,dev,why is there a service fee on my statement?,34,extra_charge_on_statement,ok,34,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708146+00:00,,1,0.94
+sim-A,simulation:sim-A,,train-00619,dev,I got billed an extra pound!,34,extra_charge_on_statement,ok,34,,0.73,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708150+00:00,,1,0.73
+sim-A,simulation:sim-A,,train-00746,dev,"Cash withdrawal has been pending, why is it so?",46,pending_cash_withdrawal,ok,46,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708153+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-00876,dev,my cash withdrawal has not come out of my account yet.,46,pending_cash_withdrawal,ok,46,,0.8,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708160+00:00,,1,0.8
+sim-A,simulation:sim-A,,train-00883,dev,Is the EUR accepted for exchanges?,36,fiat_currency_support,ok,36,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708164+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-00983,dev,Which fiat currencies are supported for holding and exchanging?,36,fiat_currency_support,ok,36,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708168+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-01089,dev,Can I have my card delivered on Tuesday?,12,card_delivery_estimate,ok,12,,0.43,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708172+00:00,,1,0.43
+sim-A,simulation:sim-A,,train-01169,dev,Do I have to manually top up once I'm too low?,4,automatic_top_up,ok,4,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708176+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-01190,dev,When I'm traveling is it possible to add money automatically at certain time points?,4,automatic_top_up,ok,4,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708180+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-01251,dev,I cannot seem to use my card.,14,card_not_working,ok,14,,0.68,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708183+00:00,,1,0.68
+sim-A,simulation:sim-A,,train-01389,dev,How do I exchange currencies using this app?,33,exchange_via_app,ok,33,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708187+00:00,,1,0.94
+sim-A,simulation:sim-A,,train-01510,dev,What do I do if my card is stolen?,41,lost_or_stolen_card,ok,41,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708191+00:00,,1,0.92
+sim-A,simulation:sim-A,,train-01635,dev,As my kids get older are they able to get set up with their own accounts?,1,age_limit,ok,1,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708195+00:00,,1,0.91
+sim-A,simulation:sim-A,,train-01745,dev,I entered my pin wrong  too many times.,49,pin_blocked,ok,49,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708198+00:00,,1,0.92
+sim-A,simulation:sim-A,,train-01795,dev,Contactless payments need to be enabled for my card.,23,contactless_not_working,ok,23,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708202+00:00,,1,0.85
+sim-A,simulation:sim-A,,train-01855,dev,what is the price of a transfer?,56,top_up_by_bank_transfer_charge,ok,56,,0.3,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708206+00:00,,1,0.3
+sim-A,simulation:sim-A,,train-01998,dev,I'm still waiting for my top-up to go through,47,pending_top_up,ok,47,,0.73,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708210+00:00,,1,0.73
+sim-A,simulation:sim-A,,train-02078,dev,Am I able to cancel a transfer I just made,8,cancel_transfer,ok,8,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708213+00:00,,1,0.96
+sim-A,simulation:sim-A,,train-02253,dev,Is there a limit to how much I can top-up?,60,top_up_limits,ok,60,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708217+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-02312,dev,What amount can I top-up?,60,top_up_limits,ok,60,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708221+00:00,,1,0.95
+sim-A,simulation:sim-A,,train-02414,dev,I was given the wrong amount of cash,75,wrong_amount_of_cash_received,ok,75,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708225+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-02618,dev,Why am I charged a fee when using my debit or credit card?,15,card_payment_fee_charged,ok,15,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708228+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-02716,dev,Where is my last money transaction,66,transfer_not_received_by_recipient,ok,66,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708232+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-02865,dev,the money i transferred didnt arrive,66,transfer_not_received_by_recipient,ok,66,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708236+00:00,,1,0.78
+sim-A,simulation:sim-A,,train-02945,dev,What forms of payment do you accept?,54,supported_cards_and_currencies,ok,42,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708245+00:00,,0,0.93
+sim-A,simulation:sim-A,,train-03014,dev,Where do I order a virtual card?,40,getting_virtual_card,ok,40,,0.57,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708250+00:00,,1,0.57
+sim-A,simulation:sim-A,,train-03153,dev,Can i use this card at any store?,10,card_acceptance,ok,10,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708253+00:00,,1,0.89
+sim-A,simulation:sim-A,,train-03266,dev,Reasons for top up cancellation.,61,top_up_reverted,ok,61,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708257+00:00,,1,0.89
+sim-A,simulation:sim-A,,train-03399,dev,"I deposited a check yesterday and Im not seeing it in my account. i need the money, is there something wrong with my account? check it out please",6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708261+00:00,,1,0.96
+sim-A,simulation:sim-A,,train-03427,dev,"My friend deposited $100 into my account, but it is not showing up!",6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708264+00:00,,1,0.97
+sim-A,simulation:sim-A,,train-03519,dev,"Hi, there is a suspicious payment from my card. I definitely do not know who this is or who could have made this payment.",16,card_payment_not_recognised,ok,16,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708268+00:00,,1,0.81
+sim-A,simulation:sim-A,,train-03651,dev,I am here to change my adress.,30,edit_personal_details,ok,30,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708272+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-03669,dev,I need to change my address in the personal details.,30,edit_personal_details,ok,32,,0.59,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708278+00:00,,0,0.59
+sim-A,simulation:sim-A,,train-03782,dev,Why is identity verification required?,74,why_verify_identity,ok,74,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708282+00:00,,1,0.87
+sim-A,simulation:sim-A,,train-03970,dev,I am having a problem proving who I am,68,unable_to_verify_identity,ok,68,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708286+00:00,,1,0.95
+sim-A,simulation:sim-A,,train-04030,dev,I can't find the PIN.,38,get_physical_card,ok,38,,0.69,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708290+00:00,,1,0.69
+sim-A,simulation:sim-A,,train-04232,dev,"Please tell me, do you use Visa or Mastercard?",73,visa_or_mastercard,ok,73,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708293+00:00,,1,0.98
+sim-A,simulation:sim-A,,train-04260,dev,How do I to up by card?,62,topping_up_by_card,ok,62,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708297+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-04320,dev,"If I want a friend to top off my account, can they?",62,topping_up_by_card,ok,62,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708301+00:00,,1,0.97
+sim-A,simulation:sim-A,,train-04355,dev,"I need multiple cards per day, and they all have to be disposable.",29,disposable_card_limits,ok,29,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708304+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-04536,dev,What should I do if I think that someone might be using me card?,22,compromised_card,ok,52,,0.43,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708311+00:00,,0,0.43
+sim-A,simulation:sim-A,,train-04570,dev,Where should I withdraw money from?,3,atm_support,ok,3,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708314+00:00,,1,0.96
+sim-A,simulation:sim-A,,train-04631,dev,Can I withdraw from any ATM?,3,atm_support,ok,3,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708318+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-04807,dev,"I know this very late, but I just went through my statements from the last couple months and there's one quite large-ish payment that I definitely haven't made. Is it still possible to dispute it?",28,direct_debit_payment_not_recognised,ok,28,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708322+00:00,,1,0.97
+sim-A,simulation:sim-A,,train-04900,dev,Instruct me how to reset the passcode.,44,passcode_forgotten,ok,44,,0.71,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708325+00:00,,1,0.71
+sim-A,simulation:sim-A,,train-04959,dev,I was declined when trying to withdrawal cash!,26,declined_cash_withdrawal,ok,8,,0.77,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708334+00:00,,0,0.77
+sim-A,simulation:sim-A,,train-05045,dev,Please help me with my card. As i have tried to use my card in two different ATMs but repeatedly it was declining by ATM.,26,declined_cash_withdrawal,ok,26,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708338+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-05222,dev,It's been a few days since I've tried to pay a seller but the funds aren't going through. What is happening?,45,pending_card_payment,ok,45,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708342+00:00,,1,0.93
+sim-A,simulation:sim-A,,train-05353,dev,"If I lost my phone, how can I stop someone from accessing my account through the app?",42,lost_or_stolen_phone,ok,62,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708347+00:00,,0,0.93
+sim-A,simulation:sim-A,,train-05458,dev,I think I deserve a refunded on a certain item.,52,request_refund,ok,52,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708351+00:00,,1,0.87
+sim-A,simulation:sim-A,,train-05466,dev,It has been forever ago that I made an order online. The product simply is not coming. Just give me back my money because I'm not paying these people.,52,request_refund,ok,52,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708355+00:00,,1,0.85
+sim-A,simulation:sim-A,,train-05599,dev,I have a transfer that was declined.,27,declined_transfer,ok,0,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708361+00:00,,0,0.92
+sim-A,simulation:sim-A,,train-05721,dev,I made a purchase a few weeks ago but wasn't happy with it so recently requested a refund from the supplier.  Can you check where the money is?,51,Refund_not_showing_up,ok,51,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708367+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-05860,dev,The payment for the card did not go through,25,declined_card_payment,ok,25,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708371+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-06028,dev,"How long do you expect me to wait for the transfer? It finally worked out, but has been pending for a long time and it's quite urgent.",48,pending_transfer,ok,48,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708375+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-06202,dev,I need to terminate my account immediately.,55,terminate_account,ok,44,,0.7,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708381+00:00,,0,0.7
+sim-A,simulation:sim-A,,train-06297,dev,How can I get my card out of the ATM?,18,card_swallowed,ok,18,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708384+00:00,,1,0.87
+sim-A,simulation:sim-A,,train-06405,dev,Why was I charged twice?,63,transaction_charged_twice,ok,63,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708388+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-06570,dev,How can I find out the source of my available cash?,70,verify_source_of_funds,ok,70,,0.72,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708392+00:00,,1,0.72
+sim-A,simulation:sim-A,,train-06618,dev,How long will a transfer from Europe take?,67,transfer_timing,ok,67,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708396+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-06643,dev,How long does it take for a transfer to show up in my account?,67,transfer_timing,ok,67,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708399+00:00,,1,0.98
+sim-A,simulation:sim-A,,train-06748,dev,It looks like my card payment might have been reverted.,53,reverted_card_payment?,ok,53,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708403+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-06902,dev,Are there any specific cash machines that I have to go to in order to change my PIN?,21,change_pin,ok,21,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708407+00:00,,1,0.96
+sim-A,simulation:sim-A,,train-07116,dev,The app won't let me transfer money to a beneficiary,7,beneficiary_not_allowed,ok,4,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708412+00:00,,0,0.78
+sim-A,simulation:sim-A,,train-07315,dev,Why was my transfer charged a fee?,64,transfer_fee_charged,ok,64,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708416+00:00,,1,0.91
+sim-A,simulation:sim-A,,train-07382,dev,Can I get paid for this in another currency?,50,receiving_money,ok,50,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708420+00:00,,1,0.97
+sim-A,simulation:sim-A,,train-07405,dev,Will my employer be able to pay me with this service,50,receiving_money,ok,29,,0.12,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708428+00:00,,0,0.12
+sim-A,simulation:sim-A,,train-07564,dev,Why can't I complete the transfer?,35,failed_transfer,ok,35,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708432+00:00,,1,0.86
+sim-A,simulation:sim-A,,train-07572,dev,Can I add money to my account via bank transfer?,65,transfer_into_account,ok,65,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708436+00:00,,1,0.93
+sim-A,simulation:sim-A,,train-07767,dev,Can I verify my top-up card?,71,verify_top_up,ok,71,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708439+00:00,,1,0.74
+sim-A,simulation:sim-A,,train-07781,dev,why do you verify the top up,71,verify_top_up,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708443+00:00,,0,0.0
+sim-A,simulation:sim-A,,train-07865,dev,I would like to use one of my cards for a family member. Is that allowed?,39,getting_spare_card,ok,39,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708447+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-08018,dev,Where would I find top up by cash deposit?,58,top_up_by_cash_or_cheque,ok,58,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708450+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-08048,dev,Where can the cards be delivered?,43,order_physical_card,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708454+00:00,,0,0.0
+sim-A,simulation:sim-A,,train-08173,dev,My disposable virtual card got rejected,72,virtual_card_not_working,ok,72,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708457+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-08195,dev,"I received my Virtual card information, but was unable to use it to make a purchase. Why did this happen and what can I do?",72,virtual_card_not_working,ok,72,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708461+00:00,,1,0.85
+sim-A,simulation:sim-A,,train-08278,dev,I think that the exchange rate for the withdrawal of my cash is not right.,76,wrong_exchange_rate_for_cash_withdrawal,ok,55,,0.77,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708466+00:00,,0,0.77
+sim-A,simulation:sim-A,,train-08351,dev,"I draw out money from your ATM during holidays, and was charged insanely. I wouldn't have done it, if i had a little sense about the shocking charges.",76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708470+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-08444,dev,How can I get a virtual card for a one-time transaction?,37,get_disposable_virtual_card,ok,36,,0.63,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708476+00:00,,0,0.63
+sim-A,simulation:sim-A,,train-08540,dev,I really need to top-up my card today urgently but my card keeps getting declined!! Can you please resolve this problem or let me know if you have any alternatives,59,top_up_failed,ok,59,,0.72,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708480+00:00,,1,0.72
+sim-A,simulation:sim-A,,train-08618,dev,Where is the money that I transferred.,5,balance_not_updated_after_bank_transfer,ok,5,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708483+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-08647,dev,Balance hasn't been updated following a bank transfer,5,balance_not_updated_after_bank_transfer,ok,5,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708487+00:00,,1,0.81
+sim-A,simulation:sim-A,,train-08940,dev,Cash I did not get showed up in my account,20,cash_withdrawal_not_recognised,ok,20,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708490+00:00,,1,0.89
+sim-A,simulation:sim-A,,train-08959,dev,exchanging currencies costs what?,31,exchange_charge,ok,45,,0.23,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708496+00:00,,0,0.23
+sim-A,simulation:sim-A,,train-09025,dev,Is there a fee for exchanging currency?,31,exchange_charge,ok,31,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708500+00:00,,1,0.96
+sim-A,simulation:sim-A,,train-09158,dev,Will I be charged a fee for topping up using a European card?,57,top_up_by_card_charge,ok,57,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708503+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-09221,dev,Can I activate my card with the app?,0,activate_my_card,ok,0,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708507+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-09284,dev,How can i make my card active?,0,activate_my_card,ok,0,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708513+00:00,,1,0.99
+sim-A,simulation:sim-A,,train-09438,dev,"Do you charge for cash withdrawals?  I want to get my hands on my own money and you appear to be charging me for the pleasure! Why is this, you'd never get this with my high street bank!",19,cash_withdrawal_charge,ok,19,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708517+00:00,,1,0.87
+sim-A,simulation:sim-A,,train-09555,dev,"When will I get a new card when I order it, and how much will it cost.",9,card_about_to_expire,ok,67,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708523+00:00,,0,0.82
+sim-A,simulation:sim-A,,train-09676,dev,Can I top up using my apple watch?,2,apple_pay_or_google_pay,ok,2,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708526+00:00,,1,0.98
+sim-A,simulation:sim-A,,train-09758,dev,Google Pay won't let me top up.,2,apple_pay_or_google_pay,ok,2,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708530+00:00,,1,0.95
+sim-A,simulation:sim-A,,train-09861,dev,What do you require for identification verification?,69,verify_my_identity,ok,69,,0.21,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708534+00:00,,1,0.21
+sim-A,simulation:sim-A,,train-09944,dev,are there any country restrictions?,24,country_support,ok,24,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708537+00:00,,1,0.78
+sim-A,simulation:sim-A,,test-00012,test,I still don't have my card after 2 weeks.  What should I do?,11,card_arrival,ok,11,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708541+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-00038,test,What is the tracking number for the card you sent?,11,card_arrival,ok,11,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708545+00:00,,1,0.78
+sim-A,simulation:sim-A,,test-00051,test,Can I link an existing card?,13,card_linking,ok,13,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708548+00:00,,1,0.85
+sim-A,simulation:sim-A,,test-00065,test,how do I link an already existing card?,13,card_linking,ok,13,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708552+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00106,test,The exchange rate would be?,32,exchange_rate,ok,32,,0.84,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708556+00:00,,1,0.84
+sim-A,simulation:sim-A,,test-00114,test,Can you tell me the foreign exchange rate?,32,exchange_rate,ok,32,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708560+00:00,,1,0.94
+sim-A,simulation:sim-A,,test-00118,test,when does the rate get determined,32,exchange_rate,ok,32,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708563+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00133,test,Why is the exchange rate wrong when I purchase something abroad?,17,card_payment_wrong_exchange_rate,ok,33,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708570+00:00,,0,0.93
+sim-A,simulation:sim-A,,test-00141,test,"When I made a purchase last Saturday, I was charged extra. Did I receive the right exchange rate?",17,card_payment_wrong_exchange_rate,ok,17,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708574+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-00153,test,The incorrect rate was used in my foreign purchase,17,card_payment_wrong_exchange_rate,ok,17,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708578+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00183,test,Why was I overcharged a pound!?,34,extra_charge_on_statement,ok,34,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708581+00:00,,1,0.98
+sim-A,simulation:sim-A,,test-00192,test,"Can you help me with a weird charge?  It's a pound charge that never goes away from the statement view on the app I'm using.  It's not described as anything but ""Pending"", and that status has never changed during the last two days.",34,extra_charge_on_statement,ok,63,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708587+00:00,,0,0.98
+sim-A,simulation:sim-A,,test-00211,test,Why is a transaction showing as pending when I recieved cash from an ATM?,46,pending_cash_withdrawal,ok,46,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708591+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00233,test,Why does it say pending cash withdrawal on my statement?,46,pending_cash_withdrawal,ok,58,,0.41,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708597+00:00,,0,0.41
+sim-A,simulation:sim-A,,test-00244,test,What currencies can I hold money in?,36,fiat_currency_support,ok,6,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708605+00:00,,0,0.81
+sim-A,simulation:sim-A,,test-00254,test,Do you offer additional currency options?,36,fiat_currency_support,ok,36,,0.48,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708609+00:00,,1,0.48
+sim-A,simulation:sim-A,,test-00256,test,What fiat currencies are supported for holding and exchange?,36,fiat_currency_support,ok,36,,0.79,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708613+00:00,,1,0.79
+sim-A,simulation:sim-A,,test-00282,test,i need my card quick,12,card_delivery_estimate,ok,12,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708616+00:00,,1,0.87
+sim-A,simulation:sim-A,,test-00312,test,I am waiting for my card to arrive.,12,card_delivery_estimate,ok,12,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708620+00:00,,1,0.98
+sim-A,simulation:sim-A,,test-00319,test,Can I have it be delivered at a certain time?,12,card_delivery_estimate,ok,12,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708624+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00323,test,"I'm running out of money, can I  auto top up?",4,automatic_top_up,ok,4,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708627+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00328,test,Can I have it add money at certain time intervals when I travel?,4,automatic_top_up,ok,4,,0.79,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708631+00:00,,1,0.79
+sim-A,simulation:sim-A,,test-00347,test,Can I have it add money automatically in certain intervals?,4,automatic_top_up,ok,4,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708635+00:00,,1,0.85
+sim-A,simulation:sim-A,,test-00370,test,How can I get my physical card to work?,14,card_not_working,ok,14,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708639+00:00,,1,0.98
+sim-A,simulation:sim-A,,test-00395,test,My card doesn't accept any transaction at all. What's wrong??,14,card_not_working,ok,14,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708642+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00398,test,How do I find out why my card won't work?,14,card_not_working,ok,14,,0.35,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708646+00:00,,1,0.35
+sim-A,simulation:sim-A,,test-00410,test,What all currencies can be exchanged?,33,exchange_via_app,ok,33,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708649+00:00,,1,0.88
+sim-A,simulation:sim-A,,test-00414,test,Is it possible to change to another currency?,33,exchange_via_app,ok,33,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708653+00:00,,1,0.92
+sim-A,simulation:sim-A,,test-00444,test,My card is lost! What can I do?,41,lost_or_stolen_card,ok,41,,0.84,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708657+00:00,,1,0.84
+sim-A,simulation:sim-A,,test-00465,test,My bags were stolen. I need a new card but need to cancel the stolen one.,41,lost_or_stolen_card,ok,41,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708661+00:00,,1,0.82
+sim-A,simulation:sim-A,,test-00479,test,Help me please!  My card was stolen!,41,lost_or_stolen_card,ok,41,,0.8,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708664+00:00,,1,0.8
+sim-A,simulation:sim-A,,test-00500,test,Can my 19 year old daughter open a savings account at the bank?,1,age_limit,ok,1,,0.7,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708668+00:00,,1,0.7
+sim-A,simulation:sim-A,,test-00513,test,How old do my kids have to be to use your service?,1,age_limit,ok,1,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708672+00:00,,1,0.81
+sim-A,simulation:sim-A,,test-00542,test,"My account is blocked, how do I log in now",49,pin_blocked,ok,49,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708675+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00553,test,Can I unblock my pin?,49,pin_blocked,ok,49,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708679+00:00,,1,0.87
+sim-A,simulation:sim-A,,test-00555,test,"My card's frozen, what can I do?",49,pin_blocked,ok,49,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708684+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00578,test,My contactless is not working,23,contactless_not_working,ok,23,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708688+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00588,test,Why isn't my contactless not working?,23,contactless_not_working,ok,23,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708692+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00601,test,I would like to make a transfer. How much does it cost?,56,top_up_by_bank_transfer_charge,ok,56,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708695+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00609,test,Is it possible to get a transfer from SWIFT?,56,top_up_by_bank_transfer_charge,ok,56,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708699+00:00,,1,0.92
+sim-A,simulation:sim-A,,test-00615,test,Are there charges for receiving a SEPA transfer?,56,top_up_by_bank_transfer_charge,ok,56,,0.69,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708703+00:00,,1,0.69
+sim-A,simulation:sim-A,,test-00641,test,My card was topped this morning but I can't see the funds. Why didn't it complete?,47,pending_top_up,ok,47,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708706+00:00,,1,0.94
+sim-A,simulation:sim-A,,test-00646,test,Could you explain why my top-up has gone through yet?,47,pending_top_up,ok,27,,0.7,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708712+00:00,,0,0.7
+sim-A,simulation:sim-A,,test-00670,test,"My top up hasn't worked, it's been stuck in pending for the last couple hours",47,pending_top_up,ok,47,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708716+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00693,test,Help me cancel my transaction,8,cancel_transfer,ok,8,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708720+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00704,test,I made a mistake with a transaction!,8,cancel_transfer,ok,8,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708723+00:00,,1,0.85
+sim-A,simulation:sim-A,,test-00714,test,Cancel my last transfer,8,cancel_transfer,ok,8,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708727+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00726,test,Are the top-ups limited?,60,top_up_limits,ok,60,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708731+00:00,,1,0.82
+sim-A,simulation:sim-A,,test-00751,test,what is the most i can top up?,60,top_up_limits,ok,60,,0.56,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708734+00:00,,1,0.56
+sim-A,simulation:sim-A,,test-00752,test,Is there a limit to how high I can top-up?,60,top_up_limits,ok,45,,0.66,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708740+00:00,,0,0.66
+sim-A,simulation:sim-A,,test-00767,test,The ATM gave me the wrong amount of cash today when I went to withdraw. The app says it was more.,75,wrong_amount_of_cash_received,ok,75,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708744+00:00,,1,0.87
+sim-A,simulation:sim-A,,test-00778,test,"I went to withdraw some cash earlier today, but seems the ATM gave me the wrong amount of cash! The amount showing up in the app is a lot more",75,wrong_amount_of_cash_received,ok,75,,0.8,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708748+00:00,,1,0.8
+sim-A,simulation:sim-A,,test-00784,test,Something went wrong with my withdrawal. The amount of money isn't right.,75,wrong_amount_of_cash_received,ok,75,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708751+00:00,,1,0.96
+sim-A,simulation:sim-A,,test-00809,test,Why was I charged an extra fee when paying with my card?,15,card_payment_fee_charged,ok,15,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708755+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00814,test,When would my card be charged an extra fee for a transaction?,15,card_payment_fee_charged,ok,15,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708759+00:00,,1,0.78
+sim-A,simulation:sim-A,,test-00828,test,For the first time I got a fee on my account. How do I know when you charge these fees?,15,card_payment_fee_charged,ok,15,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708763+00:00,,1,0.78
+sim-A,simulation:sim-A,,test-00844,test,I tried to send someone money but they haven't received it.,66,transfer_not_received_by_recipient,ok,66,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708769+00:00,,1,0.86
+sim-A,simulation:sim-A,,test-00856,test,"I transferred the rent payment for my new place a couple days ago but the landlord says it's not there yet, despite showing up as done on my side. I checked the account number I sent it to and it's definitely correct. Can you please verify if the transaction really went through or not?",66,transfer_not_received_by_recipient,ok,66,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708772+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00875,test,"How long do transfers need to come through? I sent some money to a friend, she needs it urgently, but seems it's still not there yet after a couple hours.",66,transfer_not_received_by_recipient,ok,66,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708776+00:00,,1,0.98
+sim-A,simulation:sim-A,,test-00888,test,Can I use my American Express to add money to my account?,54,supported_cards_and_currencies,ok,54,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708780+00:00,,1,0.9
+sim-A,simulation:sim-A,,test-00903,test,"I want to add money but don't know what currencies you accept, can you tell me?",54,supported_cards_and_currencies,ok,54,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708785+00:00,,1,0.82
+sim-A,simulation:sim-A,,test-00926,test,Can you tell me how to order a virtual card?,40,getting_virtual_card,ok,40,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708789+00:00,,1,0.86
+sim-A,simulation:sim-A,,test-00928,test,what is the virtual card,40,getting_virtual_card,ok,40,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708793+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00974,test,What places will accept my card for payment?,10,card_acceptance,ok,10,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708797+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-00996,test,Will filling stations accept my card?,10,card_acceptance,ok,10,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708800+00:00,,1,0.9
+sim-A,simulation:sim-A,,test-01018,test,I topped up but the app reverted it,61,top_up_reverted,ok,61,,0.75,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708804+00:00,,1,0.75
+sim-A,simulation:sim-A,,test-01023,test,"When I topped up, the app reverted my funds.",61,top_up_reverted,ok,61,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708808+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01037,test,My top-up has been cancelled.,61,top_up_reverted,ok,61,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708812+00:00,,1,0.93
+sim-A,simulation:sim-A,,test-01052,test,I made a deposit this morning but it is still pending?,6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708815+00:00,,1,0.76
+sim-A,simulation:sim-A,,test-01079,test,"I sent you a cheque couple days ago, nothing happened to my account yet! This is unacceptable, where is my money??",6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708819+00:00,,1,0.98
+sim-A,simulation:sim-A,,test-01083,test,There is a payment that is not mine in the app.  Please advise/,16,card_payment_not_recognised,ok,16,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708823+00:00,,1,0.86
+sim-A,simulation:sim-A,,test-01110,test,I see a charge on my account that I don't recall making. I feel like my account may have been compromised.,16,card_payment_not_recognised,ok,16,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708826+00:00,,1,0.82
+sim-A,simulation:sim-A,,test-01112,test,Somebody used my card to make a purchase,16,card_payment_not_recognised,ok,16,,0.61,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708830+00:00,,1,0.61
+sim-A,simulation:sim-A,,test-01122,test,How do I update my details?,30,edit_personal_details,ok,30,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708834+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01139,test,How can I modify my details?,30,edit_personal_details,ok,30,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708838+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01174,test,What is the purpose for the identity check,74,why_verify_identity,ok,74,,0.48,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708841+00:00,,1,0.48
+sim-A,simulation:sim-A,,test-01176,test,What is the point of an identity check?,74,why_verify_identity,ok,74,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708845+00:00,,1,0.78
+sim-A,simulation:sim-A,,test-01185,test,Why do you require so many identity details?,74,why_verify_identity,ok,74,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708851+00:00,,1,0.91
+sim-A,simulation:sim-A,,test-01203,test,I am having trouble verifying my identity.,68,unable_to_verify_identity,ok,68,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708855+00:00,,1,0.93
+sim-A,simulation:sim-A,,test-01204,test,what do i do if my verification failed,68,unable_to_verify_identity,ok,68,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708858+00:00,,1,0.86
+sim-A,simulation:sim-A,,test-01228,test,I am experiencing difficulty providing my identity.,68,unable_to_verify_identity,ok,68,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708862+00:00,,1,0.92
+sim-A,simulation:sim-A,,test-01248,test,I don't know where to look to find my PIN.,38,get_physical_card,ok,38,,0.83,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708866+00:00,,1,0.83
+sim-A,simulation:sim-A,,test-01260,test,Does my PIN come with my card?,38,get_physical_card,ok,38,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708869+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01262,test,Why isn't my PIN available yet?,38,get_physical_card,ok,38,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708873+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-01300,test,are both visa and mastercard available to me?,73,visa_or_mastercard,ok,73,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708877+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01312,test,I would rather the Mastercard.,73,visa_or_mastercard,ok,73,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708880+00:00,,1,0.87
+sim-A,simulation:sim-A,,test-01317,test,Can you let me know if Visa is among the card scheme assignments?,73,visa_or_mastercard,ok,73,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708884+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01331,test,Where's the money that got charged to my card? It's not showing up in my account balance,62,topping_up_by_card,ok,62,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708888+00:00,,1,0.76
+sim-A,simulation:sim-A,,test-01347,test,Cannot access my top up.,62,topping_up_by_card,ok,62,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708891+00:00,,1,0.85
+sim-A,simulation:sim-A,,test-01361,test,Can I make many disposable cards per day?,29,disposable_card_limits,ok,29,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708895+00:00,,1,0.9
+sim-A,simulation:sim-A,,test-01372,test,What if I need multiple disposable cards?,29,disposable_card_limits,ok,29,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708899+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-01381,test,How can I create many temporary cards daily?,29,disposable_card_limits,ok,29,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708903+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-01409,test,Someone else may be using my card.  There are transactions I don't recognize.,22,compromised_card,ok,44,,0.48,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708909+00:00,,0,0.48
+sim-A,simulation:sim-A,,test-01426,test,"I'm not certain, but someone may be using my card.",22,compromised_card,ok,22,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708913+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-01436,test,I think someone copied the numbers on my card and is using them.,22,compromised_card,ok,22,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708916+00:00,,1,0.93
+sim-A,simulation:sim-A,,test-01443,test,Is there a list of ATM machines?,3,atm_support,ok,3,,0.33,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708920+00:00,,1,0.33
+sim-A,simulation:sim-A,,test-01446,test,Which ATM's accept my card?,3,atm_support,ok,3,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708926+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-01451,test,What ATMs is the card okay to use at?,3,atm_support,ok,3,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708930+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-01487,test,There's a Direct Debit payment in my account that I didn't make,28,direct_debit_payment_not_recognised,ok,28,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708935+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01508,test,I didn't make this direct debit transaction,28,direct_debit_payment_not_recognised,ok,28,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708939+00:00,,1,0.89
+sim-A,simulation:sim-A,,test-01543,test,I need help resetting my passcode to access my app.,44,passcode_forgotten,ok,44,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708943+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01549,test,Is there a way to reset my passcode?,44,passcode_forgotten,ok,47,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708949+00:00,,0,0.78
+sim-A,simulation:sim-A,,test-01552,test,How do I reset the passcode?,44,passcode_forgotten,ok,44,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708953+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01572,test,I tried to make a cash withdrawal and it was declined. Why did this happen?,26,declined_cash_withdrawal,ok,26,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708957+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01573,test,I can't get money out of the ATM,26,declined_cash_withdrawal,ok,26,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708960+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01585,test,Why was my cash withdrawal declined?,26,declined_cash_withdrawal,ok,28,,0.61,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708966+00:00,,0,0.61
+sim-A,simulation:sim-A,,test-01607,test,"I recently made a payment, and it is showing up in my account as ""pending"". What does that mean?",45,pending_card_payment,ok,45,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708969+00:00,,1,0.76
+sim-A,simulation:sim-A,,test-01620,test,Why is a payment showing up on my card as pending?,45,pending_card_payment,ok,45,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708973+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01640,test,My phone was stolen,42,lost_or_stolen_phone,ok,42,,0.8,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708977+00:00,,1,0.8
+sim-A,simulation:sim-A,,test-01663,test,I was mugged and everything taken.  What do I do to protect my account?,42,lost_or_stolen_phone,ok,24,,0.54,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708983+00:00,,0,0.54
+sim-A,simulation:sim-A,,test-01669,test,"If I lost my phone, can someone use my account?",42,lost_or_stolen_phone,ok,42,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708987+00:00,,1,0.98
+sim-A,simulation:sim-A,,test-01686,test,I would like a refund for something I bought,52,request_refund,ok,52,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708990+00:00,,1,0.85
+sim-A,simulation:sim-A,,test-01688,test,Can I have a refund?,52,request_refund,ok,52,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708994+00:00,,1,0.81
+sim-A,simulation:sim-A,,test-01711,test,I want to reverse a purchase. Can I cancel it?,52,request_refund,ok,52,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.708998+00:00,,1,0.98
+sim-A,simulation:sim-A,,test-01737,test,Trouble transferring transaction contact for help,27,declined_transfer,ok,27,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709001+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01742,test,Why was the transfer declined?,27,declined_transfer,ok,27,,0.83,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709005+00:00,,1,0.83
+sim-A,simulation:sim-A,,test-01756,test,My card is being declined online. Could you tell me what might be broken or wrong with the account?,27,declined_transfer,ok,27,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709009+00:00,,1,0.86
+sim-A,simulation:sim-A,,test-01769,test,Can you tell me why my refund is not showing in my statement?,51,Refund_not_showing_up,ok,51,,0.71,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709013+00:00,,1,0.71
+sim-A,simulation:sim-A,,test-01775,test,I bought something and returned it and the money from the return isn't in my account.,51,Refund_not_showing_up,ok,51,,0.83,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709016+00:00,,1,0.83
+sim-A,simulation:sim-A,,test-01816,test,"I have a card payment that was declined, but why?",25,declined_card_payment,ok,25,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709022+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01827,test,Please explain why my card was declined?,25,declined_card_payment,ok,18,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709028+00:00,,0,0.88
+sim-A,simulation:sim-A,,test-01836,test,Card payment declined?,25,declined_card_payment,ok,25,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709032+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01841,test,How long for money transfer to show?,48,pending_transfer,ok,48,,0.83,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709035+00:00,,1,0.83
+sim-A,simulation:sim-A,,test-01872,test,For how long will my transfer be pending?,48,pending_transfer,ok,48,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709039+00:00,,1,0.95
+sim-A,simulation:sim-A,,test-01884,test,What steps do I need to take to close my account?,55,terminate_account,ok,55,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709043+00:00,,1,0.98
+sim-A,simulation:sim-A,,test-01886,test,Please delete my account right now!,55,terminate_account,ok,55,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709046+00:00,,1,0.88
+sim-A,simulation:sim-A,,test-01904,test,Please terminate my account.,55,terminate_account,ok,55,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709050+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01924,test,HOw do I get my card back after the ATM has pulled it in?,18,card_swallowed,ok,18,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709054+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01953,test,I was taking out funds and was unable to regain my card.,18,card_swallowed,ok,18,,0.84,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709057+00:00,,1,0.84
+sim-A,simulation:sim-A,,test-01962,test,Why am I being charged twice fro a restaurant?,63,transaction_charged_twice,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709061+00:00,,0,0.0
+sim-A,simulation:sim-A,,test-01972,test,It appears that I am being double charged for some items that I have purchased this past week.  Please review and correct.,63,transaction_charged_twice,ok,63,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709065+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-01987,test,My card has been charged two separate times for a single transaction.,63,transaction_charged_twice,ok,63,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709068+00:00,,1,0.88
+sim-A,simulation:sim-A,,test-02001,test,I want information about the source of funds.,70,verify_source_of_funds,ok,70,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709072+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02010,test,How can I tell where my funds came from?,70,verify_source_of_funds,ok,70,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709076+00:00,,1,0.96
+sim-A,simulation:sim-A,,test-02034,test,Where do my funds come from?,70,verify_source_of_funds,ok,53,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709082+00:00,,0,0.97
+sim-A,simulation:sim-A,,test-02041,test,What is the wait time for a transfer from the US?,67,transfer_timing,ok,67,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709085+00:00,,1,0.95
+sim-A,simulation:sim-A,,test-02071,test,I have to transfer something to China as fast as I can. How long will it take to arrive in China?,67,transfer_timing,ok,67,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709089+00:00,,1,0.93
+sim-A,simulation:sim-A,,test-02081,test,My card payment was reverted.  Why?,53,reverted_card_payment?,ok,53,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709093+00:00,,1,0.88
+sim-A,simulation:sim-A,,test-02087,test,"Hello, My money went through for my purchase but now I got contacted from the seller noting that they didn't receive it. Then the money was returned to my account and I'm not sure why this occurred. So if you can resolve this issue please.",53,reverted_card_payment?,ok,53,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709097+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02119,test,Why has payment been returned?,53,reverted_card_payment?,ok,53,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709100+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02128,test,I want to set a new PIN,21,change_pin,ok,21,,0.62,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709106+00:00,,1,0.62
+sim-A,simulation:sim-A,,test-02138,test,I want to choose a different PIN.,21,change_pin,ok,21,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709110+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-02158,test,How to change the PIN on my card?,21,change_pin,ok,10,,0.33,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709115+00:00,,0,0.33
+sim-A,simulation:sim-A,,test-02167,test,Why did I get a message saying that my transfer is not possible?  I have done this before no problem.  Please fix.,7,beneficiary_not_allowed,ok,7,,0.73,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709120+00:00,,1,0.73
+sim-A,simulation:sim-A,,test-02196,test,why isnt my account allowing transfers,7,beneficiary_not_allowed,ok,50,,0.56,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709125+00:00,,0,0.56
+sim-A,simulation:sim-A,,test-02203,test,Why was a charged just for transferring?,64,transfer_fee_charged,ok,64,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709129+00:00,,1,0.89
+sim-A,simulation:sim-A,,test-02214,test,"Hi,  Please help me, as i have transferred some amount but receiver did not get the same amount. He received a bit less. Due to this again i need to transfer the difference.   I have transferred money but beneficiary's account is credited with less amount. Now i have transfer the difference of the amount. I think there is some issue, could you please look into this.",64,transfer_fee_charged,ok,64,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709132+00:00,,1,0.96
+sim-A,simulation:sim-A,,test-02215,test,"Why did I get charged for something I bought online? Even though it was international, I thought it would be covered.",64,transfer_fee_charged,ok,64,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709136+00:00,,1,0.94
+sim-A,simulation:sim-A,,test-02240,test,Will salary be received through this?,50,receiving_money,ok,50,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709140+00:00,,1,0.92
+sim-A,simulation:sim-A,,test-02266,test,How do I deposit my paycheck to this account?,50,receiving_money,ok,50,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709144+00:00,,1,0.87
+sim-A,simulation:sim-A,,test-02288,test,Why did my transfer not go through?,35,failed_transfer,ok,35,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709147+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02300,test,What are your policies for card transfers?,35,failed_transfer,ok,35,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709151+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02302,test,I tried to make a transfer but it failed,35,failed_transfer,ok,35,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709155+00:00,,1,0.96
+sim-A,simulation:sim-A,,test-02349,test,Are there ways to transfer money into my account?,65,transfer_into_account,ok,65,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709158+00:00,,1,0.96
+sim-A,simulation:sim-A,,test-02354,test,I checked my account today and it said I was out of money. How do I transfer money into my account?,65,transfer_into_account,ok,60,,0.79,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709164+00:00,,0,0.79
+sim-A,simulation:sim-A,,test-02357,test,I'm trying to transfer money into my account.,65,transfer_into_account,ok,65,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709167+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02369,test,Why do you need code verification for my top up?,71,verify_top_up,ok,71,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709171+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02384,test,How do I go forth verifying my top-up card?,71,verify_top_up,ok,71,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709175+00:00,,1,0.95
+sim-A,simulation:sim-A,,test-02387,test,Is there a verification code for the top-up card?,71,verify_top_up,ok,71,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709179+00:00,,1,0.92
+sim-A,simulation:sim-A,,test-02425,test,Can i have a second physical card for this account?,39,getting_spare_card,ok,11,,0.53,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709185+00:00,,0,0.53
+sim-A,simulation:sim-A,,test-02429,test,Can i have a card to my daughter?,39,getting_spare_card,ok,14,,0.22,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709190+00:00,,0,0.22
+sim-A,simulation:sim-A,,test-02438,test,"My child needs a card, how can I add them to the account I currently have?",39,getting_spare_card,ok,39,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709196+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02450,test,Where do I locate topping up with cash.,58,top_up_by_cash_or_cheque,ok,58,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709200+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02473,test,Can I top up my account with a cheque?,58,top_up_by_cash_or_cheque,ok,58,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709206+00:00,,1,0.95
+sim-A,simulation:sim-A,,test-02490,test,Do you charge for physical cards,43,order_physical_card,ok,43,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709209+00:00,,1,0.98
+sim-A,simulation:sim-A,,test-02497,test,Please tell me how to get a physical card.,43,order_physical_card,ok,60,,0.8,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709215+00:00,,0,0.8
+sim-A,simulation:sim-A,,test-02528,test,I was at the store earlier and my virtual card didn't work. What's the solution for this problem?,72,virtual_card_not_working,ok,72,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709219+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02532,test,Why was my virtual card declined when attempting to setup automatic billing?,72,virtual_card_not_working,ok,72,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709223+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02553,test,"My disposable virtual card was rejected by the merchant, please help?",72,virtual_card_not_working,ok,72,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709226+00:00,,1,0.88
+sim-A,simulation:sim-A,,test-02571,test,Is there a fee for exchanging cash?,76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709230+00:00,,1,0.92
+sim-A,simulation:sim-A,,test-02576,test,It seems I was overcharged when I used an ATM while on vacation. If I knew about your fees in advance I sure would have gone somewhere else.,76,wrong_exchange_rate_for_cash_withdrawal,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709234+00:00,,0,0.0
+sim-A,simulation:sim-A,,test-02581,test,I feel like too much money was taken during my currency exchange.,76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709237+00:00,,1,0.94
+sim-A,simulation:sim-A,,test-02611,test,"Is there anyway, I can get a disposable virtual card?",37,get_disposable_virtual_card,ok,37,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709241+00:00,,1,0.96
+sim-A,simulation:sim-A,,test-02624,test,What does a disposable virtual card do?,37,get_disposable_virtual_card,ok,37,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709245+00:00,,1,0.91
+sim-A,simulation:sim-A,,test-02633,test,Will I be able to get a disposable virtual card as well?,37,get_disposable_virtual_card,ok,36,,0.61,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709250+00:00,,0,0.61
+sim-A,simulation:sim-A,,test-02655,test,Why did my top up not work?,59,top_up_failed,ok,59,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709254+00:00,,1,0.76
+sim-A,simulation:sim-A,,test-02672,test,Why can't I top up?,59,top_up_failed,ok,20,,0.69,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709260+00:00,,0,0.69
+sim-A,simulation:sim-A,,test-02673,test,My top-up has failed.,59,top_up_failed,ok,59,,0.72,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709264+00:00,,1,0.72
+sim-A,simulation:sim-A,,test-02680,test,I made a transfer a few hours ago from a UK banking account.  I do not yet see the transfer.  Please check on this for me.,5,balance_not_updated_after_bank_transfer,ok,5,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709268+00:00,,1,0.97
+sim-A,simulation:sim-A,,test-02700,test,I made a transfer and it doesnt' show up in my account.,5,balance_not_updated_after_bank_transfer,ok,5,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709271+00:00,,1,0.81
+sim-A,simulation:sim-A,,test-02753,test,I didn't take out money from an ATM but my app statement shows that I did. How can I fix this?,20,cash_withdrawal_not_recognised,ok,20,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709275+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02754,test,"Someone has stolen my card. Even though I have my card with me, someone just made a 500£ cash withdrawal. Please help as soon as possible.",20,cash_withdrawal_not_recognised,ok,20,,0.83,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709279+00:00,,1,0.83
+sim-A,simulation:sim-A,,test-02766,test,How much more do I have to pay to exchange currencies?,31,exchange_charge,ok,31,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709284+00:00,,1,0.95
+sim-A,simulation:sim-A,,test-02774,test,Is there a fee for exchanging foreign currencies?,31,exchange_charge,ok,31,,0.67,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709288+00:00,,1,0.67
+sim-A,simulation:sim-A,,test-02827,test,"When using a US card, what is the cost for a top up/off?",57,top_up_by_card_charge,ok,57,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709292+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02828,test,"I need to use a European card for a top up, what will the charge be?",57,top_up_by_card_charge,ok,57,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709295+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02834,test,Is their a fee for top ups?,57,top_up_by_card_charge,ok,57,,0.58,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709299+00:00,,1,0.58
+sim-A,simulation:sim-A,,test-02849,test,How do I activate a card I received?,0,activate_my_card,ok,0,,0.71,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709303+00:00,,1,0.71
+sim-A,simulation:sim-A,,test-02850,test,Why can't I activate my card?,0,activate_my_card,ok,0,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709307+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02854,test,Would like to use my card and need to activate it first.  Can you help me do this?,0,activate_my_card,ok,0,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709310+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02882,test,Why am I being charged when I withdraw cash?,19,cash_withdrawal_charge,ok,19,,0.59,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709314+00:00,,1,0.59
+sim-A,simulation:sim-A,,test-02909,test,"I thought cash withdrawals were free? Why have I been charged a fee? Also, how much is this fee?",19,cash_withdrawal_charge,ok,19,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709319+00:00,,1,0.91
+sim-A,simulation:sim-A,,test-02927,test,how long and how much does it cost for new card,9,card_about_to_expire,ok,9,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709323+00:00,,1,0.76
+sim-A,simulation:sim-A,,test-02950,test,The expiration date of my card is approaching .,9,card_about_to_expire,ok,9,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709327+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02968,test,do i have to setup apple pay to use it,2,apple_pay_or_google_pay,ok,2,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709331+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-02998,test,How do I use the top up app with my apple watch?,2,apple_pay_or_google_pay,ok,17,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709336+00:00,,0,0.99
+sim-A,simulation:sim-A,,test-03028,test,which kind of documentation do I need for identity check?,69,verify_my_identity,ok,69,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709340+00:00,,1,0.99
+sim-A,simulation:sim-A,,test-03032,test,What do I need to show who I am?,69,verify_my_identity,ok,69,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709344+00:00,,1,0.89
+sim-A,simulation:sim-A,,test-03066,test,"I need a card, but I'm in the US at the moment.",24,country_support,ok,24,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709347+00:00,,1,0.96
+sim-A,simulation:sim-A,,test-03069,test,In what countries do you do business?,24,country_support,ok,24,,0.67,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.709351+00:00,,1,0.67
+sim-B,simulation:sim-B,,train-00008,dev,Does the package with my card have tracking?,11,card_arrival,ok,11,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712380+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-00261,dev,help me link my card,13,card_linking,ok,13,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712391+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-00266,dev,Where do I go to get my new card linked?,13,card_linking,ok,13,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712396+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-00321,dev,How is the exchange rate calculated?,32,exchange_rate,ok,32,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712403+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-00368,dev,How do you do exchanges?,32,exchange_rate,ok,31,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712414+00:00,,0,0.94
+sim-B,simulation:sim-B,,train-00486,dev,What do i do if the exchange rate was wrong for the item i bought overseas?,17,card_payment_wrong_exchange_rate,ok,17,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712418+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-00614,dev,why is there a service fee on my statement?,34,extra_charge_on_statement,ok,34,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712422+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-00619,dev,I got billed an extra pound!,34,extra_charge_on_statement,ok,42,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712429+00:00,,0,0.94
+sim-B,simulation:sim-B,,train-00746,dev,"Cash withdrawal has been pending, why is it so?",46,pending_cash_withdrawal,ok,46,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712433+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-00876,dev,my cash withdrawal has not come out of my account yet.,46,pending_cash_withdrawal,ok,46,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712438+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-00883,dev,Is the EUR accepted for exchanges?,36,fiat_currency_support,ok,36,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712441+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-00983,dev,Which fiat currencies are supported for holding and exchanging?,36,fiat_currency_support,ok,36,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712445+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-01089,dev,Can I have my card delivered on Tuesday?,12,card_delivery_estimate,ok,61,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712451+00:00,,0,0.98
+sim-B,simulation:sim-B,,train-01169,dev,Do I have to manually top up once I'm too low?,4,automatic_top_up,ok,4,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712455+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-01190,dev,When I'm traveling is it possible to add money automatically at certain time points?,4,automatic_top_up,ok,4,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712459+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-01251,dev,I cannot seem to use my card.,14,card_not_working,ok,14,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712463+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-01389,dev,How do I exchange currencies using this app?,33,exchange_via_app,ok,33,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712467+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-01510,dev,What do I do if my card is stolen?,41,lost_or_stolen_card,ok,41,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712470+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-01635,dev,As my kids get older are they able to get set up with their own accounts?,1,age_limit,ok,1,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712474+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-01745,dev,I entered my pin wrong  too many times.,49,pin_blocked,ok,49,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712477+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-01795,dev,Contactless payments need to be enabled for my card.,23,contactless_not_working,ok,23,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712481+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-01855,dev,what is the price of a transfer?,56,top_up_by_bank_transfer_charge,ok,36,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712487+00:00,,0,0.95
+sim-B,simulation:sim-B,,train-01998,dev,I'm still waiting for my top-up to go through,47,pending_top_up,ok,47,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712491+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-02078,dev,Am I able to cancel a transfer I just made,8,cancel_transfer,ok,8,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712495+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-02253,dev,Is there a limit to how much I can top-up?,60,top_up_limits,ok,60,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712501+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-02312,dev,What amount can I top-up?,60,top_up_limits,ok,60,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712504+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-02414,dev,I was given the wrong amount of cash,75,wrong_amount_of_cash_received,ok,75,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712508+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-02618,dev,Why am I charged a fee when using my debit or credit card?,15,card_payment_fee_charged,ok,15,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712512+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-02716,dev,Where is my last money transaction,66,transfer_not_received_by_recipient,ok,66,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712515+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-02865,dev,the money i transferred didnt arrive,66,transfer_not_received_by_recipient,ok,66,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712519+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-02945,dev,What forms of payment do you accept?,54,supported_cards_and_currencies,ok,54,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712523+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-03014,dev,Where do I order a virtual card?,40,getting_virtual_card,ok,42,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712529+00:00,,0,0.97
+sim-B,simulation:sim-B,,train-03153,dev,Can i use this card at any store?,10,card_acceptance,ok,10,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712533+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-03266,dev,Reasons for top up cancellation.,61,top_up_reverted,ok,61,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712537+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-03399,dev,"I deposited a check yesterday and Im not seeing it in my account. i need the money, is there something wrong with my account? check it out please",6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712540+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-03427,dev,"My friend deposited $100 into my account, but it is not showing up!",6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712544+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-03519,dev,"Hi, there is a suspicious payment from my card. I definitely do not know who this is or who could have made this payment.",16,card_payment_not_recognised,ok,16,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712547+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-03651,dev,I am here to change my adress.,30,edit_personal_details,ok,30,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712551+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-03669,dev,I need to change my address in the personal details.,30,edit_personal_details,ok,30,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712555+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-03782,dev,Why is identity verification required?,74,why_verify_identity,ok,74,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712558+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-03970,dev,I am having a problem proving who I am,68,unable_to_verify_identity,ok,68,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712562+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-04030,dev,I can't find the PIN.,38,get_physical_card,ok,38,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712566+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-04232,dev,"Please tell me, do you use Visa or Mastercard?",73,visa_or_mastercard,ok,73,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712569+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-04260,dev,How do I to up by card?,62,topping_up_by_card,ok,62,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712573+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-04320,dev,"If I want a friend to top off my account, can they?",62,topping_up_by_card,ok,62,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712576+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-04355,dev,"I need multiple cards per day, and they all have to be disposable.",29,disposable_card_limits,ok,29,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712582+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-04536,dev,What should I do if I think that someone might be using me card?,22,compromised_card,ok,11,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712588+00:00,,0,0.9
+sim-B,simulation:sim-B,,train-04570,dev,Where should I withdraw money from?,3,atm_support,ok,3,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712592+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-04631,dev,Can I withdraw from any ATM?,3,atm_support,ok,3,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712596+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-04807,dev,"I know this very late, but I just went through my statements from the last couple months and there's one quite large-ish payment that I definitely haven't made. Is it still possible to dispute it?",28,direct_debit_payment_not_recognised,ok,28,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712599+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-04900,dev,Instruct me how to reset the passcode.,44,passcode_forgotten,ok,7,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712605+00:00,,0,0.99
+sim-B,simulation:sim-B,,train-04959,dev,I was declined when trying to withdrawal cash!,26,declined_cash_withdrawal,ok,26,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712609+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-05045,dev,Please help me with my card. As i have tried to use my card in two different ATMs but repeatedly it was declining by ATM.,26,declined_cash_withdrawal,ok,26,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712612+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-05222,dev,It's been a few days since I've tried to pay a seller but the funds aren't going through. What is happening?,45,pending_card_payment,ok,45,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712617+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-05353,dev,"If I lost my phone, how can I stop someone from accessing my account through the app?",42,lost_or_stolen_phone,ok,42,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712620+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-05458,dev,I think I deserve a refunded on a certain item.,52,request_refund,ok,52,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712624+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-05466,dev,It has been forever ago that I made an order online. The product simply is not coming. Just give me back my money because I'm not paying these people.,52,request_refund,ok,4,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712630+00:00,,0,0.93
+sim-B,simulation:sim-B,,train-05599,dev,I have a transfer that was declined.,27,declined_transfer,ok,27,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712633+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-05721,dev,I made a purchase a few weeks ago but wasn't happy with it so recently requested a refund from the supplier.  Can you check where the money is?,51,Refund_not_showing_up,ok,51,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712637+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-05860,dev,The payment for the card did not go through,25,declined_card_payment,ok,25,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712641+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-06028,dev,"How long do you expect me to wait for the transfer? It finally worked out, but has been pending for a long time and it's quite urgent.",48,pending_transfer,ok,48,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712644+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-06202,dev,I need to terminate my account immediately.,55,terminate_account,ok,43,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712650+00:00,,0,0.92
+sim-B,simulation:sim-B,,train-06297,dev,How can I get my card out of the ATM?,18,card_swallowed,ok,18,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712654+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-06405,dev,Why was I charged twice?,63,transaction_charged_twice,ok,63,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712657+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-06570,dev,How can I find out the source of my available cash?,70,verify_source_of_funds,ok,70,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712661+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-06618,dev,How long will a transfer from Europe take?,67,transfer_timing,ok,67,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712665+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-06643,dev,How long does it take for a transfer to show up in my account?,67,transfer_timing,ok,67,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712670+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-06748,dev,It looks like my card payment might have been reverted.,53,reverted_card_payment?,ok,53,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712674+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-06902,dev,Are there any specific cash machines that I have to go to in order to change my PIN?,21,change_pin,ok,21,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712677+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-07116,dev,The app won't let me transfer money to a beneficiary,7,beneficiary_not_allowed,ok,7,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712681+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-07315,dev,Why was my transfer charged a fee?,64,transfer_fee_charged,ok,64,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712685+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-07382,dev,Can I get paid for this in another currency?,50,receiving_money,ok,50,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712688+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-07405,dev,Will my employer be able to pay me with this service,50,receiving_money,ok,32,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712694+00:00,,0,0.92
+sim-B,simulation:sim-B,,train-07564,dev,Why can't I complete the transfer?,35,failed_transfer,ok,35,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712703+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-07572,dev,Can I add money to my account via bank transfer?,65,transfer_into_account,ok,65,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712708+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-07767,dev,Can I verify my top-up card?,71,verify_top_up,ok,71,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712711+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-07781,dev,why do you verify the top up,71,verify_top_up,ok,71,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712715+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-07865,dev,I would like to use one of my cards for a family member. Is that allowed?,39,getting_spare_card,ok,39,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712719+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-08018,dev,Where would I find top up by cash deposit?,58,top_up_by_cash_or_cheque,ok,58,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712722+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-08048,dev,Where can the cards be delivered?,43,order_physical_card,ok,43,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712726+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-08173,dev,My disposable virtual card got rejected,72,virtual_card_not_working,ok,72,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712730+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-08195,dev,"I received my Virtual card information, but was unable to use it to make a purchase. Why did this happen and what can I do?",72,virtual_card_not_working,ok,72,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712733+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-08278,dev,I think that the exchange rate for the withdrawal of my cash is not right.,76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712737+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-08351,dev,"I draw out money from your ATM during holidays, and was charged insanely. I wouldn't have done it, if i had a little sense about the shocking charges.",76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712741+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-08444,dev,How can I get a virtual card for a one-time transaction?,37,get_disposable_virtual_card,ok,37,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712744+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-08540,dev,I really need to top-up my card today urgently but my card keeps getting declined!! Can you please resolve this problem or let me know if you have any alternatives,59,top_up_failed,ok,59,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712748+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-08618,dev,Where is the money that I transferred.,5,balance_not_updated_after_bank_transfer,ok,5,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712751+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-08647,dev,Balance hasn't been updated following a bank transfer,5,balance_not_updated_after_bank_transfer,ok,5,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712757+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-08940,dev,Cash I did not get showed up in my account,20,cash_withdrawal_not_recognised,ok,20,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712761+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-08959,dev,exchanging currencies costs what?,31,exchange_charge,ok,48,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712770+00:00,,0,0.91
+sim-B,simulation:sim-B,,train-09025,dev,Is there a fee for exchanging currency?,31,exchange_charge,ok,31,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712774+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-09158,dev,Will I be charged a fee for topping up using a European card?,57,top_up_by_card_charge,ok,42,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712779+00:00,,0,0.89
+sim-B,simulation:sim-B,,train-09221,dev,Can I activate my card with the app?,0,activate_my_card,ok,0,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712783+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-09284,dev,How can i make my card active?,0,activate_my_card,ok,0,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712787+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-09438,dev,"Do you charge for cash withdrawals?  I want to get my hands on my own money and you appear to be charging me for the pleasure! Why is this, you'd never get this with my high street bank!",19,cash_withdrawal_charge,ok,19,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712790+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-09555,dev,"When will I get a new card when I order it, and how much will it cost.",9,card_about_to_expire,ok,9,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712794+00:00,,1,0.95
+sim-B,simulation:sim-B,,train-09676,dev,Can I top up using my apple watch?,2,apple_pay_or_google_pay,ok,2,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712797+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-09758,dev,Google Pay won't let me top up.,2,apple_pay_or_google_pay,ok,2,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712801+00:00,,1,0.99
+sim-B,simulation:sim-B,,train-09861,dev,What do you require for identification verification?,69,verify_my_identity,ok,69,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712805+00:00,,1,0.9
+sim-B,simulation:sim-B,,train-09944,dev,are there any country restrictions?,24,country_support,ok,24,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712808+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00012,test,I still don't have my card after 2 weeks.  What should I do?,11,card_arrival,ok,11,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712812+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00038,test,What is the tracking number for the card you sent?,11,card_arrival,ok,11,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712816+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00051,test,Can I link an existing card?,13,card_linking,ok,13,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712820+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00065,test,how do I link an already existing card?,13,card_linking,ok,13,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712823+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00106,test,The exchange rate would be?,32,exchange_rate,ok,32,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712827+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00114,test,Can you tell me the foreign exchange rate?,32,exchange_rate,ok,32,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712831+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00118,test,when does the rate get determined,32,exchange_rate,ok,32,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712834+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00133,test,Why is the exchange rate wrong when I purchase something abroad?,17,card_payment_wrong_exchange_rate,ok,17,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712838+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00141,test,"When I made a purchase last Saturday, I was charged extra. Did I receive the right exchange rate?",17,card_payment_wrong_exchange_rate,ok,17,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712844+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00153,test,The incorrect rate was used in my foreign purchase,17,card_payment_wrong_exchange_rate,ok,17,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712847+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00183,test,Why was I overcharged a pound!?,34,extra_charge_on_statement,ok,34,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712851+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00192,test,"Can you help me with a weird charge?  It's a pound charge that never goes away from the statement view on the app I'm using.  It's not described as anything but ""Pending"", and that status has never changed during the last two days.",34,extra_charge_on_statement,ok,34,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712855+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-00211,test,Why is a transaction showing as pending when I recieved cash from an ATM?,46,pending_cash_withdrawal,ok,46,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712858+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00233,test,Why does it say pending cash withdrawal on my statement?,46,pending_cash_withdrawal,ok,13,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712864+00:00,,0,0.87
+sim-B,simulation:sim-B,,test-00244,test,What currencies can I hold money in?,36,fiat_currency_support,ok,36,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712868+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00254,test,Do you offer additional currency options?,36,fiat_currency_support,ok,43,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712873+00:00,,0,0.96
+sim-B,simulation:sim-B,,test-00256,test,What fiat currencies are supported for holding and exchange?,36,fiat_currency_support,ok,36,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712877+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00282,test,i need my card quick,12,card_delivery_estimate,ok,12,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712881+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00312,test,I am waiting for my card to arrive.,12,card_delivery_estimate,ok,12,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712884+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00319,test,Can I have it be delivered at a certain time?,12,card_delivery_estimate,ok,12,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712888+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00323,test,"I'm running out of money, can I  auto top up?",4,automatic_top_up,ok,4,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712892+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00328,test,Can I have it add money at certain time intervals when I travel?,4,automatic_top_up,ok,4,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712895+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00347,test,Can I have it add money automatically in certain intervals?,4,automatic_top_up,ok,4,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712899+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00370,test,How can I get my physical card to work?,14,card_not_working,ok,14,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712902+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00395,test,My card doesn't accept any transaction at all. What's wrong??,14,card_not_working,ok,14,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712906+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00398,test,How do I find out why my card won't work?,14,card_not_working,ok,14,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712910+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00410,test,What all currencies can be exchanged?,33,exchange_via_app,ok,33,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712913+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00414,test,Is it possible to change to another currency?,33,exchange_via_app,ok,33,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712917+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00444,test,My card is lost! What can I do?,41,lost_or_stolen_card,ok,41,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712921+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00465,test,My bags were stolen. I need a new card but need to cancel the stolen one.,41,lost_or_stolen_card,ok,41,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712927+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00479,test,Help me please!  My card was stolen!,41,lost_or_stolen_card,ok,41,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712930+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00500,test,Can my 19 year old daughter open a savings account at the bank?,1,age_limit,ok,1,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712934+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00513,test,How old do my kids have to be to use your service?,1,age_limit,ok,1,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712938+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00542,test,"My account is blocked, how do I log in now",49,pin_blocked,ok,49,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712941+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-00553,test,Can I unblock my pin?,49,pin_blocked,ok,49,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712945+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00555,test,"My card's frozen, what can I do?",49,pin_blocked,ok,49,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712949+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00578,test,My contactless is not working,23,contactless_not_working,ok,23,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712952+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-00588,test,Why isn't my contactless not working?,23,contactless_not_working,ok,23,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712957+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00601,test,I would like to make a transfer. How much does it cost?,56,top_up_by_bank_transfer_charge,ok,56,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712961+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00609,test,Is it possible to get a transfer from SWIFT?,56,top_up_by_bank_transfer_charge,ok,56,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712964+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00615,test,Are there charges for receiving a SEPA transfer?,56,top_up_by_bank_transfer_charge,ok,13,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712970+00:00,,0,0.95
+sim-B,simulation:sim-B,,test-00641,test,My card was topped this morning but I can't see the funds. Why didn't it complete?,47,pending_top_up,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712974+00:00,,0,0.0
+sim-B,simulation:sim-B,,test-00646,test,Could you explain why my top-up has gone through yet?,47,pending_top_up,ok,47,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712978+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00670,test,"My top up hasn't worked, it's been stuck in pending for the last couple hours",47,pending_top_up,ok,47,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712981+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00693,test,Help me cancel my transaction,8,cancel_transfer,ok,8,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712985+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-00704,test,I made a mistake with a transaction!,8,cancel_transfer,ok,8,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712989+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00714,test,Cancel my last transfer,8,cancel_transfer,ok,8,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712992+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00726,test,Are the top-ups limited?,60,top_up_limits,ok,60,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.712996+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-00751,test,what is the most i can top up?,60,top_up_limits,ok,60,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713000+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00752,test,Is there a limit to how high I can top-up?,60,top_up_limits,ok,37,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713005+00:00,,0,0.95
+sim-B,simulation:sim-B,,test-00767,test,The ATM gave me the wrong amount of cash today when I went to withdraw. The app says it was more.,75,wrong_amount_of_cash_received,ok,75,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713011+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00778,test,"I went to withdraw some cash earlier today, but seems the ATM gave me the wrong amount of cash! The amount showing up in the app is a lot more",75,wrong_amount_of_cash_received,ok,68,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713017+00:00,,0,0.92
+sim-B,simulation:sim-B,,test-00784,test,Something went wrong with my withdrawal. The amount of money isn't right.,75,wrong_amount_of_cash_received,ok,75,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713020+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00809,test,Why was I charged an extra fee when paying with my card?,15,card_payment_fee_charged,ok,15,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713024+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00814,test,When would my card be charged an extra fee for a transaction?,15,card_payment_fee_charged,ok,15,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713028+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-00828,test,For the first time I got a fee on my account. How do I know when you charge these fees?,15,card_payment_fee_charged,ok,15,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713031+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00844,test,I tried to send someone money but they haven't received it.,66,transfer_not_received_by_recipient,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713035+00:00,,0,0.0
+sim-B,simulation:sim-B,,test-00856,test,"I transferred the rent payment for my new place a couple days ago but the landlord says it's not there yet, despite showing up as done on my side. I checked the account number I sent it to and it's definitely correct. Can you please verify if the transaction really went through or not?",66,transfer_not_received_by_recipient,ok,66,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713039+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-00875,test,"How long do transfers need to come through? I sent some money to a friend, she needs it urgently, but seems it's still not there yet after a couple hours.",66,transfer_not_received_by_recipient,ok,66,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713043+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-00888,test,Can I use my American Express to add money to my account?,54,supported_cards_and_currencies,ok,54,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713046+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-00903,test,"I want to add money but don't know what currencies you accept, can you tell me?",54,supported_cards_and_currencies,ok,54,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713050+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00926,test,Can you tell me how to order a virtual card?,40,getting_virtual_card,ok,32,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713056+00:00,,0,0.95
+sim-B,simulation:sim-B,,test-00928,test,what is the virtual card,40,getting_virtual_card,ok,40,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713060+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-00974,test,What places will accept my card for payment?,10,card_acceptance,ok,10,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713063+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-00996,test,Will filling stations accept my card?,10,card_acceptance,ok,10,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713067+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01018,test,I topped up but the app reverted it,61,top_up_reverted,ok,33,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713072+00:00,,0,0.98
+sim-B,simulation:sim-B,,test-01023,test,"When I topped up, the app reverted my funds.",61,top_up_reverted,ok,61,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713076+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01037,test,My top-up has been cancelled.,61,top_up_reverted,ok,61,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713080+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01052,test,I made a deposit this morning but it is still pending?,6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713083+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01079,test,"I sent you a cheque couple days ago, nothing happened to my account yet! This is unacceptable, where is my money??",6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713087+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01083,test,There is a payment that is not mine in the app.  Please advise/,16,card_payment_not_recognised,ok,16,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713091+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01110,test,I see a charge on my account that I don't recall making. I feel like my account may have been compromised.,16,card_payment_not_recognised,ok,16,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713096+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01112,test,Somebody used my card to make a purchase,16,card_payment_not_recognised,ok,40,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713102+00:00,,0,0.91
+sim-B,simulation:sim-B,,test-01122,test,How do I update my details?,30,edit_personal_details,ok,30,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713106+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01139,test,How can I modify my details?,30,edit_personal_details,ok,30,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713109+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01174,test,What is the purpose for the identity check,74,why_verify_identity,ok,74,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713115+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01176,test,What is the point of an identity check?,74,why_verify_identity,ok,62,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713121+00:00,,0,0.96
+sim-B,simulation:sim-B,,test-01185,test,Why do you require so many identity details?,74,why_verify_identity,ok,74,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713125+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01203,test,I am having trouble verifying my identity.,68,unable_to_verify_identity,ok,68,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713129+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01204,test,what do i do if my verification failed,68,unable_to_verify_identity,ok,68,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713132+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01228,test,I am experiencing difficulty providing my identity.,68,unable_to_verify_identity,ok,68,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713136+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01248,test,I don't know where to look to find my PIN.,38,get_physical_card,ok,38,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713140+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01260,test,Does my PIN come with my card?,38,get_physical_card,ok,38,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713143+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01262,test,Why isn't my PIN available yet?,38,get_physical_card,ok,38,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713149+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01300,test,are both visa and mastercard available to me?,73,visa_or_mastercard,ok,73,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713152+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01312,test,I would rather the Mastercard.,73,visa_or_mastercard,ok,73,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713156+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01317,test,Can you let me know if Visa is among the card scheme assignments?,73,visa_or_mastercard,ok,73,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713160+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01331,test,Where's the money that got charged to my card? It's not showing up in my account balance,62,topping_up_by_card,ok,62,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713165+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01347,test,Cannot access my top up.,62,topping_up_by_card,ok,62,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713169+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01361,test,Can I make many disposable cards per day?,29,disposable_card_limits,ok,29,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713173+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01372,test,What if I need multiple disposable cards?,29,disposable_card_limits,ok,29,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713176+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01381,test,How can I create many temporary cards daily?,29,disposable_card_limits,ok,29,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713180+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01409,test,Someone else may be using my card.  There are transactions I don't recognize.,22,compromised_card,ok,18,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713188+00:00,,0,0.87
+sim-B,simulation:sim-B,,test-01426,test,"I'm not certain, but someone may be using my card.",22,compromised_card,ok,68,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713194+00:00,,0,0.94
+sim-B,simulation:sim-B,,test-01436,test,I think someone copied the numbers on my card and is using them.,22,compromised_card,ok,22,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713197+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01443,test,Is there a list of ATM machines?,3,atm_support,ok,33,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713203+00:00,,0,0.89
+sim-B,simulation:sim-B,,test-01446,test,Which ATM's accept my card?,3,atm_support,ok,3,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713207+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01451,test,What ATMs is the card okay to use at?,3,atm_support,ok,3,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713210+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01487,test,There's a Direct Debit payment in my account that I didn't make,28,direct_debit_payment_not_recognised,ok,28,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713214+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01508,test,I didn't make this direct debit transaction,28,direct_debit_payment_not_recognised,ok,28,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713218+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01543,test,I need help resetting my passcode to access my app.,44,passcode_forgotten,ok,44,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713221+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01549,test,Is there a way to reset my passcode?,44,passcode_forgotten,ok,44,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713225+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01552,test,How do I reset the passcode?,44,passcode_forgotten,ok,44,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713229+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01572,test,I tried to make a cash withdrawal and it was declined. Why did this happen?,26,declined_cash_withdrawal,ok,26,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713233+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01573,test,I can't get money out of the ATM,26,declined_cash_withdrawal,ok,26,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713237+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01585,test,Why was my cash withdrawal declined?,26,declined_cash_withdrawal,ok,26,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713240+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01607,test,"I recently made a payment, and it is showing up in my account as ""pending"". What does that mean?",45,pending_card_payment,ok,45,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713247+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01620,test,Why is a payment showing up on my card as pending?,45,pending_card_payment,ok,45,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713251+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01640,test,My phone was stolen,42,lost_or_stolen_phone,ok,42,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713255+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01663,test,I was mugged and everything taken.  What do I do to protect my account?,42,lost_or_stolen_phone,ok,15,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713261+00:00,,0,0.9
+sim-B,simulation:sim-B,,test-01669,test,"If I lost my phone, can someone use my account?",42,lost_or_stolen_phone,ok,42,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713265+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01686,test,I would like a refund for something I bought,52,request_refund,ok,52,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713268+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01688,test,Can I have a refund?,52,request_refund,ok,52,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713272+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01711,test,I want to reverse a purchase. Can I cancel it?,52,request_refund,ok,52,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713277+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01737,test,Trouble transferring transaction contact for help,27,declined_transfer,ok,27,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713281+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01742,test,Why was the transfer declined?,27,declined_transfer,ok,27,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713285+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01756,test,My card is being declined online. Could you tell me what might be broken or wrong with the account?,27,declined_transfer,ok,27,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713288+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01769,test,Can you tell me why my refund is not showing in my statement?,51,Refund_not_showing_up,ok,51,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713292+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01775,test,I bought something and returned it and the money from the return isn't in my account.,51,Refund_not_showing_up,ok,51,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713296+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01816,test,"I have a card payment that was declined, but why?",25,declined_card_payment,ok,25,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713299+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01827,test,Please explain why my card was declined?,25,declined_card_payment,ok,25,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713303+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01836,test,Card payment declined?,25,declined_card_payment,ok,25,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713307+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01841,test,How long for money transfer to show?,48,pending_transfer,ok,64,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713312+00:00,,0,0.94
+sim-B,simulation:sim-B,,test-01872,test,For how long will my transfer be pending?,48,pending_transfer,ok,48,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713316+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01884,test,What steps do I need to take to close my account?,55,terminate_account,ok,55,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713320+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01886,test,Please delete my account right now!,55,terminate_account,ok,55,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713323+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01904,test,Please terminate my account.,55,terminate_account,ok,55,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713327+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-01924,test,HOw do I get my card back after the ATM has pulled it in?,18,card_swallowed,ok,18,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713331+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01953,test,I was taking out funds and was unable to regain my card.,18,card_swallowed,ok,18,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713334+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-01962,test,Why am I being charged twice fro a restaurant?,63,transaction_charged_twice,ok,63,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713338+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01972,test,It appears that I am being double charged for some items that I have purchased this past week.  Please review and correct.,63,transaction_charged_twice,ok,63,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713341+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-01987,test,My card has been charged two separate times for a single transaction.,63,transaction_charged_twice,ok,63,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713345+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02001,test,I want information about the source of funds.,70,verify_source_of_funds,ok,70,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713349+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02010,test,How can I tell where my funds came from?,70,verify_source_of_funds,ok,70,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713352+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02034,test,Where do my funds come from?,70,verify_source_of_funds,ok,70,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713358+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02041,test,What is the wait time for a transfer from the US?,67,transfer_timing,ok,67,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713362+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02071,test,I have to transfer something to China as fast as I can. How long will it take to arrive in China?,67,transfer_timing,ok,67,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713365+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02081,test,My card payment was reverted.  Why?,53,reverted_card_payment?,ok,26,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713371+00:00,,0,0.88
+sim-B,simulation:sim-B,,test-02087,test,"Hello, My money went through for my purchase but now I got contacted from the seller noting that they didn't receive it. Then the money was returned to my account and I'm not sure why this occurred. So if you can resolve this issue please.",53,reverted_card_payment?,ok,53,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713375+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02119,test,Why has payment been returned?,53,reverted_card_payment?,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713378+00:00,,0,0.0
+sim-B,simulation:sim-B,,test-02128,test,I want to set a new PIN,21,change_pin,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713382+00:00,,0,0.0
+sim-B,simulation:sim-B,,test-02138,test,I want to choose a different PIN.,21,change_pin,ok,21,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713386+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02158,test,How to change the PIN on my card?,21,change_pin,ok,66,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713391+00:00,,0,0.98
+sim-B,simulation:sim-B,,test-02167,test,Why did I get a message saying that my transfer is not possible?  I have done this before no problem.  Please fix.,7,beneficiary_not_allowed,ok,7,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713395+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02196,test,why isnt my account allowing transfers,7,beneficiary_not_allowed,ok,6,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713400+00:00,,0,0.97
+sim-B,simulation:sim-B,,test-02203,test,Why was a charged just for transferring?,64,transfer_fee_charged,ok,64,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713404+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02214,test,"Hi,  Please help me, as i have transferred some amount but receiver did not get the same amount. He received a bit less. Due to this again i need to transfer the difference.   I have transferred money but beneficiary's account is credited with less amount. Now i have transfer the difference of the amount. I think there is some issue, could you please look into this.",64,transfer_fee_charged,ok,64,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713408+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02215,test,"Why did I get charged for something I bought online? Even though it was international, I thought it would be covered.",64,transfer_fee_charged,ok,64,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713412+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02240,test,Will salary be received through this?,50,receiving_money,ok,50,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713415+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02266,test,How do I deposit my paycheck to this account?,50,receiving_money,ok,54,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713421+00:00,,0,0.91
+sim-B,simulation:sim-B,,test-02288,test,Why did my transfer not go through?,35,failed_transfer,ok,35,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713425+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02300,test,What are your policies for card transfers?,35,failed_transfer,ok,35,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713429+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02302,test,I tried to make a transfer but it failed,35,failed_transfer,ok,35,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713432+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02349,test,Are there ways to transfer money into my account?,65,transfer_into_account,ok,65,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713436+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02354,test,I checked my account today and it said I was out of money. How do I transfer money into my account?,65,transfer_into_account,ok,47,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713442+00:00,,0,0.87
+sim-B,simulation:sim-B,,test-02357,test,I'm trying to transfer money into my account.,65,transfer_into_account,ok,65,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713447+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02369,test,Why do you need code verification for my top up?,71,verify_top_up,ok,71,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713451+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02384,test,How do I go forth verifying my top-up card?,71,verify_top_up,ok,71,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713455+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02387,test,Is there a verification code for the top-up card?,71,verify_top_up,ok,71,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713459+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02425,test,Can i have a second physical card for this account?,39,getting_spare_card,ok,39,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713463+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02429,test,Can i have a card to my daughter?,39,getting_spare_card,ok,42,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713469+00:00,,0,0.88
+sim-B,simulation:sim-B,,test-02438,test,"My child needs a card, how can I add them to the account I currently have?",39,getting_spare_card,ok,39,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713473+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02450,test,Where do I locate topping up with cash.,58,top_up_by_cash_or_cheque,ok,58,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713476+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02473,test,Can I top up my account with a cheque?,58,top_up_by_cash_or_cheque,ok,58,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713480+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02490,test,Do you charge for physical cards,43,order_physical_card,ok,43,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713484+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02497,test,Please tell me how to get a physical card.,43,order_physical_card,ok,43,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713488+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02528,test,I was at the store earlier and my virtual card didn't work. What's the solution for this problem?,72,virtual_card_not_working,ok,72,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713491+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02532,test,Why was my virtual card declined when attempting to setup automatic billing?,72,virtual_card_not_working,ok,72,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713495+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02553,test,"My disposable virtual card was rejected by the merchant, please help?",72,virtual_card_not_working,ok,72,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713499+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02571,test,Is there a fee for exchanging cash?,76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713502+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02576,test,It seems I was overcharged when I used an ATM while on vacation. If I knew about your fees in advance I sure would have gone somewhere else.,76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713506+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02581,test,I feel like too much money was taken during my currency exchange.,76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713510+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02611,test,"Is there anyway, I can get a disposable virtual card?",37,get_disposable_virtual_card,ok,37,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713513+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02624,test,What does a disposable virtual card do?,37,get_disposable_virtual_card,ok,37,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713517+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02633,test,Will I be able to get a disposable virtual card as well?,37,get_disposable_virtual_card,ok,39,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713522+00:00,,0,0.91
+sim-B,simulation:sim-B,,test-02655,test,Why did my top up not work?,59,top_up_failed,ok,59,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713526+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02672,test,Why can't I top up?,59,top_up_failed,ok,59,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713532+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02673,test,My top-up has failed.,59,top_up_failed,ok,21,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713539+00:00,,0,0.96
+sim-B,simulation:sim-B,,test-02680,test,I made a transfer a few hours ago from a UK banking account.  I do not yet see the transfer.  Please check on this for me.,5,balance_not_updated_after_bank_transfer,ok,5,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713543+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02700,test,I made a transfer and it doesnt' show up in my account.,5,balance_not_updated_after_bank_transfer,ok,5,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713547+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02753,test,I didn't take out money from an ATM but my app statement shows that I did. How can I fix this?,20,cash_withdrawal_not_recognised,ok,20,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713550+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02754,test,"Someone has stolen my card. Even though I have my card with me, someone just made a 500£ cash withdrawal. Please help as soon as possible.",20,cash_withdrawal_not_recognised,ok,20,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713554+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02766,test,How much more do I have to pay to exchange currencies?,31,exchange_charge,ok,31,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713558+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02774,test,Is there a fee for exchanging foreign currencies?,31,exchange_charge,ok,56,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713563+00:00,,0,0.87
+sim-B,simulation:sim-B,,test-02827,test,"When using a US card, what is the cost for a top up/off?",57,top_up_by_card_charge,ok,57,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713567+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02828,test,"I need to use a European card for a top up, what will the charge be?",57,top_up_by_card_charge,ok,57,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713571+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02834,test,Is their a fee for top ups?,57,top_up_by_card_charge,ok,57,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713575+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02849,test,How do I activate a card I received?,0,activate_my_card,ok,0,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713580+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02850,test,Why can't I activate my card?,0,activate_my_card,ok,0,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713584+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-02854,test,Would like to use my card and need to activate it first.  Can you help me do this?,0,activate_my_card,ok,0,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713587+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02882,test,Why am I being charged when I withdraw cash?,19,cash_withdrawal_charge,ok,19,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713591+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02909,test,"I thought cash withdrawals were free? Why have I been charged a fee? Also, how much is this fee?",19,cash_withdrawal_charge,ok,19,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713595+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02927,test,how long and how much does it cost for new card,9,card_about_to_expire,ok,9,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713598+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02950,test,The expiration date of my card is approaching .,9,card_about_to_expire,ok,9,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713603+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-02968,test,do i have to setup apple pay to use it,2,apple_pay_or_google_pay,ok,2,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713606+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-02998,test,How do I use the top up app with my apple watch?,2,apple_pay_or_google_pay,ok,2,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713610+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-03028,test,which kind of documentation do I need for identity check?,69,verify_my_identity,ok,69,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713613+00:00,,1,0.95
+sim-B,simulation:sim-B,,test-03032,test,What do I need to show who I am?,69,verify_my_identity,ok,69,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713619+00:00,,1,0.9
+sim-B,simulation:sim-B,,test-03066,test,"I need a card, but I'm in the US at the moment.",24,country_support,ok,24,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713623+00:00,,1,0.99
+sim-B,simulation:sim-B,,test-03069,test,In what countries do you do business?,24,country_support,ok,24,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.713626+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-00008,dev,Does the package with my card have tracking?,11,card_arrival,ok,11,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716131+00:00,,1,0.97
+sim-C,simulation:sim-C,,train-00261,dev,help me link my card,13,card_linking,ok,13,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716137+00:00,,1,0.9
+sim-C,simulation:sim-C,,train-00266,dev,Where do I go to get my new card linked?,13,card_linking,ok,13,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716141+00:00,,1,0.94
+sim-C,simulation:sim-C,,train-00321,dev,How is the exchange rate calculated?,32,exchange_rate,ok,32,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716146+00:00,,1,0.78
+sim-C,simulation:sim-C,,train-00368,dev,How do you do exchanges?,32,exchange_rate,ok,32,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716150+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-00486,dev,What do i do if the exchange rate was wrong for the item i bought overseas?,17,card_payment_wrong_exchange_rate,ok,17,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716154+00:00,,1,0.92
+sim-C,simulation:sim-C,,train-00614,dev,why is there a service fee on my statement?,34,extra_charge_on_statement,ok,34,,0.77,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716158+00:00,,1,0.77
+sim-C,simulation:sim-C,,train-00619,dev,I got billed an extra pound!,34,extra_charge_on_statement,ok,73,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716165+00:00,,0,0.74
+sim-C,simulation:sim-C,,train-00746,dev,"Cash withdrawal has been pending, why is it so?",46,pending_cash_withdrawal,ok,46,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716169+00:00,,1,0.95
+sim-C,simulation:sim-C,,train-00876,dev,my cash withdrawal has not come out of my account yet.,46,pending_cash_withdrawal,ok,46,,0.69,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716173+00:00,,1,0.69
+sim-C,simulation:sim-C,,train-00883,dev,Is the EUR accepted for exchanges?,36,fiat_currency_support,ok,36,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716177+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-00983,dev,Which fiat currencies are supported for holding and exchanging?,36,fiat_currency_support,ok,36,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716181+00:00,,1,0.91
+sim-C,simulation:sim-C,,train-01089,dev,Can I have my card delivered on Tuesday?,12,card_delivery_estimate,ok,12,,0.25,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716185+00:00,,1,0.25
+sim-C,simulation:sim-C,,train-01169,dev,Do I have to manually top up once I'm too low?,4,automatic_top_up,ok,4,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716189+00:00,,1,0.98
+sim-C,simulation:sim-C,,train-01190,dev,When I'm traveling is it possible to add money automatically at certain time points?,4,automatic_top_up,ok,4,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716193+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-01251,dev,I cannot seem to use my card.,14,card_not_working,ok,14,,0.64,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716196+00:00,,1,0.64
+sim-C,simulation:sim-C,,train-01389,dev,How do I exchange currencies using this app?,33,exchange_via_app,ok,33,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716200+00:00,,1,0.9
+sim-C,simulation:sim-C,,train-01510,dev,What do I do if my card is stolen?,41,lost_or_stolen_card,ok,41,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716204+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-01635,dev,As my kids get older are they able to get set up with their own accounts?,1,age_limit,ok,1,,0.61,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716210+00:00,,1,0.61
+sim-C,simulation:sim-C,,train-01745,dev,I entered my pin wrong  too many times.,49,pin_blocked,ok,49,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716214+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-01795,dev,Contactless payments need to be enabled for my card.,23,contactless_not_working,ok,23,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716217+00:00,,1,0.96
+sim-C,simulation:sim-C,,train-01855,dev,what is the price of a transfer?,56,top_up_by_bank_transfer_charge,ok,54,,0.16,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716223+00:00,,0,0.16
+sim-C,simulation:sim-C,,train-01998,dev,I'm still waiting for my top-up to go through,47,pending_top_up,ok,35,,0.37,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716229+00:00,,0,0.37
+sim-C,simulation:sim-C,,train-02078,dev,Am I able to cancel a transfer I just made,8,cancel_transfer,ok,8,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716233+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-02253,dev,Is there a limit to how much I can top-up?,60,top_up_limits,ok,60,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716237+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-02312,dev,What amount can I top-up?,60,top_up_limits,ok,60,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716240+00:00,,1,0.9
+sim-C,simulation:sim-C,,train-02414,dev,I was given the wrong amount of cash,75,wrong_amount_of_cash_received,ok,75,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716244+00:00,,1,0.81
+sim-C,simulation:sim-C,,train-02618,dev,Why am I charged a fee when using my debit or credit card?,15,card_payment_fee_charged,ok,15,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716247+00:00,,1,0.93
+sim-C,simulation:sim-C,,train-02716,dev,Where is my last money transaction,66,transfer_not_received_by_recipient,ok,66,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716251+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-02865,dev,the money i transferred didnt arrive,66,transfer_not_received_by_recipient,ok,66,,0.71,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716255+00:00,,1,0.71
+sim-C,simulation:sim-C,,train-02945,dev,What forms of payment do you accept?,54,supported_cards_and_currencies,ok,8,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716260+00:00,,0,0.76
+sim-C,simulation:sim-C,,train-03014,dev,Where do I order a virtual card?,40,getting_virtual_card,ok,40,,0.61,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716264+00:00,,1,0.61
+sim-C,simulation:sim-C,,train-03153,dev,Can i use this card at any store?,10,card_acceptance,ok,10,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716267+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-03266,dev,Reasons for top up cancellation.,61,top_up_reverted,ok,61,,0.84,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716271+00:00,,1,0.84
+sim-C,simulation:sim-C,,train-03399,dev,"I deposited a check yesterday and Im not seeing it in my account. i need the money, is there something wrong with my account? check it out please",6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716275+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-03427,dev,"My friend deposited $100 into my account, but it is not showing up!",6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716278+00:00,,1,0.92
+sim-C,simulation:sim-C,,train-03519,dev,"Hi, there is a suspicious payment from my card. I definitely do not know who this is or who could have made this payment.",16,card_payment_not_recognised,ok,16,,0.79,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716282+00:00,,1,0.79
+sim-C,simulation:sim-C,,train-03651,dev,I am here to change my adress.,30,edit_personal_details,ok,30,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716286+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-03669,dev,I need to change my address in the personal details.,30,edit_personal_details,ok,30,,0.61,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716289+00:00,,1,0.61
+sim-C,simulation:sim-C,,train-03782,dev,Why is identity verification required?,74,why_verify_identity,ok,74,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716295+00:00,,1,0.74
+sim-C,simulation:sim-C,,train-03970,dev,I am having a problem proving who I am,68,unable_to_verify_identity,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716298+00:00,,0,0.0
+sim-C,simulation:sim-C,,train-04030,dev,I can't find the PIN.,38,get_physical_card,ok,10,,0.57,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716304+00:00,,0,0.57
+sim-C,simulation:sim-C,,train-04232,dev,"Please tell me, do you use Visa or Mastercard?",73,visa_or_mastercard,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716308+00:00,,0,0.0
+sim-C,simulation:sim-C,,train-04260,dev,How do I to up by card?,62,topping_up_by_card,ok,62,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716311+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-04320,dev,"If I want a friend to top off my account, can they?",62,topping_up_by_card,ok,62,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716315+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-04355,dev,"I need multiple cards per day, and they all have to be disposable.",29,disposable_card_limits,ok,29,,0.72,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716318+00:00,,1,0.72
+sim-C,simulation:sim-C,,train-04536,dev,What should I do if I think that someone might be using me card?,22,compromised_card,ok,22,,0.42,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716322+00:00,,1,0.42
+sim-C,simulation:sim-C,,train-04570,dev,Where should I withdraw money from?,3,atm_support,ok,3,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716326+00:00,,1,0.89
+sim-C,simulation:sim-C,,train-04631,dev,Can I withdraw from any ATM?,3,atm_support,ok,3,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716329+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-04807,dev,"I know this very late, but I just went through my statements from the last couple months and there's one quite large-ish payment that I definitely haven't made. Is it still possible to dispute it?",28,direct_debit_payment_not_recognised,ok,28,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716333+00:00,,1,0.97
+sim-C,simulation:sim-C,,train-04900,dev,Instruct me how to reset the passcode.,44,passcode_forgotten,ok,44,,0.72,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716337+00:00,,1,0.72
+sim-C,simulation:sim-C,,train-04959,dev,I was declined when trying to withdrawal cash!,26,declined_cash_withdrawal,ok,51,,0.51,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716342+00:00,,0,0.51
+sim-C,simulation:sim-C,,train-05045,dev,Please help me with my card. As i have tried to use my card in two different ATMs but repeatedly it was declining by ATM.,26,declined_cash_withdrawal,ok,26,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716346+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-05222,dev,It's been a few days since I've tried to pay a seller but the funds aren't going through. What is happening?,45,pending_card_payment,ok,45,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716349+00:00,,1,0.97
+sim-C,simulation:sim-C,,train-05353,dev,"If I lost my phone, how can I stop someone from accessing my account through the app?",42,lost_or_stolen_phone,ok,42,,0.83,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716353+00:00,,1,0.83
+sim-C,simulation:sim-C,,train-05458,dev,I think I deserve a refunded on a certain item.,52,request_refund,ok,52,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716357+00:00,,1,0.93
+sim-C,simulation:sim-C,,train-05466,dev,It has been forever ago that I made an order online. The product simply is not coming. Just give me back my money because I'm not paying these people.,52,request_refund,ok,52,,0.51,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716360+00:00,,1,0.51
+sim-C,simulation:sim-C,,train-05599,dev,I have a transfer that was declined.,27,declined_transfer,ok,27,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716364+00:00,,1,0.81
+sim-C,simulation:sim-C,,train-05721,dev,I made a purchase a few weeks ago but wasn't happy with it so recently requested a refund from the supplier.  Can you check where the money is?,51,Refund_not_showing_up,ok,51,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716368+00:00,,1,0.96
+sim-C,simulation:sim-C,,train-05860,dev,The payment for the card did not go through,25,declined_card_payment,ok,25,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716371+00:00,,1,0.9
+sim-C,simulation:sim-C,,train-06028,dev,"How long do you expect me to wait for the transfer? It finally worked out, but has been pending for a long time and it's quite urgent.",48,pending_transfer,ok,48,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716377+00:00,,1,0.97
+sim-C,simulation:sim-C,,train-06202,dev,I need to terminate my account immediately.,55,terminate_account,ok,55,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716381+00:00,,1,0.82
+sim-C,simulation:sim-C,,train-06297,dev,How can I get my card out of the ATM?,18,card_swallowed,ok,18,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716384+00:00,,1,0.94
+sim-C,simulation:sim-C,,train-06405,dev,Why was I charged twice?,63,transaction_charged_twice,ok,63,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716388+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-06570,dev,How can I find out the source of my available cash?,70,verify_source_of_funds,ok,33,,0.61,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716394+00:00,,0,0.61
+sim-C,simulation:sim-C,,train-06618,dev,How long will a transfer from Europe take?,67,transfer_timing,ok,67,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716398+00:00,,1,0.82
+sim-C,simulation:sim-C,,train-06643,dev,How long does it take for a transfer to show up in my account?,67,transfer_timing,ok,67,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716401+00:00,,1,0.9
+sim-C,simulation:sim-C,,train-06748,dev,It looks like my card payment might have been reverted.,53,reverted_card_payment?,ok,53,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716405+00:00,,1,0.89
+sim-C,simulation:sim-C,,train-06902,dev,Are there any specific cash machines that I have to go to in order to change my PIN?,21,change_pin,ok,21,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716409+00:00,,1,0.76
+sim-C,simulation:sim-C,,train-07116,dev,The app won't let me transfer money to a beneficiary,7,beneficiary_not_allowed,ok,69,,0.52,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716414+00:00,,0,0.52
+sim-C,simulation:sim-C,,train-07315,dev,Why was my transfer charged a fee?,64,transfer_fee_charged,ok,64,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716418+00:00,,1,0.9
+sim-C,simulation:sim-C,,train-07382,dev,Can I get paid for this in another currency?,50,receiving_money,ok,50,,0.8,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716421+00:00,,1,0.8
+sim-C,simulation:sim-C,,train-07405,dev,Will my employer be able to pay me with this service,50,receiving_money,ok,20,,0.05,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716427+00:00,,0,0.05
+sim-C,simulation:sim-C,,train-07564,dev,Why can't I complete the transfer?,35,failed_transfer,ok,35,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716431+00:00,,1,0.76
+sim-C,simulation:sim-C,,train-07572,dev,Can I add money to my account via bank transfer?,65,transfer_into_account,ok,65,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716434+00:00,,1,0.76
+sim-C,simulation:sim-C,,train-07767,dev,Can I verify my top-up card?,71,verify_top_up,ok,71,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716438+00:00,,1,0.97
+sim-C,simulation:sim-C,,train-07781,dev,why do you verify the top up,71,verify_top_up,ok,55,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716443+00:00,,0,0.81
+sim-C,simulation:sim-C,,train-07865,dev,I would like to use one of my cards for a family member. Is that allowed?,39,getting_spare_card,ok,51,,0.77,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716449+00:00,,0,0.77
+sim-C,simulation:sim-C,,train-08018,dev,Where would I find top up by cash deposit?,58,top_up_by_cash_or_cheque,ok,13,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716454+00:00,,0,0.93
+sim-C,simulation:sim-C,,train-08048,dev,Where can the cards be delivered?,43,order_physical_card,ok,43,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716458+00:00,,1,0.93
+sim-C,simulation:sim-C,,train-08173,dev,My disposable virtual card got rejected,72,virtual_card_not_working,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716461+00:00,,0,0.0
+sim-C,simulation:sim-C,,train-08195,dev,"I received my Virtual card information, but was unable to use it to make a purchase. Why did this happen and what can I do?",72,virtual_card_not_working,ok,34,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716469+00:00,,0,0.88
+sim-C,simulation:sim-C,,train-08278,dev,I think that the exchange rate for the withdrawal of my cash is not right.,76,wrong_exchange_rate_for_cash_withdrawal,ok,63,,0.37,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716475+00:00,,0,0.37
+sim-C,simulation:sim-C,,train-08351,dev,"I draw out money from your ATM during holidays, and was charged insanely. I wouldn't have done it, if i had a little sense about the shocking charges.",76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.77,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716479+00:00,,1,0.77
+sim-C,simulation:sim-C,,train-08444,dev,How can I get a virtual card for a one-time transaction?,37,get_disposable_virtual_card,ok,37,,0.57,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716483+00:00,,1,0.57
+sim-C,simulation:sim-C,,train-08540,dev,I really need to top-up my card today urgently but my card keeps getting declined!! Can you please resolve this problem or let me know if you have any alternatives,59,top_up_failed,ok,59,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716486+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-08618,dev,Where is the money that I transferred.,5,balance_not_updated_after_bank_transfer,ok,5,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716490+00:00,,1,0.93
+sim-C,simulation:sim-C,,train-08647,dev,Balance hasn't been updated following a bank transfer,5,balance_not_updated_after_bank_transfer,ok,30,,0.84,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716496+00:00,,0,0.84
+sim-C,simulation:sim-C,,train-08940,dev,Cash I did not get showed up in my account,20,cash_withdrawal_not_recognised,ok,20,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716501+00:00,,1,0.91
+sim-C,simulation:sim-C,,train-08959,dev,exchanging currencies costs what?,31,exchange_charge,ok,28,,0.11,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716507+00:00,,0,0.11
+sim-C,simulation:sim-C,,train-09025,dev,Is there a fee for exchanging currency?,31,exchange_charge,ok,31,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716511+00:00,,1,0.95
+sim-C,simulation:sim-C,,train-09158,dev,Will I be charged a fee for topping up using a European card?,57,top_up_by_card_charge,ok,57,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716514+00:00,,1,0.87
+sim-C,simulation:sim-C,,train-09221,dev,Can I activate my card with the app?,0,activate_my_card,ok,0,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716518+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-09284,dev,How can i make my card active?,0,activate_my_card,ok,0,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716522+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-09438,dev,"Do you charge for cash withdrawals?  I want to get my hands on my own money and you appear to be charging me for the pleasure! Why is this, you'd never get this with my high street bank!",19,cash_withdrawal_charge,ok,19,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716528+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-09555,dev,"When will I get a new card when I order it, and how much will it cost.",9,card_about_to_expire,ok,9,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716531+00:00,,1,0.74
+sim-C,simulation:sim-C,,train-09676,dev,Can I top up using my apple watch?,2,apple_pay_or_google_pay,ok,2,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716535+00:00,,1,0.96
+sim-C,simulation:sim-C,,train-09758,dev,Google Pay won't let me top up.,2,apple_pay_or_google_pay,ok,2,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716539+00:00,,1,0.99
+sim-C,simulation:sim-C,,train-09861,dev,What do you require for identification verification?,69,verify_my_identity,ok,15,,0.17,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716544+00:00,,0,0.17
+sim-C,simulation:sim-C,,train-09944,dev,are there any country restrictions?,24,country_support,ok,24,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716548+00:00,,1,0.91
+sim-C,simulation:sim-C,,test-00012,test,I still don't have my card after 2 weeks.  What should I do?,11,card_arrival,ok,11,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716552+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00038,test,What is the tracking number for the card you sent?,11,card_arrival,ok,11,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716556+00:00,,1,0.92
+sim-C,simulation:sim-C,,test-00051,test,Can I link an existing card?,13,card_linking,ok,13,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716562+00:00,,1,0.96
+sim-C,simulation:sim-C,,test-00065,test,how do I link an already existing card?,13,card_linking,ok,13,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716565+00:00,,1,0.81
+sim-C,simulation:sim-C,,test-00106,test,The exchange rate would be?,32,exchange_rate,ok,32,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716569+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00114,test,Can you tell me the foreign exchange rate?,32,exchange_rate,ok,32,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716572+00:00,,1,0.74
+sim-C,simulation:sim-C,,test-00118,test,when does the rate get determined,32,exchange_rate,ok,32,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716576+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00133,test,Why is the exchange rate wrong when I purchase something abroad?,17,card_payment_wrong_exchange_rate,ok,17,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716580+00:00,,1,0.74
+sim-C,simulation:sim-C,,test-00141,test,"When I made a purchase last Saturday, I was charged extra. Did I receive the right exchange rate?",17,card_payment_wrong_exchange_rate,ok,17,,0.68,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716583+00:00,,1,0.68
+sim-C,simulation:sim-C,,test-00153,test,The incorrect rate was used in my foreign purchase,17,card_payment_wrong_exchange_rate,ok,17,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716587+00:00,,1,0.94
+sim-C,simulation:sim-C,,test-00183,test,Why was I overcharged a pound!?,34,extra_charge_on_statement,ok,34,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716591+00:00,,1,0.94
+sim-C,simulation:sim-C,,test-00192,test,"Can you help me with a weird charge?  It's a pound charge that never goes away from the statement view on the app I'm using.  It's not described as anything but ""Pending"", and that status has never changed during the last two days.",34,extra_charge_on_statement,ok,34,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716594+00:00,,1,0.76
+sim-C,simulation:sim-C,,test-00211,test,Why is a transaction showing as pending when I recieved cash from an ATM?,46,pending_cash_withdrawal,ok,46,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716598+00:00,,1,0.98
+sim-C,simulation:sim-C,,test-00233,test,Why does it say pending cash withdrawal on my statement?,46,pending_cash_withdrawal,ok,46,,0.23,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716601+00:00,,1,0.23
+sim-C,simulation:sim-C,,test-00244,test,What currencies can I hold money in?,36,fiat_currency_support,ok,36,,0.75,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716605+00:00,,1,0.75
+sim-C,simulation:sim-C,,test-00254,test,Do you offer additional currency options?,36,fiat_currency_support,ok,36,,0.31,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716609+00:00,,1,0.31
+sim-C,simulation:sim-C,,test-00256,test,What fiat currencies are supported for holding and exchange?,36,fiat_currency_support,ok,36,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716612+00:00,,1,0.81
+sim-C,simulation:sim-C,,test-00282,test,i need my card quick,12,card_delivery_estimate,ok,12,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716616+00:00,,1,0.82
+sim-C,simulation:sim-C,,test-00312,test,I am waiting for my card to arrive.,12,card_delivery_estimate,ok,12,,0.72,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716620+00:00,,1,0.72
+sim-C,simulation:sim-C,,test-00319,test,Can I have it be delivered at a certain time?,12,card_delivery_estimate,ok,12,,0.8,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716623+00:00,,1,0.8
+sim-C,simulation:sim-C,,test-00323,test,"I'm running out of money, can I  auto top up?",4,automatic_top_up,ok,4,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716627+00:00,,1,0.88
+sim-C,simulation:sim-C,,test-00328,test,Can I have it add money at certain time intervals when I travel?,4,automatic_top_up,ok,4,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716631+00:00,,1,0.86
+sim-C,simulation:sim-C,,test-00347,test,Can I have it add money automatically in certain intervals?,4,automatic_top_up,ok,4,,0.65,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716634+00:00,,1,0.65
+sim-C,simulation:sim-C,,test-00370,test,How can I get my physical card to work?,14,card_not_working,ok,14,,0.55,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716641+00:00,,1,0.55
+sim-C,simulation:sim-C,,test-00395,test,My card doesn't accept any transaction at all. What's wrong??,14,card_not_working,ok,14,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716645+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00398,test,How do I find out why my card won't work?,14,card_not_working,ok,14,,0.26,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716649+00:00,,1,0.26
+sim-C,simulation:sim-C,,test-00410,test,What all currencies can be exchanged?,33,exchange_via_app,ok,33,,0.73,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716652+00:00,,1,0.73
+sim-C,simulation:sim-C,,test-00414,test,Is it possible to change to another currency?,33,exchange_via_app,ok,33,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716656+00:00,,1,0.98
+sim-C,simulation:sim-C,,test-00444,test,My card is lost! What can I do?,41,lost_or_stolen_card,ok,41,,0.84,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716660+00:00,,1,0.84
+sim-C,simulation:sim-C,,test-00465,test,My bags were stolen. I need a new card but need to cancel the stolen one.,41,lost_or_stolen_card,ok,41,,0.61,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716663+00:00,,1,0.61
+sim-C,simulation:sim-C,,test-00479,test,Help me please!  My card was stolen!,41,lost_or_stolen_card,ok,41,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716667+00:00,,1,0.92
+sim-C,simulation:sim-C,,test-00500,test,Can my 19 year old daughter open a savings account at the bank?,1,age_limit,ok,1,,0.7,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716670+00:00,,1,0.7
+sim-C,simulation:sim-C,,test-00513,test,How old do my kids have to be to use your service?,1,age_limit,ok,1,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716674+00:00,,1,0.88
+sim-C,simulation:sim-C,,test-00542,test,"My account is blocked, how do I log in now",49,pin_blocked,ok,49,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716678+00:00,,1,0.82
+sim-C,simulation:sim-C,,test-00553,test,Can I unblock my pin?,49,pin_blocked,ok,53,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716683+00:00,,0,0.99
+sim-C,simulation:sim-C,,test-00555,test,"My card's frozen, what can I do?",49,pin_blocked,ok,11,,0.8,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716689+00:00,,0,0.8
+sim-C,simulation:sim-C,,test-00578,test,My contactless is not working,23,contactless_not_working,ok,23,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716693+00:00,,1,0.95
+sim-C,simulation:sim-C,,test-00588,test,Why isn't my contactless not working?,23,contactless_not_working,ok,23,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716696+00:00,,1,0.96
+sim-C,simulation:sim-C,,test-00601,test,I would like to make a transfer. How much does it cost?,56,top_up_by_bank_transfer_charge,ok,56,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716700+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00609,test,Is it possible to get a transfer from SWIFT?,56,top_up_by_bank_transfer_charge,ok,56,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716704+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00615,test,Are there charges for receiving a SEPA transfer?,56,top_up_by_bank_transfer_charge,ok,21,,0.42,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716709+00:00,,0,0.42
+sim-C,simulation:sim-C,,test-00641,test,My card was topped this morning but I can't see the funds. Why didn't it complete?,47,pending_top_up,ok,47,,0.75,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716713+00:00,,1,0.75
+sim-C,simulation:sim-C,,test-00646,test,Could you explain why my top-up has gone through yet?,47,pending_top_up,ok,45,,0.62,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716718+00:00,,0,0.62
+sim-C,simulation:sim-C,,test-00670,test,"My top up hasn't worked, it's been stuck in pending for the last couple hours",47,pending_top_up,ok,47,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716722+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00693,test,Help me cancel my transaction,8,cancel_transfer,ok,8,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716728+00:00,,1,0.98
+sim-C,simulation:sim-C,,test-00704,test,I made a mistake with a transaction!,8,cancel_transfer,ok,8,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716731+00:00,,1,0.74
+sim-C,simulation:sim-C,,test-00714,test,Cancel my last transfer,8,cancel_transfer,ok,8,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716735+00:00,,1,0.86
+sim-C,simulation:sim-C,,test-00726,test,Are the top-ups limited?,60,top_up_limits,ok,60,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716739+00:00,,1,0.74
+sim-C,simulation:sim-C,,test-00751,test,what is the most i can top up?,60,top_up_limits,ok,60,,0.34,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716742+00:00,,1,0.34
+sim-C,simulation:sim-C,,test-00752,test,Is there a limit to how high I can top-up?,60,top_up_limits,ok,60,,0.51,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716746+00:00,,1,0.51
+sim-C,simulation:sim-C,,test-00767,test,The ATM gave me the wrong amount of cash today when I went to withdraw. The app says it was more.,75,wrong_amount_of_cash_received,ok,75,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716749+00:00,,1,0.85
+sim-C,simulation:sim-C,,test-00778,test,"I went to withdraw some cash earlier today, but seems the ATM gave me the wrong amount of cash! The amount showing up in the app is a lot more",75,wrong_amount_of_cash_received,ok,57,,0.68,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716755+00:00,,0,0.68
+sim-C,simulation:sim-C,,test-00784,test,Something went wrong with my withdrawal. The amount of money isn't right.,75,wrong_amount_of_cash_received,ok,75,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716759+00:00,,1,0.81
+sim-C,simulation:sim-C,,test-00809,test,Why was I charged an extra fee when paying with my card?,15,card_payment_fee_charged,ok,52,,0.78,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716765+00:00,,0,0.78
+sim-C,simulation:sim-C,,test-00814,test,When would my card be charged an extra fee for a transaction?,15,card_payment_fee_charged,ok,15,,0.59,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716768+00:00,,1,0.59
+sim-C,simulation:sim-C,,test-00828,test,For the first time I got a fee on my account. How do I know when you charge these fees?,15,card_payment_fee_charged,ok,15,,0.79,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716772+00:00,,1,0.79
+sim-C,simulation:sim-C,,test-00844,test,I tried to send someone money but they haven't received it.,66,transfer_not_received_by_recipient,ok,66,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716776+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00856,test,"I transferred the rent payment for my new place a couple days ago but the landlord says it's not there yet, despite showing up as done on my side. I checked the account number I sent it to and it's definitely correct. Can you please verify if the transaction really went through or not?",66,transfer_not_received_by_recipient,ok,66,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716779+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00875,test,"How long do transfers need to come through? I sent some money to a friend, she needs it urgently, but seems it's still not there yet after a couple hours.",66,transfer_not_received_by_recipient,ok,66,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716783+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-00888,test,Can I use my American Express to add money to my account?,54,supported_cards_and_currencies,ok,54,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716787+00:00,,1,0.96
+sim-C,simulation:sim-C,,test-00903,test,"I want to add money but don't know what currencies you accept, can you tell me?",54,supported_cards_and_currencies,ok,54,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716790+00:00,,1,0.97
+sim-C,simulation:sim-C,,test-00926,test,Can you tell me how to order a virtual card?,40,getting_virtual_card,ok,41,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716797+00:00,,0,0.92
+sim-C,simulation:sim-C,,test-00928,test,what is the virtual card,40,getting_virtual_card,ok,40,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716801+00:00,,1,0.95
+sim-C,simulation:sim-C,,test-00974,test,What places will accept my card for payment?,10,card_acceptance,ok,10,,0.79,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716805+00:00,,1,0.79
+sim-C,simulation:sim-C,,test-00996,test,Will filling stations accept my card?,10,card_acceptance,ok,10,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716808+00:00,,1,0.93
+sim-C,simulation:sim-C,,test-01018,test,I topped up but the app reverted it,61,top_up_reverted,ok,61,,0.73,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716814+00:00,,1,0.73
+sim-C,simulation:sim-C,,test-01023,test,"When I topped up, the app reverted my funds.",61,top_up_reverted,ok,61,,0.77,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716817+00:00,,1,0.77
+sim-C,simulation:sim-C,,test-01037,test,My top-up has been cancelled.,61,top_up_reverted,ok,61,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716821+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-01052,test,I made a deposit this morning but it is still pending?,6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.51,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716824+00:00,,1,0.51
+sim-C,simulation:sim-C,,test-01079,test,"I sent you a cheque couple days ago, nothing happened to my account yet! This is unacceptable, where is my money??",6,balance_not_updated_after_cheque_or_cash_deposit,ok,6,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716828+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-01083,test,There is a payment that is not mine in the app.  Please advise/,16,card_payment_not_recognised,ok,16,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716832+00:00,,1,0.76
+sim-C,simulation:sim-C,,test-01110,test,I see a charge on my account that I don't recall making. I feel like my account may have been compromised.,16,card_payment_not_recognised,ok,16,,0.73,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716835+00:00,,1,0.73
+sim-C,simulation:sim-C,,test-01112,test,Somebody used my card to make a purchase,16,card_payment_not_recognised,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716839+00:00,,0,0.0
+sim-C,simulation:sim-C,,test-01122,test,How do I update my details?,30,edit_personal_details,ok,30,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716842+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-01139,test,How can I modify my details?,30,edit_personal_details,ok,69,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716848+00:00,,0,0.99
+sim-C,simulation:sim-C,,test-01174,test,What is the purpose for the identity check,74,why_verify_identity,ok,16,,0.2,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716854+00:00,,0,0.2
+sim-C,simulation:sim-C,,test-01176,test,What is the point of an identity check?,74,why_verify_identity,ok,74,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716857+00:00,,1,0.74
+sim-C,simulation:sim-C,,test-01185,test,Why do you require so many identity details?,74,why_verify_identity,ok,70,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716863+00:00,,0,0.87
+sim-C,simulation:sim-C,,test-01203,test,I am having trouble verifying my identity.,68,unable_to_verify_identity,ok,68,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716867+00:00,,1,0.86
+sim-C,simulation:sim-C,,test-01204,test,what do i do if my verification failed,68,unable_to_verify_identity,ok,68,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716870+00:00,,1,0.82
+sim-C,simulation:sim-C,,test-01228,test,I am experiencing difficulty providing my identity.,68,unable_to_verify_identity,ok,68,,0.73,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716874+00:00,,1,0.73
+sim-C,simulation:sim-C,,test-01248,test,I don't know where to look to find my PIN.,38,get_physical_card,ok,38,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716878+00:00,,1,0.9
+sim-C,simulation:sim-C,,test-01260,test,Does my PIN come with my card?,38,get_physical_card,ok,38,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716881+00:00,,1,0.92
+sim-C,simulation:sim-C,,test-01262,test,Why isn't my PIN available yet?,38,get_physical_card,ok,38,,0.7,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716885+00:00,,1,0.7
+sim-C,simulation:sim-C,,test-01300,test,are both visa and mastercard available to me?,73,visa_or_mastercard,ok,73,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716889+00:00,,1,0.93
+sim-C,simulation:sim-C,,test-01312,test,I would rather the Mastercard.,73,visa_or_mastercard,ok,73,,0.68,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716892+00:00,,1,0.68
+sim-C,simulation:sim-C,,test-01317,test,Can you let me know if Visa is among the card scheme assignments?,73,visa_or_mastercard,ok,73,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716898+00:00,,1,0.98
+sim-C,simulation:sim-C,,test-01331,test,Where's the money that got charged to my card? It's not showing up in my account balance,62,topping_up_by_card,ok,62,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716902+00:00,,1,0.86
+sim-C,simulation:sim-C,,test-01347,test,Cannot access my top up.,62,topping_up_by_card,ok,62,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716905+00:00,,1,0.88
+sim-C,simulation:sim-C,,test-01361,test,Can I make many disposable cards per day?,29,disposable_card_limits,ok,52,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716911+00:00,,0,0.99
+sim-C,simulation:sim-C,,test-01372,test,What if I need multiple disposable cards?,29,disposable_card_limits,ok,29,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716917+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-01381,test,How can I create many temporary cards daily?,29,disposable_card_limits,ok,29,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716921+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-01409,test,Someone else may be using my card.  There are transactions I don't recognize.,22,compromised_card,ok,2,,0.41,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716926+00:00,,0,0.41
+sim-C,simulation:sim-C,,test-01426,test,"I'm not certain, but someone may be using my card.",22,compromised_card,ok,22,,0.71,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716930+00:00,,1,0.71
+sim-C,simulation:sim-C,,test-01436,test,I think someone copied the numbers on my card and is using them.,22,compromised_card,ok,22,,0.86,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716934+00:00,,1,0.86
+sim-C,simulation:sim-C,,test-01443,test,Is there a list of ATM machines?,3,atm_support,ok,28,,0.07,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716939+00:00,,0,0.07
+sim-C,simulation:sim-C,,test-01446,test,Which ATM's accept my card?,3,atm_support,ok,3,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716943+00:00,,1,0.92
+sim-C,simulation:sim-C,,test-01451,test,What ATMs is the card okay to use at?,3,atm_support,ok,3,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716947+00:00,,1,0.91
+sim-C,simulation:sim-C,,test-01487,test,There's a Direct Debit payment in my account that I didn't make,28,direct_debit_payment_not_recognised,ok,28,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716950+00:00,,1,0.88
+sim-C,simulation:sim-C,,test-01508,test,I didn't make this direct debit transaction,28,direct_debit_payment_not_recognised,ok,28,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716954+00:00,,1,0.9
+sim-C,simulation:sim-C,,test-01543,test,I need help resetting my passcode to access my app.,44,passcode_forgotten,ok,44,,0.73,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716958+00:00,,1,0.73
+sim-C,simulation:sim-C,,test-01549,test,Is there a way to reset my passcode?,44,passcode_forgotten,ok,70,,0.66,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716963+00:00,,0,0.66
+sim-C,simulation:sim-C,,test-01552,test,How do I reset the passcode?,44,passcode_forgotten,ok,44,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716967+00:00,,1,0.91
+sim-C,simulation:sim-C,,test-01572,test,I tried to make a cash withdrawal and it was declined. Why did this happen?,26,declined_cash_withdrawal,ok,26,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716971+00:00,,1,0.98
+sim-C,simulation:sim-C,,test-01573,test,I can't get money out of the ATM,26,declined_cash_withdrawal,invalid_output,-1,,,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716974+00:00,,0,0.0
+sim-C,simulation:sim-C,,test-01585,test,Why was my cash withdrawal declined?,26,declined_cash_withdrawal,ok,3,,0.3,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716980+00:00,,0,0.3
+sim-C,simulation:sim-C,,test-01607,test,"I recently made a payment, and it is showing up in my account as ""pending"". What does that mean?",45,pending_card_payment,ok,33,,0.66,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716985+00:00,,0,0.66
+sim-C,simulation:sim-C,,test-01620,test,Why is a payment showing up on my card as pending?,45,pending_card_payment,ok,45,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716991+00:00,,1,0.98
+sim-C,simulation:sim-C,,test-01640,test,My phone was stolen,42,lost_or_stolen_phone,ok,42,,0.75,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716995+00:00,,1,0.75
+sim-C,simulation:sim-C,,test-01663,test,I was mugged and everything taken.  What do I do to protect my account?,42,lost_or_stolen_phone,ok,42,,0.25,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.716998+00:00,,1,0.25
+sim-C,simulation:sim-C,,test-01669,test,"If I lost my phone, can someone use my account?",42,lost_or_stolen_phone,ok,42,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717002+00:00,,1,0.88
+sim-C,simulation:sim-C,,test-01686,test,I would like a refund for something I bought,52,request_refund,ok,52,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717006+00:00,,1,0.97
+sim-C,simulation:sim-C,,test-01688,test,Can I have a refund?,52,request_refund,ok,35,,0.56,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717011+00:00,,0,0.56
+sim-C,simulation:sim-C,,test-01711,test,I want to reverse a purchase. Can I cancel it?,52,request_refund,ok,52,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717015+00:00,,1,0.96
+sim-C,simulation:sim-C,,test-01737,test,Trouble transferring transaction contact for help,27,declined_transfer,ok,27,,0.69,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717019+00:00,,1,0.69
+sim-C,simulation:sim-C,,test-01742,test,Why was the transfer declined?,27,declined_transfer,ok,15,,0.66,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717024+00:00,,0,0.66
+sim-C,simulation:sim-C,,test-01756,test,My card is being declined online. Could you tell me what might be broken or wrong with the account?,27,declined_transfer,ok,27,,0.79,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717030+00:00,,1,0.79
+sim-C,simulation:sim-C,,test-01769,test,Can you tell me why my refund is not showing in my statement?,51,Refund_not_showing_up,ok,51,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717034+00:00,,1,0.82
+sim-C,simulation:sim-C,,test-01775,test,I bought something and returned it and the money from the return isn't in my account.,51,Refund_not_showing_up,ok,51,,0.51,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717037+00:00,,1,0.51
+sim-C,simulation:sim-C,,test-01816,test,"I have a card payment that was declined, but why?",25,declined_card_payment,ok,25,,0.84,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717041+00:00,,1,0.84
+sim-C,simulation:sim-C,,test-01827,test,Please explain why my card was declined?,25,declined_card_payment,ok,61,,0.71,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717046+00:00,,0,0.71
+sim-C,simulation:sim-C,,test-01836,test,Card payment declined?,25,declined_card_payment,ok,25,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717050+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-01841,test,How long for money transfer to show?,48,pending_transfer,ok,48,,0.89,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717054+00:00,,1,0.89
+sim-C,simulation:sim-C,,test-01872,test,For how long will my transfer be pending?,48,pending_transfer,ok,48,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717058+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-01884,test,What steps do I need to take to close my account?,55,terminate_account,ok,55,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717061+00:00,,1,0.91
+sim-C,simulation:sim-C,,test-01886,test,Please delete my account right now!,55,terminate_account,ok,55,,0.84,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717065+00:00,,1,0.84
+sim-C,simulation:sim-C,,test-01904,test,Please terminate my account.,55,terminate_account,ok,55,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717068+00:00,,1,0.91
+sim-C,simulation:sim-C,,test-01924,test,HOw do I get my card back after the ATM has pulled it in?,18,card_swallowed,ok,18,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717072+00:00,,1,0.97
+sim-C,simulation:sim-C,,test-01953,test,I was taking out funds and was unable to regain my card.,18,card_swallowed,ok,18,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717077+00:00,,1,0.94
+sim-C,simulation:sim-C,,test-01962,test,Why am I being charged twice fro a restaurant?,63,transaction_charged_twice,ok,63,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717081+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-01972,test,It appears that I am being double charged for some items that I have purchased this past week.  Please review and correct.,63,transaction_charged_twice,ok,63,,0.82,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717085+00:00,,1,0.82
+sim-C,simulation:sim-C,,test-01987,test,My card has been charged two separate times for a single transaction.,63,transaction_charged_twice,ok,63,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717088+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02001,test,I want information about the source of funds.,70,verify_source_of_funds,ok,70,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717092+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02010,test,How can I tell where my funds came from?,70,verify_source_of_funds,ok,70,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717096+00:00,,1,0.81
+sim-C,simulation:sim-C,,test-02034,test,Where do my funds come from?,70,verify_source_of_funds,ok,70,,0.9,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717099+00:00,,1,0.9
+sim-C,simulation:sim-C,,test-02041,test,What is the wait time for a transfer from the US?,67,transfer_timing,ok,67,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717103+00:00,,1,0.88
+sim-C,simulation:sim-C,,test-02071,test,I have to transfer something to China as fast as I can. How long will it take to arrive in China?,67,transfer_timing,ok,67,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717107+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02081,test,My card payment was reverted.  Why?,53,reverted_card_payment?,ok,53,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717111+00:00,,1,0.74
+sim-C,simulation:sim-C,,test-02087,test,"Hello, My money went through for my purchase but now I got contacted from the seller noting that they didn't receive it. Then the money was returned to my account and I'm not sure why this occurred. So if you can resolve this issue please.",53,reverted_card_payment?,ok,53,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717114+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02119,test,Why has payment been returned?,53,reverted_card_payment?,ok,53,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717118+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02128,test,I want to set a new PIN,21,change_pin,ok,21,,0.59,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717122+00:00,,1,0.59
+sim-C,simulation:sim-C,,test-02138,test,I want to choose a different PIN.,21,change_pin,ok,21,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717125+00:00,,1,0.95
+sim-C,simulation:sim-C,,test-02158,test,How to change the PIN on my card?,21,change_pin,ok,68,,0.21,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717131+00:00,,0,0.21
+sim-C,simulation:sim-C,,test-02167,test,Why did I get a message saying that my transfer is not possible?  I have done this before no problem.  Please fix.,7,beneficiary_not_allowed,ok,10,,0.62,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717137+00:00,,0,0.62
+sim-C,simulation:sim-C,,test-02196,test,why isnt my account allowing transfers,7,beneficiary_not_allowed,ok,62,,0.41,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717145+00:00,,0,0.41
+sim-C,simulation:sim-C,,test-02203,test,Why was a charged just for transferring?,64,transfer_fee_charged,ok,64,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717149+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02214,test,"Hi,  Please help me, as i have transferred some amount but receiver did not get the same amount. He received a bit less. Due to this again i need to transfer the difference.   I have transferred money but beneficiary's account is credited with less amount. Now i have transfer the difference of the amount. I think there is some issue, could you please look into this.",64,transfer_fee_charged,ok,64,,0.87,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717153+00:00,,1,0.87
+sim-C,simulation:sim-C,,test-02215,test,"Why did I get charged for something I bought online? Even though it was international, I thought it would be covered.",64,transfer_fee_charged,ok,64,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717157+00:00,,1,0.76
+sim-C,simulation:sim-C,,test-02240,test,Will salary be received through this?,50,receiving_money,ok,13,,0.65,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717162+00:00,,0,0.65
+sim-C,simulation:sim-C,,test-02266,test,How do I deposit my paycheck to this account?,50,receiving_money,ok,50,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717168+00:00,,1,0.81
+sim-C,simulation:sim-C,,test-02288,test,Why did my transfer not go through?,35,failed_transfer,ok,74,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717174+00:00,,0,0.96
+sim-C,simulation:sim-C,,test-02300,test,What are your policies for card transfers?,35,failed_transfer,ok,35,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717178+00:00,,1,0.81
+sim-C,simulation:sim-C,,test-02302,test,I tried to make a transfer but it failed,35,failed_transfer,ok,35,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717181+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02349,test,Are there ways to transfer money into my account?,65,transfer_into_account,ok,65,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717185+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02354,test,I checked my account today and it said I was out of money. How do I transfer money into my account?,65,transfer_into_account,ok,19,,0.55,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717190+00:00,,0,0.55
+sim-C,simulation:sim-C,,test-02357,test,I'm trying to transfer money into my account.,65,transfer_into_account,ok,65,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717194+00:00,,1,0.74
+sim-C,simulation:sim-C,,test-02369,test,Why do you need code verification for my top up?,71,verify_top_up,ok,71,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717198+00:00,,1,0.97
+sim-C,simulation:sim-C,,test-02384,test,How do I go forth verifying my top-up card?,71,verify_top_up,ok,71,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717202+00:00,,1,0.92
+sim-C,simulation:sim-C,,test-02387,test,Is there a verification code for the top-up card?,71,verify_top_up,ok,71,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717206+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02425,test,Can i have a second physical card for this account?,39,getting_spare_card,ok,39,,0.35,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717209+00:00,,1,0.35
+sim-C,simulation:sim-C,,test-02429,test,Can i have a card to my daughter?,39,getting_spare_card,ok,39,,0.05,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717213+00:00,,1,0.05
+sim-C,simulation:sim-C,,test-02438,test,"My child needs a card, how can I add them to the account I currently have?",39,getting_spare_card,ok,39,,0.85,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717218+00:00,,1,0.85
+sim-C,simulation:sim-C,,test-02450,test,Where do I locate topping up with cash.,58,top_up_by_cash_or_cheque,ok,58,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717221+00:00,,1,0.91
+sim-C,simulation:sim-C,,test-02473,test,Can I top up my account with a cheque?,58,top_up_by_cash_or_cheque,ok,34,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717227+00:00,,0,0.76
+sim-C,simulation:sim-C,,test-02490,test,Do you charge for physical cards,43,order_physical_card,ok,43,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717231+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02497,test,Please tell me how to get a physical card.,43,order_physical_card,ok,43,,0.51,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717234+00:00,,1,0.51
+sim-C,simulation:sim-C,,test-02528,test,I was at the store earlier and my virtual card didn't work. What's the solution for this problem?,72,virtual_card_not_working,ok,72,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717238+00:00,,1,0.95
+sim-C,simulation:sim-C,,test-02532,test,Why was my virtual card declined when attempting to setup automatic billing?,72,virtual_card_not_working,ok,8,,0.98,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717244+00:00,,0,0.98
+sim-C,simulation:sim-C,,test-02553,test,"My disposable virtual card was rejected by the merchant, please help?",72,virtual_card_not_working,ok,72,,0.65,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717247+00:00,,1,0.65
+sim-C,simulation:sim-C,,test-02571,test,Is there a fee for exchanging cash?,76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.96,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717251+00:00,,1,0.96
+sim-C,simulation:sim-C,,test-02576,test,It seems I was overcharged when I used an ATM while on vacation. If I knew about your fees in advance I sure would have gone somewhere else.,76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717257+00:00,,1,0.91
+sim-C,simulation:sim-C,,test-02581,test,I feel like too much money was taken during my currency exchange.,76,wrong_exchange_rate_for_cash_withdrawal,ok,76,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717260+00:00,,1,0.95
+sim-C,simulation:sim-C,,test-02611,test,"Is there anyway, I can get a disposable virtual card?",37,get_disposable_virtual_card,ok,37,,0.84,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717264+00:00,,1,0.84
+sim-C,simulation:sim-C,,test-02624,test,What does a disposable virtual card do?,37,get_disposable_virtual_card,ok,37,,0.97,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717268+00:00,,1,0.97
+sim-C,simulation:sim-C,,test-02633,test,Will I be able to get a disposable virtual card as well?,37,get_disposable_virtual_card,ok,6,,0.52,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717273+00:00,,0,0.52
+sim-C,simulation:sim-C,,test-02655,test,Why did my top up not work?,59,top_up_failed,ok,59,,0.49,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717277+00:00,,1,0.49
+sim-C,simulation:sim-C,,test-02672,test,Why can't I top up?,59,top_up_failed,ok,71,,0.49,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717283+00:00,,0,0.49
+sim-C,simulation:sim-C,,test-02673,test,My top-up has failed.,59,top_up_failed,ok,15,,0.35,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717288+00:00,,0,0.35
+sim-C,simulation:sim-C,,test-02680,test,I made a transfer a few hours ago from a UK banking account.  I do not yet see the transfer.  Please check on this for me.,5,balance_not_updated_after_bank_transfer,ok,5,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717292+00:00,,1,0.93
+sim-C,simulation:sim-C,,test-02700,test,I made a transfer and it doesnt' show up in my account.,5,balance_not_updated_after_bank_transfer,ok,2,,0.66,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717297+00:00,,0,0.66
+sim-C,simulation:sim-C,,test-02753,test,I didn't take out money from an ATM but my app statement shows that I did. How can I fix this?,20,cash_withdrawal_not_recognised,ok,20,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717301+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02754,test,"Someone has stolen my card. Even though I have my card with me, someone just made a 500£ cash withdrawal. Please help as soon as possible.",20,cash_withdrawal_not_recognised,ok,37,,0.76,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717306+00:00,,0,0.76
+sim-C,simulation:sim-C,,test-02766,test,How much more do I have to pay to exchange currencies?,31,exchange_charge,ok,31,,0.93,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717310+00:00,,1,0.93
+sim-C,simulation:sim-C,,test-02774,test,Is there a fee for exchanging foreign currencies?,31,exchange_charge,ok,31,,0.38,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717314+00:00,,1,0.38
+sim-C,simulation:sim-C,,test-02827,test,"When using a US card, what is the cost for a top up/off?",57,top_up_by_card_charge,ok,57,,0.91,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717317+00:00,,1,0.91
+sim-C,simulation:sim-C,,test-02828,test,"I need to use a European card for a top up, what will the charge be?",57,top_up_by_card_charge,ok,57,,0.83,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717321+00:00,,1,0.83
+sim-C,simulation:sim-C,,test-02834,test,Is their a fee for top ups?,57,top_up_by_card_charge,ok,66,,0.5,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717327+00:00,,0,0.5
+sim-C,simulation:sim-C,,test-02849,test,How do I activate a card I received?,0,activate_my_card,ok,0,,0.61,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717331+00:00,,1,0.61
+sim-C,simulation:sim-C,,test-02850,test,Why can't I activate my card?,0,activate_my_card,ok,0,,0.94,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717334+00:00,,1,0.94
+sim-C,simulation:sim-C,,test-02854,test,Would like to use my card and need to activate it first.  Can you help me do this?,0,activate_my_card,ok,0,,0.92,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717338+00:00,,1,0.92
+sim-C,simulation:sim-C,,test-02882,test,Why am I being charged when I withdraw cash?,19,cash_withdrawal_charge,ok,19,,0.5,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717341+00:00,,1,0.5
+sim-C,simulation:sim-C,,test-02909,test,"I thought cash withdrawals were free? Why have I been charged a fee? Also, how much is this fee?",19,cash_withdrawal_charge,ok,19,,0.99,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717347+00:00,,1,0.99
+sim-C,simulation:sim-C,,test-02927,test,how long and how much does it cost for new card,9,card_about_to_expire,ok,9,,0.71,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717352+00:00,,1,0.71
+sim-C,simulation:sim-C,,test-02950,test,The expiration date of my card is approaching .,9,card_about_to_expire,ok,9,,0.88,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717356+00:00,,1,0.88
+sim-C,simulation:sim-C,,test-02968,test,do i have to setup apple pay to use it,2,apple_pay_or_google_pay,ok,2,,0.95,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717360+00:00,,1,0.95
+sim-C,simulation:sim-C,,test-02998,test,How do I use the top up app with my apple watch?,2,apple_pay_or_google_pay,ok,2,,0.74,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717364+00:00,,1,0.74
+sim-C,simulation:sim-C,,test-03028,test,which kind of documentation do I need for identity check?,69,verify_my_identity,ok,69,,0.79,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717367+00:00,,1,0.79
+sim-C,simulation:sim-C,,test-03032,test,What do I need to show who I am?,69,verify_my_identity,ok,69,,0.7,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717371+00:00,,1,0.7
+sim-C,simulation:sim-C,,test-03066,test,"I need a card, but I'm in the US at the moment.",24,country_support,ok,24,,0.81,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717374+00:00,,1,0.81
+sim-C,simulation:sim-C,,test-03069,test,In what countries do you do business?,24,country_support,ok,24,,0.46,,,SIMULATED,,,,,,0.005,,2026-11-23T06:06:30.717378+00:00,,1,0.46

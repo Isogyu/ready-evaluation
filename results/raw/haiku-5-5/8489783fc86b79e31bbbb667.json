@@ -1,0 +1,37 @@
+{
+ "model_key": "haiku-5-5",
+ "model_id": "claude-haiku-5-5",
+ "provider": "anthropic",
+ "case_id": "test-02510",
+ "split": "test",
+ "label_id": 43,
+ "timestamp": "2026-11-23T09:27:02.475827+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 0
+ },
+ "latency_s": 1.1435045000107493,
+ "response_model": "claude-haiku-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKczcLZoN8orLHf3cPTC",
+ "usage": {
+  "input_tokens": 21,
+  "output_tokens": 27,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 3.607e-05,
+ "raw_text": "{\"predicted_label\": \"card_arrival\", \"confidence\": 0.6}",
+ "status": "ok",
+ "predicted_id": 11,
+ "predicted_label": "card_arrival",
+ "confidence": 0.6,
+ "confidence_raw": 0.6,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "8489783fc86b79e31bbbb667",
+ "prompt_version": "v1"
+}

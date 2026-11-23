@@ -1,0 +1,37 @@
+{
+ "model_key": "opus-5-5",
+ "model_id": "claude-opus-5-5",
+ "provider": "anthropic",
+ "case_id": "test-01678",
+ "split": "test",
+ "label_id": 42,
+ "timestamp": "2026-11-23T08:08:43.390198+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 0
+ },
+ "latency_s": 1.1505147499992745,
+ "response_model": "claude-opus-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKX2DcBW4PjR969xHKtv",
+ "usage": {
+  "input_tokens": 28,
+  "output_tokens": 31,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0015508,
+ "raw_text": "{\"predicted_label\":\"lost_or_stolen_phone\",\"confidence\":0.8}",
+ "status": "ok",
+ "predicted_id": 42,
+ "predicted_label": "lost_or_stolen_phone",
+ "confidence": 0.8,
+ "confidence_raw": 0.8,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "f22b9c4b712c9747f1ed3353",
+ "prompt_version": "v1"
+}

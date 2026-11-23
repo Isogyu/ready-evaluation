@@ -1,0 +1,37 @@
+{
+ "model_key": "haiku-5-5__s1",
+ "model_id": "claude-haiku-5-5",
+ "provider": "anthropic",
+ "case_id": "train-08994",
+ "split": "dev",
+ "label_id": 31,
+ "timestamp": "2026-11-23T08:24:55.639499+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 1
+ },
+ "latency_s": 1.0720610419957666,
+ "response_model": "claude-haiku-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKYFtP3tSmdKEjf4gZ1q",
+ "usage": {
+  "input_tokens": 26,
+  "output_tokens": 28,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 3.707e-05,
+ "raw_text": "{\"predicted_label\": \"exchange_charge\", \"confidence\": 0.9}",
+ "status": "ok",
+ "predicted_id": 31,
+ "predicted_label": "exchange_charge",
+ "confidence": 0.9,
+ "confidence_raw": 0.9,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "e948a5ff90a52e219aa7f977",
+ "prompt_version": "v1"
+}

@@ -1,0 +1,37 @@
+{
+ "model_key": "haiku-5-5__s2",
+ "model_id": "claude-haiku-5-5",
+ "provider": "anthropic",
+ "case_id": "test-01553",
+ "split": "test",
+ "label_id": 44,
+ "timestamp": "2026-11-23T08:26:57.753987+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 2
+ },
+ "latency_s": 0.8940861250011949,
+ "response_model": "claude-haiku-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKYQtfeyNacfaCb1M4pF",
+ "usage": {
+  "input_tokens": 26,
+  "output_tokens": 30,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 3.807e-05,
+ "raw_text": "{\"predicted_label\": \"passcode_forgotten\", \"confidence\": 0.97}",
+ "status": "ok",
+ "predicted_id": 44,
+ "predicted_label": "passcode_forgotten",
+ "confidence": 0.97,
+ "confidence_raw": 0.97,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "ba724d3a8a846e6a8dc40a06",
+ "prompt_version": "v1"
+}

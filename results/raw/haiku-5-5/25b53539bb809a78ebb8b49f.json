@@ -1,0 +1,35 @@
+{
+ "model_key": "haiku-5-5",
+ "model_id": "claude-haiku-5-5",
+ "provider": "anthropic",
+ "case_id": "train-04850",
+ "split": "dev",
+ "label_id": 44,
+ "timestamp": "2026-11-23T07:00:21.773968+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default"
+ },
+ "latency_s": 1.3224068339914083,
+ "response_model": "claude-haiku-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKRosR5pzcqTn9GRtAsP",
+ "usage": {
+  "input_tokens": 18,
+  "output_tokens": 120,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 8.227e-05,
+ "raw_text": "{\"predicted_label\": \"passcode_forgotten\", \"confidence\": 0.4}",
+ "status": "ok",
+ "predicted_id": 44,
+ "predicted_label": "passcode_forgotten",
+ "confidence": 0.4,
+ "confidence_raw": 0.4,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "25b53539bb809a78ebb8b49f",
+ "prompt_version": "v1"
+}

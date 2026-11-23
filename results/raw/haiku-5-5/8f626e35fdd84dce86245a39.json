@@ -1,0 +1,35 @@
+{
+ "model_key": "haiku-5-5",
+ "model_id": "claude-haiku-5-5",
+ "provider": "anthropic",
+ "case_id": "train-01795",
+ "split": "dev",
+ "label_id": 23,
+ "timestamp": "2026-11-23T06:34:28.881651+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default"
+ },
+ "latency_s": 1.0387500829965575,
+ "response_model": "claude-haiku-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKPqQB4Fj3cGq1VLsgux",
+ "usage": {
+  "input_tokens": 28,
+  "output_tokens": 29,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 3.777e-05,
+ "raw_text": "{\"predicted_label\": \"contactless_not_working\", \"confidence\": 0.85}",
+ "status": "ok",
+ "predicted_id": 23,
+ "predicted_label": "contactless_not_working",
+ "confidence": 0.85,
+ "confidence_raw": 0.85,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "8f626e35fdd84dce86245a39",
+ "prompt_version": "v1"
+}

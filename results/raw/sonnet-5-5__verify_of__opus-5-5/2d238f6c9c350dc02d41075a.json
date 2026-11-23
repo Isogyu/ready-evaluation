@@ -1,0 +1,37 @@
+{
+ "model_key": "sonnet-5-5__verify_of__opus-5-5",
+ "model_id": "claude-sonnet-5-5",
+ "provider": "anthropic",
+ "case_id": "train-06375",
+ "split": "dev",
+ "label_id": 63,
+ "timestamp": "2026-11-23T09:03:30.049395+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "verify",
+  "sample": 0
+ },
+ "latency_s": 0.8541600000025937,
+ "response_model": "claude-sonnet-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKbCVbbezGu1i6eUorek",
+ "usage": {
+  "input_tokens": 35,
+  "output_tokens": 14,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 1038
+ },
+ "cost_usd": 0.00041759999999999996,
+ "raw_text": "{\"probability_correct\":0.9}",
+ "status": "ok",
+ "predicted_id": -1,
+ "predicted_label": "transaction_charged_twice",
+ "confidence": 0.9,
+ "confidence_raw": 0.9,
+ "label_match": null,
+ "parse_note": "",
+ "cache_key": "2d238f6c9c350dc02d41075a",
+ "prompt_version": "v1"
+}

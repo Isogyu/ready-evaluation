@@ -1,0 +1,35 @@
+{
+ "model_key": "haiku-5-5",
+ "model_id": "claude-haiku-5-5",
+ "provider": "anthropic",
+ "case_id": "test-01055",
+ "split": "test",
+ "label_id": 6,
+ "timestamp": "2026-11-23T07:01:34.829797+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default"
+ },
+ "latency_s": 1.1514372090023244,
+ "response_model": "claude-haiku-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKRuFkdmX4duSW3TQfVC",
+ "usage": {
+  "input_tokens": 31,
+  "output_tokens": 44,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 4.557e-05,
+ "raw_text": "{\"predicted_label\": \"balance_not_updated_after_cheque_or_cash_deposit\", \"confidence\": 0.85}",
+ "status": "ok",
+ "predicted_id": 6,
+ "predicted_label": "balance_not_updated_after_cheque_or_cash_deposit",
+ "confidence": 0.85,
+ "confidence_raw": 0.85,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "b8450695ed655552c9b56e95",
+ "prompt_version": "v1"
+}

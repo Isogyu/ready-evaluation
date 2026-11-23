@@ -1,0 +1,37 @@
+{
+ "model_key": "opus-5-5__verify",
+ "model_id": "claude-opus-5-5",
+ "provider": "anthropic",
+ "case_id": "test-02096",
+ "split": "test",
+ "label_id": 53,
+ "timestamp": "2026-11-23T08:32:00.837470+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "verify",
+  "sample": 0
+ },
+ "latency_s": 1.8539300420088693,
+ "response_model": "claude-opus-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKYoEJigGp3BMDy1QcwK",
+ "usage": {
+  "input_tokens": 45,
+  "output_tokens": 121,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 1038
+ },
+ "cost_usd": 0.0030152,
+ "raw_text": "{\"probability_correct\": 0.55}",
+ "status": "ok",
+ "predicted_id": -1,
+ "predicted_label": "reverted_card_payment?",
+ "confidence": 0.55,
+ "confidence_raw": 0.55,
+ "label_match": null,
+ "parse_note": "",
+ "cache_key": "f41d7406da6020a4f6b980cc",
+ "prompt_version": "v1"
+}

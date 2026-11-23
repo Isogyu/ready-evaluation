@@ -1,0 +1,139 @@
+{
+ "runs": [
+  {
+   "finished_at": "2026-11-23T06:53:06.511278+00:00",
+   "prompt_version": "v1",
+   "models": [
+    {
+     "key": "opus-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-opus-5-5",
+     "price_in": 4.0,
+     "price_out": 20.0,
+     "max_tokens": 4000,
+     "effort": "low"
+    },
+    {
+     "key": "sonnet-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-sonnet-5-5",
+     "price_in": 2.0,
+     "price_out": 10.0,
+     "max_tokens": 4000,
+     "effort": "low"
+    },
+    {
+     "key": "haiku-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-haiku-5-5",
+     "price_in": 0.1,
+     "price_out": 0.5,
+     "max_tokens": 4000,
+     "effort": "low"
+    }
+   ],
+   "budget_usd": 15.0,
+   "seed": 20261124,
+   "python": "3.13.2",
+   "anthropic_sdk": "2.12.0",
+   "preregistered_doc_sha256": {
+    "docs/hypotheses_v2.md": "42d77a289811053afd7aa4bb6ee8f575c33224532ff86ae4a91ab095b67c2a7c"
+   },
+   "mode": "pilot",
+   "n_cases": 3,
+   "new_calls": 6,
+   "stopped_by_budget": false,
+   "spent_usd": 0.8020158599999989
+  },
+  {
+   "finished_at": "2026-11-23T07:02:53.267068+00:00",
+   "prompt_version": "v1",
+   "models": [
+    {
+     "key": "opus-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-opus-5-5",
+     "price_in": 4.0,
+     "price_out": 20.0,
+     "max_tokens": 4000,
+     "effort": "low"
+    },
+    {
+     "key": "sonnet-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-sonnet-5-5",
+     "price_in": 2.0,
+     "price_out": 10.0,
+     "max_tokens": 4000,
+     "effort": "low"
+    },
+    {
+     "key": "haiku-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-haiku-5-5",
+     "price_in": 0.1,
+     "price_out": 0.5,
+     "max_tokens": 4000,
+     "effort": "low"
+    }
+   ],
+   "budget_usd": 15.0,
+   "seed": 20261124,
+   "python": "3.13.2",
+   "anthropic_sdk": "2.12.0",
+   "preregistered_doc_sha256": {
+    "docs/hypotheses_v2.md": "42d77a289811053afd7aa4bb6ee8f575c33224532ff86ae4a91ab095b67c2a7c"
+   },
+   "mode": "full",
+   "n_cases": 1000,
+   "new_calls": 2694,
+   "stopped_by_budget": false,
+   "spent_usd": 2.871365140000003
+  },
+  {
+   "finished_at": "2026-11-23T08:01:38.452100+00:00",
+   "prompt_version": "v1",
+   "models": [
+    {
+     "key": "opus-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-opus-5-5",
+     "price_in": 4.0,
+     "price_out": 20.0,
+     "max_tokens": 4000,
+     "effort": "low"
+    },
+    {
+     "key": "sonnet-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-sonnet-5-5",
+     "price_in": 2.0,
+     "price_out": 10.0,
+     "max_tokens": 4000,
+     "effort": "low"
+    },
+    {
+     "key": "haiku-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-haiku-5-5",
+     "price_in": 0.1,
+     "price_out": 0.5,
+     "max_tokens": 4000,
+     "effort": "low"
+    }
+   ],
+   "budget_usd": 15.0,
+   "seed": 20261124,
+   "python": "3.13.2",
+   "anthropic_sdk": "2.12.0",
+   "preregistered_doc_sha256": {
+    "docs/hypotheses_v2.md": "581b09f0fb8333379b475e642a1abef851a7b349d5afa5f411602e254c364835"
+   },
+   "mode": "full",
+   "n_cases": 1000,
+   "new_calls": 0,
+   "stopped_by_budget": false,
+   "spent_usd": 2.871365140000006
+  }
+ ]
+}

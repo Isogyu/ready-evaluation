@@ -1,0 +1,37 @@
+{
+ "model_key": "opus-5-5__s1",
+ "model_id": "claude-opus-5-5",
+ "provider": "anthropic",
+ "case_id": "test-01215",
+ "split": "test",
+ "label_id": 68,
+ "timestamp": "2026-11-23T08:11:56.388957+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 1
+ },
+ "latency_s": 1.1010889590106672,
+ "response_model": "claude-opus-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKXGShNC7BPSF4s6pDNt",
+ "usage": {
+  "input_tokens": 22,
+  "output_tokens": 28,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0014667999999999999,
+ "raw_text": "{\"predicted_label\":\"passcode_forgotten\",\"confidence\":0.5}",
+ "status": "ok",
+ "predicted_id": 44,
+ "predicted_label": "passcode_forgotten",
+ "confidence": 0.5,
+ "confidence_raw": 0.5,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "7b893b5e3caf3c7563e6eacd",
+ "prompt_version": "v1"
+}

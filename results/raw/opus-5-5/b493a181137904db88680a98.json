@@ -1,0 +1,35 @@
+{
+ "model_key": "opus-5-5",
+ "model_id": "claude-opus-5-5",
+ "provider": "anthropic",
+ "case_id": "test-02706",
+ "split": "test",
+ "label_id": 5,
+ "timestamp": "2026-11-23T06:56:18.967465+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default"
+ },
+ "latency_s": 1.2340325000113808,
+ "response_model": "claude-opus-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKRVyJnMqtfJwp198g8t",
+ "usage": {
+  "input_tokens": 28,
+  "output_tokens": 36,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0016508,
+ "raw_text": "{\"predicted_label\":\"balance_not_updated_after_bank_transfer\",\"confidence\":0.55}",
+ "status": "ok",
+ "predicted_id": 5,
+ "predicted_label": "balance_not_updated_after_bank_transfer",
+ "confidence": 0.55,
+ "confidence_raw": 0.55,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "b493a181137904db88680a98",
+ "prompt_version": "v1"
+}

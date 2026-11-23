@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>READY検証レポート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: 社内技術レポート。結論を先に、数値は表と図で、断定しない
+   IDEA 薬の添付文書のような区切り：効能（結果）・用法（方法）・注意（限界）を色の箱で分ける。仮説判定は色札で示す
+   PICTURE グラフ3（レビュー率と信頼性）を冒頭に大きく。主要数値の帯を横に
+   COLOUR 白地、黒文字、エメラルド #00a86b を実測、淡いピンク #ffd6e0 を注意・仮定、論文は灰色
+   TYPE Schibsted Grotesk 800（数字・見出し）＋ Noto Sans JP
+   LAYOUT 上部に表題と結論、数値の帯、グラフ。以下は章ごとに本文と図を左右または上下に */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#04140d);--ink:light-dark(#0b0b0b,#eef3f0);--ink2:light-dark(#46504b,#a9b8b0);--rule:light-dark(#d7dcd9,#22362c);--em:light-dark(#00875a,#2fd08f);--emf:light-dark(#00754a,#0b6e47);--pink:light-dark(#ffd6e0,#4a2530);--paper:light-dark(#f1f2f1,#10241a)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 "Noto Sans JP","Hiragino Sans",system-ui,sans-serif;overflow-x:clip}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(4vw,16px)}
+.band{padding-block:clamp(28px,4vw,56px)}
+h1,h2,h3,.num{font-family:"Schibsted Grotesk","Noto Sans JP",sans-serif}
+h1{font-size:clamp(28px,4.2vw,46px);line-height:1.2;letter-spacing:-.01em;margin:0 0 .4em;font-weight:800;text-wrap:balance}
+h1 small{display:block;font-size:.5em;font-weight:700;color:#d6f5e8;margin-top:.4em}
+h2{font-size:clamp(22px,2.6vw,30px);line-height:1.3;margin:0 0 .6em;font-weight:800;text-wrap:balance}
+h3{font-size:18px;margin:1.6em 0 .4em;font-weight:700}
+p{margin:0 0 1em;max-width:46em}
+.head{background:var(--emf);color:#fff}
+.head .wrap{padding-block:clamp(28px,4vw,52px)}
+.head p{color:#eafff5;font-size:17px}
+.head a{color:#fff}
+.lead{font-size:18px;font-weight:500;max-width:44em}
+.meta{font-size:14px;color:#d6f5e8;margin-top:1.2em}
+.figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--rule);border:2px solid var(--rule);margin:0}
+.figs div{background:var(--bg);padding:16px 18px}
+.figs .num{font-size:clamp(22px,2.3vw,30px);font-weight:800;line-height:1.2}
+.figs .lab{font-size:13px;color:var(--ink2);line-height:1.5;margin-top:4px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:3px;vertical-align:2px;margin-right:6px;white-space:nowrap}
+.t-real{background:var(--emf);color:#fff}
+.t-paper{background:var(--paper);color:var(--ink);border:1px solid var(--rule)}
+.t-assume{background:var(--pink);color:var(--ink)}
+.hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:28px;align-items:start}
+figure{margin:0}
+figure img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--rule)}
+figcaption{font-size:14px;color:var(--ink2);margin-top:8px;line-height:1.6}
+.box{border-left:6px solid var(--emf);padding:12px 18px;background:color-mix(in srgb,var(--emf) 8%,var(--bg));margin:1em 0}
+.note{border-left:6px solid #e89aae;padding:12px 18px;background:color-mix(in srgb,var(--pink) 55%,var(--bg));margin:1em 0}
+.paper{border-left:6px solid var(--ink2);padding:12px 18px;background:var(--paper);margin:1em 0}
+.box p:last-child,.note p:last-child,.paper p:last-child{margin-bottom:0}
+nav.toc{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule)}
+nav.toc .wrap{display:flex;gap:4px 18px;overflow-x:auto;padding-block:10px;font-size:14px}
+nav.toc a{flex:none;color:var(--ink);text-decoration:none;padding:4px 0}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--em);text-decoration:underline}
+section{border-top:1px solid var(--rule)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:start}
+.scroll{overflow-x:auto;margin:1em 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.5}
+th,td{padding:8px 10px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font-weight:700;border-bottom:2px solid var(--ink);white-space:nowrap}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.hl td{background:color-mix(in srgb,var(--emf) 9%,var(--bg))}
+ul,ol{padding-left:1.4em;max-width:46em}
+li{margin:.3em 0}
+code{font-size:.92em;overflow-wrap:anywhere}
+a{color:var(--em)}
+.ans{font-weight:700}
+footer{font-size:14px;color:var(--ink2)}
+@media(max-width:900px){.hero,.two{grid-template-columns:minmax(0,1fr)}.figs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.figs{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){table{font-size:13px}th,td{padding:6px 5px}.lead{font-size:16.5px}}
+.t-exp{background:light-dark(#fff1b8,#4a3d0b);color:var(--ink)}
+.vd{display:inline-block;font-size:13px;font-weight:700;padding:1px 8px;border-radius:3px;white-space:nowrap}
+.vd.yes{background:var(--emf);color:#fff}
+.vd.no{background:light-dark(#3a3a3a,#d8d8d8);color:light-dark(#fff,#111)}
+.vd.hold{background:var(--pink);color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="head">
+<div class="wrap">
+<h1>AIの正答率だけでモデルを選んでいないか？<small>READY論文に基づく人間のレビュー負荷と運用コストの検証</small></h1>
+<p class="lead">銀行問い合わせの77分類で Claude 3モデルを比べた。追加実験（最終評価500件、仮説は実行前に固定）では、API単価が最も安い Haiku は、目標信頼性90%を満たすのにレビューを52.6%要した。1件当たり総コストは70円で、Opus（41円）・Sonnet（39円）の約1.7倍になった。正答率の差が2.2ptと小さい Opus と Sonnet は、必要レビュー率の差が目標によって出たり出なかったりした。統計的な保証を付けるための安全余裕によって、レビュー量は6〜18pt増えた。追加実験 v4 では、Haiku の予測をそのまま使い、Opus に検証させた値で振り分けた。それだけで、目標90%に必要なレビュー率が48.6%から24.8%に下がった。正答率はまったく同じでも、必要な人手は振り分け方で半分になりうる。この結果は v5 の新しいデータでも再現した。ただし、「安いモデル＋強い検証」が強いモデル単独より総コストで安いとまでは言えなかった。</p>
+<p class="meta">実験日 2026-11-23 ／ 予備実験 v1：最終評価200件 ／ 追加実験 v2：モデル比較、最終評価500件・仮説を事前登録 ／ 追加実験 v3：同一モデル内の振り分け信号、v4：別モデルによる検証、v5：運用構成の総コスト（それぞれ新しい最終評価500件・仮説を事前登録） ／ API費用 合計 $23.62 ／ 論文の完全再現ではない ／ 凡例：<span class="tag t-real">実測</span><span class="tag t-assume">仮定</span><span class="tag t-paper">論文</span><span class="tag t-exp">探索的</span></p>
+</div>
+</header>
+
+<div class="wrap band">
+<div class="figs" role="list">
+<div role="listitem"><div class="num">86.6 / 84.4 / 73.8%</div><div class="lab"><span class="tag t-real">実測</span>v2 の正答率（Opus / Sonnet / Haiku）。Opus−Sonnet は 2.2pt で、Holm補正後 p=0.052（有意でない）</div></div>
+<div role="listitem"><div class="num">30.8 / 29.4 / 52.6%</div><div class="lab"><span class="tag t-real">実測</span><span class="tag t-assume">仮定</span>目標90%に必要なレビュー率（a_h=100%、δ=0.05、しきい値は開発データ500件で決定）</div></div>
+<div role="listitem"><div class="num">41 / 39 / 70円</div><div class="lab"><span class="tag t-real">実測</span><span class="tag t-assume">仮定</span>目標90%での1件当たり総コスト。API単価が最も安い Haiku が最も高くなった</div></div>
+<div role="listitem"><div class="num">+6〜18pt</div><div class="lab"><span class="tag t-exp">探索的</span>統計的な保証のために安全余裕 δ=0.05 を入れたことで増えたレビュー率（目標90%）</div></div>
+</div>
+
+<div class="hero" style="margin-top:28px">
+<figure>
+<img src="charts/v2/graph3_review_vs_reliability.png" alt="グラフ3（v2）：レビュー率とレビュー後信頼性。3モデルの確信度順方式（実線）とランダム方式（点線）。左は a_h=100%、右は a_h=90%。" width="1800" height="830">
+<figcaption>グラフ3　レビュー率とレビュー後信頼性（v2、最終評価データ500件）。実線は確信度の低い順にレビューする方式、点線はランダムに選ぶ方式の200シード平均。右の a_h=90%（人間も1割間違える仮定）では、レビューを増やしすぎると信頼性が下がる。</figcaption>
+</figure>
+<div>
+<h2>この図から言えること</h2>
+<ul>
+<li><b>確信度で選ぶと、同じ人手で信頼性が6.6〜8.1pt上がる。</b>3モデルとも、ランダム方式の97.5%点を上回った（H2 支持）。</li>
+<li><b>Opus と Sonnet の曲線は近く、Haiku は離れている。</b>目標90%に必要なレビュー率は、Opus と Sonnet が約30%、Haiku が約53%。</li>
+<li><b>人間側の精度が上限を決める。</b>a_h=90%では、どのモデルでも信頼性は95%に届かず、AIが正しい案件まで回すほど信頼性が下がる。</li>
+</ul>
+<div class="note"><p>必要レビュー率の値は、目標の決め方・安全余裕 δ・人間の成功率 a_h の仮定に強く依存する（第4章）。</p></div>
+</div>
+</div>
+</div>
+
+<nav class="toc" aria-label="章"><div class="wrap">
+<a href="#c1">1 問題提起</a><a href="#c2">2 READY論文</a><a href="#c3">3 検証方法</a><a href="#c4">4 結果</a><a href="#c4b">4続 信号の比較</a><a href="#c4c">4続 別モデル検証</a><a href="#c4d">4続 構成のコスト</a><a href="#c4e">4続 必要件数</a><a href="#c5">5 考察</a><a href="#c6">6 SIer業務への応用</a><a href="#c7">7 結論</a><a href="#c8">8 限界と課題</a>
+</div></nav>
+
+<section id="c1"><div class="wrap band">
+<h2>第1章　正答率だけでモデルを選んでよいのか</h2>
+<p>業務にAIエージェントを入れるとき、モデルの比較は正答率（ベンチマークのスコア）で行われることが多い。しかし実際の業務では、AIの出力をそのまま使うことはまれで、一部を人間が確認する。運用コストの大半はこの人間の確認作業である。</p>
+<p>そうであれば、問うべきは「AIが何%正しいか」だけではない。「要求される品質に達するのに、人間が何%を確認すればよいか」と「そのときの総コストはいくらか」も問う必要がある。前者が同じでも、後者は、AIが自分の誤りをどれだけ見分けられるかで変わりうる。</p>
+<p>本レポートは、この考え方を体系化した READY 論文を紹介し、公開データセットを使った独自検証の結果を報告する。検証は2段階で行った。予備実験（v1）で傾向を見て、その傾向を仮説として実行前に固定し、重複のない新しいデータで追加実験（v2）を行った。</p>
+</div></section>
+
+<section id="c2"><div class="wrap band">
+<h2>第2章　READY論文：人間＋AIの系として導入可否を判定する</h2>
+<div class="two">
+<div>
+<p><span class="tag t-paper">論文</span>Chatrath ほか（Scale AI）「READY or Not: Reliable Enterprise Agent Deployment」arXiv:2609.02095、2026年9月2日投稿。</p>
+<p>READY は、エージェント単体ではなく「エージェント＋人間のレビュー方針」の組を評価する。手順は3段階である。</p>
+<ol>
+<li><b>ワークフロー評価</b>：各ケースの成否と、エージェントが申告した確信度を記録する。</li>
+<li><b>監督方針の最適化</b>（開発データ）：確信度がしきい値未満の案件を人間に回す。目標信頼性 Y に安全余裕 δ=0.05 を足した値を満たすしきい値のうち、レビューが最も少ないものを選ぶ。</li>
+<li><b>Deployment Qualification</b>（保留データ）：方針を固定し、信頼性の片側95%下限が Y 以上なら「適格」とする。</li>
+</ol>
+<p>信頼性は R = c·a + (1−c)·a_h で表す。c は AI に任せる割合、a はその部分の正答率、a_h は人間レビューの成功率（仮定）である。</p>
+</div>
+<div>
+<div class="paper">
+<p><b>論文の主な結果</b>（CliniCARE-Bench：臨床監査750件、16システム）</p>
+<ul>
+<li>自律成功率が 72.8% と 72.5% でほぼ同じ2システムが、目標76%を満たすのに 39.2% と 29.6% のレビューを要した。<b>どちらも適格</b>で、違ったのはレビュー量である。</li>
+<li>自律成功率と、確信度による誤り検出の性能（AUROC）の相関は −0.12 で、ほぼ無関係だった。</li>
+<li>δ を入れないと選んだ方針の46%しか適格にならず、δ=0.05 で95%になった。</li>
+<li>a_h=90% の仮定では、どの方針も信頼性90%を超えなかった。採用分の正答率が90%を下回っていたためで、一般的な上限ではない。</li>
+<li>金額のコストは示していない。コストに関する結果はレビュー率で表されている。</li>
+</ul>
+</div>
+<p><b>新規性</b>：確信度でAIに任せる範囲を決める考え方（選択的予測）自体は既存である。論文の新しさは、仮定（a_h）、安全余裕（δ）、開発と保留の分離、片側下限による判定を、導入判断の手続きとしてまとめ、多数のエージェントで示した点にある。</p>
+<p>公式ブログには「判定が正反対になる」といった論文より強い表現があるため、引用は論文の記述に合わせた。詳細は <code>docs/paper_review.md</code>。</p>
+</div>
+</div>
+</div></section>
+
+<section id="c3"><div class="wrap band">
+<h2>第3章　検証方法：BANKING77 で3モデルを同条件で比べる</h2>
+<div class="two">
+<div>
+<div class="scroll"><table>
+<thead><tr><th>項目</th><th>予備実験 v1</th><th>追加実験 v2</th></tr></thead>
+<tbody>
+<tr><td>開発データ</td><td>train から 100件</td><td>v1 の100件＋train から400件＝500件</td></tr>
+<tr><td>最終評価データ</td><td>test から 200件</td><td>test から 500件（v1 と重複なし）</td></tr>
+<tr><td>仮説</td><td>なし（探索）</td><td>v1 の傾向から8つ立て、実行前に固定（文書のハッシュ値を記録）</td></tr>
+<tr><td>API費用</td><td>$0.77</td><td>$2.10</td></tr>
+</tbody></table></div>
+<div class="scroll"><table>
+<thead><tr><th>共通の条件</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>データ</td><td>BANKING77（銀行問い合わせ、77クラス、CC BY 4.0）。元の train/test 分割を維持し、クラスごとに均等に層別抽出</td></tr>
+<tr><td>モデル</td><td>claude-opus-5-5、claude-sonnet-5-5、claude-haiku-5-5。effort=low、max_tokens=4000。Temperature は API 仕様上指定できない</td></tr>
+<tr><td>入力・出力</td><td>問い合わせ文と77ラベル名を同一プロンプトで渡し、構造化出力で <code>{"predicted_label", "confidence"}</code> を得る。confidence は自己申告</td></tr>
+<tr><td>失敗の扱い</td><td>誤答として分母に残し、最優先でレビューする設計。今回は v1・v2 とも失敗0件</td></tr>
+<tr><td>GPT系</td><td>API キーが無く比較していない</td></tr>
+</tbody></table></div>
+</div>
+<div>
+<h3 style="margin-top:0">比べたレビュー方針</h3>
+<ul>
+<li><b>A：AIのみ</b>　レビューしない</li>
+<li><b>B：全件レビュー</b></li>
+<li><b>C：ランダム</b>　無作為に選ぶ（v1 は20シード、v2 は200シード）</li>
+<li><b>D：確信度順</b>　確信度がしきい値未満をレビュー。しきい値は開発データだけで決め、最終評価データでは1回だけ検証</li>
+</ul>
+<div class="note">
+<p><span class="tag t-assume">仮定</span>人間レビューの成功率 a_h は 100%（主分析）・95%・90%。人件費 4,000円/時、レビュー 2分/件（1件133円）、1ドル=150円。いずれも実測ではない。</p>
+</div>
+<p>指標：正答率（Wilson区間）、Brier、ECE（10ビン）、誤り検出 AUROC、AURC、レビュー率、レビュー後信頼性、1件当たり総コスト。モデル間の比較は同じ問題を使うので、McNemar 検定（Holm 補正）と対応ありのブートストラップで行った。必要レビュー率の不確実性は、開発・最終評価の両データを再標本化し、毎回しきい値を選び直すブートストラップ（1,000回）で見積もった。</p>
+</div>
+</div>
+</div></section>
+
+<section id="c4"><div class="wrap band">
+<h2>第4章　結果：確信度順レビューの効果は再現し、主仮説は判定保留</h2>
+<p><span class="tag t-real">実測</span>以下は特に断りがない限り、追加実験 v2 の最終評価データ500件の値である。論文とは題材も規模も違うため、論文の数値とは直接比べない。</p>
+
+<h3>4.1 事前登録した仮説の判定</h3>
+<div class="scroll"><table>
+<thead><tr><th>仮説</th><th>判定</th><th>根拠（95%区間）</th></tr></thead>
+<tbody>
+<tr><td>H1　正答率は Opus &gt; Sonnet &gt; Haiku で3組とも有意</td><td><span class="vd hold">判定保留</span></td><td>Opus−Sonnet +2.2pt（McNemar 19対8、Holm補正後 p=0.052）。他の2組は p&lt;0.001</td></tr>
+<tr><td>H2　同じレビュー率で確信度順 &gt; ランダム</td><td><span class="vd yes">支持</span></td><td>確信度順 97.6% / 95.6% / 95.6% に対し、ランダムの97.5%点は 92.0% / 90.4% / 89.4%</td></tr>
+<tr><td>H3a　目標90%で Opus と Sonnet の必要レビュー率の差は ±10pt 以内（主仮説）</td><td><span class="vd hold">判定保留</span></td><td>−1.5pt（90%区間 −13.0〜+8.8）。差があるとも、同等とも言えない</td></tr>
+<tr><td>H3b　目標95%で Haiku が最も多くのレビューを要する</td><td><span class="vd yes">支持</span></td><td>Haiku−Sonnet +23.1pt（+16.6〜+35.8）、Haiku−Opus +36.7pt（+28.6〜+47.4）</td></tr>
+<tr><td>H4a　Opus・Sonnet は確信度を低めに申告する</td><td><span class="vd yes">支持</span></td><td>平均確信度−正答率：−9.1pt（−11.6〜−6.6）、−12.4pt（−15.3〜−9.6）</td></tr>
+<tr><td>H4b　Haiku は ECE が小さいが AUROC は低い</td><td><span class="vd yes">支持</span></td><td>ECE 差 −0.066（−0.092〜−0.024）、AUROC 差 +0.050（+0.008〜+0.095）</td></tr>
+<tr><td>H5　総コストに占めるAPI費用は全条件で5%未満</td><td><span class="vd no">不支持</span></td><td>最も安い人件費条件（2,000円/時・0.5分）かつキャッシュなしでは Opus 20.6%。既定条件ではキャッシュなしでも3.1%</td></tr>
+<tr><td>H6　開発データ100件のほうが500件より選定のずれ・ばらつきが大きい</td><td><span class="vd no">不支持</span></td><td>ばらつきは100件のほうが大きいが、平均的なずれは500件のほうが大きかった（4.4節）</td></tr>
+</tbody></table></div>
+<p style="font-size:14px;color:var(--ink2)">判定基準は <code>docs/hypotheses_v2.md</code>（実行前の SHA-256 を <code>results_v2/run_meta.json</code> に記録）。</p>
+
+<h3>4.2 正答率と確信度</h3>
+<div class="two">
+<figure><img src="charts/v2/graph1_accuracy.png" alt="グラフ1（v2）：モデル別の正答率と95%区間" width="1050" height="420" loading="lazy"><figcaption>グラフ1　モデル別の正答率（v2、95% Wilson区間）</figcaption></figure>
+<figure><img src="charts/v2/graph2_calibration.png" alt="グラフ2（v2）：確信度と実際の正答率（3モデル）" width="1830" height="720" loading="lazy"><figcaption>グラフ2　確信度と実際の正答率（v2、10等幅ビン）</figcaption></figure>
+</div>
+<div class="scroll"><table>
+<thead><tr><th>モデル</th><th class="n">正答率</th><th class="n">95%区間</th><th class="n">誤答</th><th class="n">確信度平均</th><th class="n">Brier</th><th class="n">ECE</th><th class="n">AUROC</th><th class="n">AUROC 95%区間</th><th class="n">AURC</th></tr></thead>
+<tbody>
+<tr><td>Opus 5.5</td><td class="n">86.6%</td><td class="n">83.3–89.3</td><td class="n">67</td><td class="n">0.78</td><td class="n">0.096</td><td class="n">0.101</td><td class="n">0.864</td><td class="n">0.819–0.906</td><td class="n">0.037</td></tr>
+<tr><td>Sonnet 5.5</td><td class="n">84.4%</td><td class="n">81.0–87.3</td><td class="n">78</td><td class="n">0.72</td><td class="n">0.128</td><td class="n">0.125</td><td class="n">0.818</td><td class="n">0.770–0.863</td><td class="n">0.054</td></tr>
+<tr><td>Haiku 5.5</td><td class="n">73.8%</td><td class="n">69.8–77.5</td><td class="n">131</td><td class="n">0.75</td><td class="n">0.145</td><td class="n">0.035</td><td class="n">0.814</td><td class="n">0.771–0.855</td><td class="n">0.113</td></tr>
+</tbody></table></div>
+<ul>
+<li>Opus と Sonnet の正答率の差は v1 の 5.5pt から v2 では 2.2pt に縮み、有意ではなくなった。<b>この2モデルは「正答率が近い組」とみなせる。</b></li>
+<li>Opus・Sonnet は確信度を正答率より9〜12pt低く申告した。Haiku は ECE が最も小さいが、誤り検出の AUROC は Opus より有意に低い。<b>確信度の数値が合っていること（校正）と、誤りを見分けられること（順位付け）は別の性質</b>であることを、新しいデータで確認できた。</li>
+<li>最終評価500件のうち57件は3モデルとも誤答した。ラベル自体の紛らわしさによるものが含まれる可能性がある。</li>
+</ul>
+
+<h3>4.3 目標信頼性ごとの必要レビュー率</h3>
+<div class="two">
+<figure><img src="charts/v2/graph5_required_review_rate.png" alt="グラフ5（v2）：目標信頼性ごとの必要レビュー率（a_h 90%・95%・100%）" width="2000" height="740" loading="lazy"><figcaption>グラフ5　目標信頼性ごとの必要レビュー率（v2）。塗りつぶしは片側95%下限が目標以上（適格）、×は開発データで達成できるしきい値なし。縦線はしきい値固定のブートストラップ95%区間</figcaption></figure>
+<div>
+<div class="scroll"><table>
+<thead><tr><th>目標 Y</th><th class="n">Opus</th><th class="n">Sonnet</th><th class="n">Haiku</th><th class="n">Opus−Sonnet の差</th></tr></thead>
+<tbody>
+<tr><td>80%</td><td class="n">0.0%</td><td class="n">4.4%</td><td class="n">16.2%</td><td class="n">−3.2pt（−9.4〜0.0）</td></tr>
+<tr><td>85%</td><td class="n">7.2%</td><td class="n">18.0%</td><td class="n">34.0%</td><td class="n">−10.5pt（−17.2〜−0.2）</td></tr>
+<tr class="hl"><td>90%</td><td class="n">30.8%</td><td class="n">29.4%</td><td class="n">52.6%</td><td class="n">−1.5pt（−14.0〜+9.8）</td></tr>
+<tr><td>95%</td><td class="n">58.6%</td><td class="n">71.6%</td><td class="n">91.8%</td><td class="n">−13.6pt（−19.8〜−8.8）</td></tr>
+</tbody></table></div>
+<p style="font-size:14px;color:var(--ink2)">a_h=100%、δ=0.05。最終評価データでのレビュー率。12件すべて片側95%下限で適格。差はしきい値選定込みのブートストラップによる平均と95%区間。</p>
+</div>
+</div>
+<div class="box">
+<p><span class="tag t-exp">探索的</span><b>正答率が近い Opus と Sonnet で、必要レビュー率に差は出たか。</b>目標85%と95%では Opus のほうが少なく、差の区間は0をまたがなかった。目標90%では差がなかった。事前登録した H3a（目標90%）は判定保留である。目標85%・95%の差は、仮説を立てずに見つけた探索的な観察として扱う。</p>
+<p>さらに、δ=0.05 の下で目標95%を課すと、開発データ上で「採用分に誤答ゼロ」を求めることになる。選ばれるしきい値は、開発データで最も確信度の高い誤答1件で決まる（Opus 0.85、Sonnet 0.90）。δ=0 にすると、Opus 30.8%、Sonnet 29.4% とほぼ同じになった。目標95%の差は、こうした少数の高確信度の誤答に左右されている。</p>
+</div>
+
+<h3>4.4 統計的な保証の代償：安全余裕 δ と開発データの件数</h3>
+<div class="two">
+<div>
+<p><span class="tag t-exp">探索的</span>H6 が不支持だったため、原因を調べた。開発データから100件または500件を1,000回抜き出してしきい値を選び直し、最終評価データ上の事後最小レビュー率（オラクル）とのずれを測った（目標90%、a_h=100%）。</p>
+<ul>
+<li><b>δ=0</b>：500件ならずれはほぼ0（平均絶対ずれ 0〜2pt）になった。件数を増やせば正確に選べる。ただし片側下限による適格判定はほとんど通らない（適格率 0〜7%）。</li>
+<li><b>δ=0.05</b>：適格率は92〜100%に上がるが、件数によらず平均 +6〜+18pt の過剰レビューになった。</li>
+</ul>
+<p>統計的な保証を付けるには余裕が要り、その余裕が人手を増やす。v1 で見えた過剰レビューの主な原因は、件数の少なさではなく、この余裕だった。</p>
+</div>
+<div class="scroll"><table>
+<thead><tr><th>モデル</th><th>δ</th><th class="n">偏り（100件）</th><th class="n">偏り（500件）</th><th class="n">適格率（500件）</th></tr></thead>
+<tbody>
+<tr><td>Opus</td><td>0</td><td class="n">−0.4pt</td><td class="n">−0.5pt</td><td class="n">7%</td></tr>
+<tr><td></td><td>0.025</td><td class="n">+7.2pt</td><td class="n">+7.2pt</td><td class="n">70%</td></tr>
+<tr><td></td><td>0.05</td><td class="n">+15.6pt</td><td class="n">+17.5pt</td><td class="n">100%</td></tr>
+<tr><td>Sonnet</td><td>0</td><td class="n">−3.5pt</td><td class="n">−0.7pt</td><td class="n">0%</td></tr>
+<tr><td></td><td>0.025</td><td class="n">+2.0pt</td><td class="n">+1.1pt</td><td class="n">20%</td></tr>
+<tr><td></td><td>0.05</td><td class="n">+6.5pt</td><td class="n">+8.1pt</td><td class="n">92%</td></tr>
+<tr><td>Haiku</td><td>0</td><td class="n">−0.8pt</td><td class="n">0.0pt</td><td class="n">1%</td></tr>
+<tr><td></td><td>0.025</td><td class="n">+5.5pt</td><td class="n">+3.4pt</td><td class="n">38%</td></tr>
+<tr><td></td><td>0.05</td><td class="n">+12.1pt</td><td class="n">+16.8pt</td><td class="n">98%</td></tr>
+</tbody></table></div>
+</div>
+<p style="font-size:14px;color:var(--ink2)">偏り＝選定したレビュー率 − オラクル（Opus 7.2%、Sonnet 18.0%、Haiku 34.0%）の平均。<code>results_v2/exploratory_margin.csv</code>。</p>
+
+<h3>4.5 レビュー方針とコスト</h3>
+<div class="two">
+<figure><img src="charts/v2/graph4_review_vs_cost.png" alt="グラフ4（v2）：レビュー率と1件当たり総コスト、目標ごとの総コスト" width="1830" height="800" loading="lazy"><figcaption>グラフ4　レビュー率と1件当たり総運用コスト（v2）。API費用が小さいため3本の線はほぼ重なり、差はレビュー率で決まる</figcaption></figure>
+<figure><img src="charts/v2/graph6_cost_effectiveness.png" alt="グラフ6（v2）：各方針の費用対効果" width="1100" height="790" loading="lazy"><figcaption>グラフ6　各方針の費用対効果（v2。C・D は目標90%用のレビュー率）</figcaption></figure>
+</div>
+<div class="scroll"><table>
+<thead><tr><th>モデル</th><th class="n">A：AIのみ</th><th class="n">C：ランダム</th><th class="n">D：確信度順</th><th class="n">レビュー率</th><th class="n">総コスト/件（D）</th><th class="n">API費用/件</th></tr></thead>
+<tbody>
+<tr><td>Opus 5.5</td><td class="n">86.6%</td><td class="n">90.7%</td><td class="n">97.6%</td><td class="n">30.8%</td><td class="n">41.3円</td><td class="n">0.23円（1.33）</td></tr>
+<tr><td>Sonnet 5.5</td><td class="n">84.4%</td><td class="n">89.0%</td><td class="n">95.6%</td><td class="n">29.4%</td><td class="n">39.3円</td><td class="n">0.11円（0.67）</td></tr>
+<tr><td>Haiku 5.5</td><td class="n">73.8%</td><td class="n">87.5%</td><td class="n">95.6%</td><td class="n">52.6%</td><td class="n">70.1円</td><td class="n">0.006円（0.03）</td></tr>
+</tbody></table></div>
+<p style="font-size:14px;color:var(--ink2)">数値はレビュー後の信頼性（期待値、a_h=100%、目標90%用のレビュー率）。全件レビューは1件約133.5円。API費用の括弧内はキャッシュが効かなかった場合の値。</p>
+<ul>
+<li><b>API単価の順位と総コストの順位は逆になりうる。</b>Haiku の API 費用は Opus の約40分の1だが、必要レビュー率が約22pt多いため、総コストは約1.7倍になった。Haiku と他の2モデルのレビュー率の差は、選定込みの95%区間で0をまたがない（Opus−Haiku −26.2pt、Sonnet−Haiku −24.7pt）。この順位（Sonnet &lt; Opus &lt; Haiku）は、人件費とレビュー時間を変えた12通りの条件すべてで同じだった。</li>
+<li><b>API費用は通常は無視できるが、常にではない。</b>既定条件では総コストの1%未満（キャッシュなしでも約3%）だった。一方、レビューが非常に安い条件（2,000円/時・0.5分）かつキャッシュが効かない場合、Opus では20%に達した（H5 不支持）。</li>
+</ul>
+
+<h3>4.6 予備実験 v1 との比較</h3>
+<div class="scroll"><table>
+<thead><tr><th>項目</th><th class="n">v1（test 200件）</th><th class="n">v2（test 500件）</th></tr></thead>
+<tbody>
+<tr><td>正答率 Opus / Sonnet / Haiku</td><td class="n">88.0 / 82.5 / 76.0%</td><td class="n">86.6 / 84.4 / 73.8%</td></tr>
+<tr><td>Opus−Sonnet の正答率差</td><td class="n">+5.5pt（p=0.002）</td><td class="n">+2.2pt（p=0.052）</td></tr>
+<tr><td>目標90%の必要レビュー率</td><td class="n">29.0 / 26.0 / 28.5%</td><td class="n">30.8 / 29.4 / 52.6%</td></tr>
+<tr><td>確信度順 − ランダム（目標90%用）</td><td class="n">+6.6〜10.2pt</td><td class="n">+6.6〜8.1pt</td></tr>
+<tr><td>目標90%の総コスト/件</td><td class="n">38.9 / 34.8 / 38.0円</td><td class="n">41.3 / 39.3 / 70.1円</td></tr>
+</tbody></table></div>
+<p>v1 では Haiku の必要レビュー率が他と同程度に見えたが、v2 では明確に多かった。v1 は開発データ100件でしきい値を選んでいたため、たまたま低いレビュー率が選ばれていた可能性が高い（v1 の Haiku は目標90%で適格にならなかった）。小規模な評価だけでモデルを選ぶ危うさを示す例である。</p>
+</div></section>
+
+<section id="c4b"><div class="wrap band">
+<h2>第4章（続き）　追加実験 v3：同じ予測のまま、振り分け信号だけを変える</h2>
+<div class="two">
+<div>
+<p><span class="tag t-real">実測</span>v2 では、自己申告の確信度が約20種類の値に集中し、しきい値の段差が必要レビュー率を左右した。v3 では、各モデルの<b>予測を固定したまま、振り分けに使う信号だけを入れ替えた</b>。予測が同じなので正答率は構造上まったく同じになり、必要レビュー率の違いはすべて振り分けから来る。仮説6つは実行前に固定した（<code>docs/hypotheses_v3.md</code>）。</p>
+<div class="scroll"><table>
+<thead><tr><th>信号</th><th>定義</th><th class="n">追加の呼び出し</th></tr></thead>
+<tbody>
+<tr><td>自己申告</td><td>v1・v2 と同じ。分類と同時に申告させた確信度</td><td class="n">なし</td></tr>
+<tr><td>一致度</td><td>同じプロンプトでさらに4回分類させ、元の予測と一致した割合</td><td class="n">4回</td></tr>
+<tr><td>自己検証</td><td>問い合わせ文と予測ラベルを見せ、そのラベルが正しい確率を別の呼び出しで答えさせる</td><td class="n">1回</td></tr>
+<tr><td>組み合わせ</td><td>上の3つの単純平均（重みは学習しない）</td><td class="n">5回</td></tr>
+</tbody></table></div>
+<p style="font-size:14px;color:var(--ink2)">dev は v2 の500件、test は v1・v2 と重複しない新しい500件。費用 $12.56（上限は承認を得て $30 に変更）。新規呼び出し約16,400件、失敗0件。</p>
+</div>
+<div>
+<div class="scroll"><table>
+<thead><tr><th>仮説（v3）</th><th>判定</th><th>根拠（95%区間）</th></tr></thead>
+<tbody>
+<tr><td>H1　AUROC：組み合わせ &gt; 自己申告</td><td><span class="vd hold">判定保留</span></td><td>差は +0.002〜+0.006 で、区間は0をまたぐ</td></tr>
+<tr><td>H2　必要レビュー率：組み合わせ &lt; 自己申告（主仮説）</td><td><span class="vd hold">判定保留</span></td><td>Opus −7.3pt（−17.2〜+2.0）、Sonnet −1.8pt、Haiku −9.9pt（−18.8〜+2.0）</td></tr>
+<tr><td>H3　AUROC：一致度 &gt; 自己申告</td><td><span class="vd no">不支持</span></td><td>−0.24〜−0.34 で有意に低い</td></tr>
+<tr><td>H4　AUROC：自己検証 ≒ 自己申告</td><td><span class="vd yes">支持</span></td><td>差は −0.017〜−0.006、区間は ±0.05 以内</td></tr>
+<tr><td>H5　下限法は δ法よりレビューが少なく、適格率90%以上</td><td><span class="vd hold">判定保留</span></td><td>レビュー率は 7〜16pt 減ったが、適格率は 66〜86%</td></tr>
+<tr><td>H6　組み合わせ信号は追加費用込みで総コストを下げる</td><td><span class="vd yes">支持（点推定）</span></td><td>Opus 36.8→17.6円、Sonnet 32.6→26.0円、Haiku 65.3→52.8円。区間は0をまたぐ</td></tr>
+</tbody></table></div>
+</div>
+</div>
+
+<div class="two" style="margin-top:20px">
+<figure><img src="charts/v3/graph8_signal_required_review.png" alt="グラフ8：信号ごとの必要レビュー率（目標90%）" width="1900" height="690" loading="lazy"><figcaption>グラフ8　信号ごとの必要レビュー率（目標90%、a_h=100%、δ=0.05）。一致度は機能せず、全件レビューになった</figcaption></figure>
+<figure><img src="charts/v3/graph9_signal_curves.png" alt="グラフ9：信号ごとのレビュー率と信頼性" width="2000" height="740" loading="lazy"><figcaption>グラフ9　信号ごとのレビュー率と信頼性。組み合わせ信号（黄）は自己申告（青）と同じ高さを通るが、段差が細かい</figcaption></figure>
+</div>
+
+<h3>v3 で分かったこと</h3>
+<ul>
+<li><span class="tag t-real">実測</span><b>同じモデルを何度呼んでも、ほぼ同じ答えが返る。</b>4回の追加分類は 96.9〜98.8% が元と同じラベルを返した。一致度が1のケースが94〜98%を占め、誤りを見分ける信号にならなかった（AUROC 0.54〜0.58）。Temperature を指定できない現行 API と effort=low の条件では、同じ呼び出しの繰り返しでは「迷い」を測れない。</li>
+<li><span class="tag t-real">実測</span><b>自己検証は、自己申告とほぼ同じ情報しか持たなかった。</b>別の呼び出しで「このラベルは正しいか」と聞き直しても、AUROC は変わらなかった（H4 支持）。</li>
+<li><span class="tag t-exp">探索的</span><b>誤りを見分ける力（AUROC）が同じでも、値が細かいと必要レビュー率が下がる傾向があった。</b>組み合わせ信号の AUROC は自己申告と同じだったが、値の種類は約20から70〜86に増え、ECE も下がった。目標の直上でしきい値を止められるため、点推定では Opus 27.4%→12.2%、Haiku 49.0%→39.6% になった。ただし差の区間は0をまたぎ、事前登録の基準（H2）は満たしていない。</li>
+<li><span class="tag t-real">実測</span><b>開発データの下限だけでは、別データでの保証にならない。</b>下限法は過剰レビューを 7〜16pt 減らしたが、最終評価データで適格になる割合は 66〜86% にとどまった。固定の δ=0.05 は保守的な分、95〜99% を保った。</li>
+<li><span class="tag t-exp">探索的</span><b>保証の代償はレビュー量の大部分を占めうる。</b>自己申告・目標90%で、事後最小のレビュー率は Opus 1.4%・Sonnet 6.0%・Haiku 29.2%。δ法で選ぶと 27.4%・24.4%・49.0% だった。</li>
+</ul>
+</div></section>
+
+<section id="c4c"><div class="wrap band">
+<h2>第4章（続き）　追加実験 v4：別のモデルに検証させると、同じ予測でも必要な人手が半分になった</h2>
+<div class="box">
+<p><span class="tag t-real">実測</span><b>Haiku の予測（正答率 76.2%）はそのままに、Opus にその予測を検証させた値で振り分けると、目標90%に必要なレビュー率が 48.6% から 24.8% に下がった</b>（差 −22.9pt、しきい値選定込みの95%区間 −31.6〜−8.6）。予測は同じなので正答率はまったく同じである。正答率が同じでも、必要なレビュー量は振り分け方で大きく変わる。これは論文の中心的な主張と整合する。本プロジェクトで、事前に定めた基準を満たした初めての証拠である。</p>
+</div>
+<div class="two">
+<div>
+<p>v3 では、同じモデルの中で信号を工夫しても誤り検出の性能は上がらなかった。v4 では情報源を別のモデルに変えた。予測は引き続き固定し、次の信号を比べた（仮説は実行前に固定、<code>docs/hypotheses_v4.md</code>）。</p>
+<ul>
+<li><b>別モデル検証</b>：対象モデルの予測ラベルを、別のモデルに「正しい確率」で評価させる（3モデルが互いを検証する6通り）。</li>
+<li><b>他モデル一致</b>：他の2モデルの予測が一致する割合（0・0.5・1）。</li>
+<li><b>組み合わせ</b>：自己申告・強いモデルの検証・他モデル一致の平均。</li>
+</ul>
+<p style="font-size:14px;color:var(--ink2)">test は v1〜v3 と重複しない新しい500件。費用 $5.37（累計 $20.80）。新規呼び出し 7,470件、失敗0件。</p>
+<div class="scroll"><table>
+<thead><tr><th>仮説（v4）</th><th>判定</th><th>根拠（95%区間）</th></tr></thead>
+<tbody>
+<tr><td>H1　Opus による検証 &gt; 自己申告（Sonnet・Haiku）</td><td><span class="vd yes">支持</span></td><td>AUROC +0.092、+0.113</td></tr>
+<tr><td>H2　他モデル一致 &gt; 自己申告</td><td><span class="vd no">不支持</span></td><td>Opus −0.254、Sonnet −0.121、Haiku −0.020</td></tr>
+<tr><td>H3　必要レビュー率：組み合わせ &lt; 自己申告（主仮説）</td><td><span class="vd hold">判定保留</span></td><td>3モデルすべての基準は満たさず。Haiku −22.9pt（−31.6〜−8.6）で弱い形は成立</td></tr>
+<tr><td>H4　検証モデルが強いほど性能が高い</td><td><span class="vd yes">支持</span></td><td>+0.050（Opus 対 Sonnet が Haiku を検証）、+0.038（Sonnet 対 Haiku が Opus を検証）</td></tr>
+<tr><td>H5　別モデルの情報を加えても総コストが下がる</td><td><span class="vd yes">支持（点推定）</span></td><td>Opus 39.5→29.1円、Sonnet 36.9→31.5円、Haiku 64.8→33.3円</td></tr>
+</tbody></table></div>
+</div>
+<figure><img src="charts/v4/graph11_cross_auroc.png" alt="グラフ11：別モデルの情報を使った信号の誤り検出性能" width="2000" height="720" loading="lazy"><figcaption>グラフ11　信号ごとの誤り検出性能。対象より強いモデルの検証（Sonnet・Haiku の段の「Opus が検証」）は自己申告を大きく上回る。弱いモデルの検証（Opus の段）は下回る</figcaption></figure>
+</div>
+<figure style="margin-top:20px"><img src="charts/v4/graph12_cross_required_review.png" alt="グラフ12：信号ごとの必要レビュー率（目標90%）" width="2000" height="720" loading="lazy"><figcaption>グラフ12　信号ごとの必要レビュー率（目標90%）。Haiku は自己申告 48.6% に対し、Opus の検証で 25.2%、組み合わせで 24.8%。他モデル一致は全件レビューになった</figcaption></figure>
+
+<h3>v4 で分かったこと</h3>
+<ul>
+<li><span class="tag t-real">実測</span><b>検証させるなら、対象より強いモデルを使う。</b>Opus が Haiku を検証すると AUROC は 0.836 → 0.949、Sonnet を検証すると 0.829 → 0.921 に上がった。逆に、Sonnet や Haiku が Opus を検証すると、自己申告（0.872）より下がった（0.786、0.748）。</li>
+<li><span class="tag t-real">実測</span><b>複数のモデルが一致しても、正しいとは限らない。</b>3モデルの予測が一致した408件のうち41件（10%）は、3モデルとも同じ誤ったラベルを選んでいた。紛らわしいラベルの組では、モデルは同じように間違える。そのため「他モデル一致」では正答率が90%で頭打ちになり、目標90%は全件レビューでしか達成できなかった。</li>
+<li><span class="tag t-exp">探索的</span><b>安いモデル＋強い検証モデルは、強いモデル単独より安くなりうる。</b>Haiku の予測を Opus が検証する構成は、目標90%で1件当たり33.3円（検証費用込み）。Opus を単独で使う場合（39.5円）より低かった（差の区間は未計算）。<b>v5 で事前登録して確かめたところ、差は示せなかった</b>（次節）。</li>
+<li><span class="tag t-exp">探索的</span><b>弱い信号を混ぜると、良い信号が薄まる。</b>事前に定めた組み合わせは「他モデル一致」を含むため、Sonnet では Opus の検証だけを使うほうが良かった（必要レビュー率 18.6% 対 23.4%）。</li>
+<li><span class="tag t-real">実測</span><b>下限法は、v3 と同じく別データでの保証を保てなかった</b>（適格率 26〜96%）。</li>
+</ul>
+</div></section>
+
+<section id="c4d"><div class="wrap band">
+<h2>第4章（続き）　追加実験 v5：「安いモデル＋強い検証」は本当に安いか</h2>
+<div class="box">
+<p><span class="tag t-real">実測</span><b>Haiku に答えさせて Opus に検証させる構成は、Opus 単独と同じ水準の総コストで、目標90%の保証を満たした。</b>点推定では 31.4円 対 37.3円だった。しかし、しきい値の選び方の揺れまで含めると差は +1.9円（95%区間 −10.4〜+13.8）で、安いとは言えなかった（主仮説 H1 は判定保留）。一方、v4 の結果「Opus の検証で Haiku の必要レビュー率が半分になる」は、新しいデータでも再現した（−23.7pt、区間 −32.4〜−7.4）。</p>
+</div>
+<div class="two">
+<div>
+<p>v4 で探索的に見えた「安いモデル＋強い検証モデルは強いモデル単独より安い」を、6つの運用構成の総コスト比較として事前登録して確かめた（<code>docs/hypotheses_v5.md</code>）。総コストの区間は、開発・最終評価の両方を再標本化し、毎回すべての構成のしきい値を選び直して求めた。test は v1〜v4 と重複しない新しい500件。費用 $2.81（累計 $23.62）。</p>
+<div class="scroll"><table>
+<thead><tr><th>構成</th><th class="n">AI正答率</th><th class="n">必要レビュー率</th><th class="n">総コスト/件</th></tr></thead>
+<tbody>
+<tr><td>Opus 単独</td><td class="n">87.2%</td><td class="n">27.8%</td><td class="n">37.3円</td></tr>
+<tr><td>Sonnet 単独</td><td class="n">85.4%</td><td class="n">26.8%</td><td class="n">35.9円</td></tr>
+<tr><td>Haiku 単独</td><td class="n">79.2%</td><td class="n">48.4%</td><td class="n">64.5円</td></tr>
+<tr class="hl"><td>Haiku＋Opus 検証（全件）</td><td class="n">79.2%</td><td class="n">23.4%</td><td class="n">31.4円</td></tr>
+<tr><td>Haiku＋Opus 検証（確信度の低い34%だけ）</td><td class="n">79.2%</td><td class="n">48.4%</td><td class="n">64.6円</td></tr>
+<tr><td>Sonnet＋Opus 検証（全件）</td><td class="n">85.4%</td><td class="n">18.2%</td><td class="n">24.6円</td></tr>
+</tbody></table></div>
+<div class="scroll"><table>
+<thead><tr><th>仮説（v5）</th><th>判定</th><th>根拠（95%区間）</th></tr></thead>
+<tbody>
+<tr><td>H1　総コスト：Haiku＋Opus 検証 &lt; Opus 単独（主仮説）</td><td><span class="vd hold">判定保留</span></td><td>差 +1.9円（−10.4〜+13.8）</td></tr>
+<tr><td>H2　Haiku＋Opus 検証は保証を満たす</td><td><span class="vd yes">支持</span></td><td>下限 0.952、適格率 99%</td></tr>
+<tr><td>H3　検証を一部に絞ってもレビューはほぼ増えない</td><td><span class="vd hold">判定保留</span></td><td>+23.3pt（+4.4〜+32.4）。総コストは約2倍で、実質的に効果なし</td></tr>
+<tr><td>H4　v4 の再現（Haiku）</td><td><span class="vd yes">支持</span></td><td>−23.7pt（−32.4〜−7.4）</td></tr>
+<tr><td>H5　Sonnet でも Opus の検証でレビューが減る</td><td><span class="vd hold">判定保留</span></td><td>−3.9pt（−12.0〜+4.4）</td></tr>
+</tbody></table></div>
+</div>
+<figure><img src="charts/v5/graph15_pipeline_costs.png" alt="グラフ15：運用構成ごとの総コストと必要レビュー率" width="1840" height="750" loading="lazy"><figcaption>グラフ15　運用構成ごとの総コストと必要レビュー率（目標90%）。点は最終評価データでの値、横線はしきい値選定込みの95%区間。区間が大きく重なっており、上位の構成どうしの差は示せない</figcaption></figure>
+</div>
+<h3>v5 で分かったこと</h3>
+<ul>
+<li><span class="tag t-real">実測</span><b>点推定だけで構成を選ぶと誤りうる。</b>Opus 単独の点推定（37.3円）は、しきい値選定の揺れを含めた平均（28.8円）より高かった。値の粗い確信度では、しきい値が1段ずれるだけで総コストが大きく変わる。構成の比較には区間が欠かせない。</li>
+<li><span class="tag t-real">実測</span><b>弱いモデルが自信を持って間違える案件こそ、検証が必要。</b>Haiku の誤答104件のうち26件は、Haiku 自身の確信度が0.80以上だった。Haiku の確信度で検証対象を絞ると、これらを見逃す。その結果、しきい値は Haiku 単独と同じになり、検証の効果が消えた。</li>
+<li><span class="tag t-real">実測</span><b>強いモデルによる検証の効果は再現した。</b>Opus による Haiku の検証は、AUROC 0.951（v4 は0.949）、必要レビュー率 −23.7pt（v4 は −22.9pt）で、ほぼ同じだった。</li>
+<li><span class="tag t-exp">探索的</span><b>Sonnet＋Opus 検証は点推定で最も安かった。</b>1件24.6円で、人件費・レビュー時間を変えた12通りすべてで1位だった。ただし、Opus 単独との差（−3.0円、区間 −16.5〜+10.2）は示せない。</li>
+</ul>
+</div></section>
+
+<section id="c4e"><div class="wrap band">
+<h2>第4章（続き）　構成の差を見分けるには何件要るか</h2>
+<div class="two">
+<div>
+<p><span class="tag t-exp">探索的</span>v5 の予測を母集団とみなし、開発・最終評価の件数を250〜16,000件に変えて再標本化した。毎回しきい値を選び直し、両側5%・検出力80%で<b>見分けられる最小の総コスト差</b>を求めた（API 費用なし、<code>docs/power_analysis.md</code>）。</p>
+<ul>
+<li><b>差の大きい比較は数百件で足りる。</b>Haiku 単独と Haiku＋Opus 検証の差（約33円）は、250件でも見分けられる。</li>
+<li><b>自己申告だけで振り分ける構成が絡む比較は、件数を増やしても見分けられるようにならない。</b>Opus 単独との比較では、4,000件でも見分けられる最小の差は約20円のままで、16,000件でも約14円だった。</li>
+<li><b>原因は確信度の段差。</b>Opus の自己申告では、しきい値0.6と0.7でレビュー率が15.4%から27.8%に跳ぶ。この標本では、0.6での開発データ上の信頼性が0.948と、条件（0.95）の目前にあった。そのため、件数を増やしても選ばれる段が入れ替わり続ける。</li>
+<li>BANKING77 の未使用の test は約880件しかなく、上位の構成どうしの確認実験はこのデータでは成り立たない。差を見分けたいなら、件数を増やすより先に、振り分け信号の値を細かくする、複数の目標や曲線全体で比べる、しきい値を事前に固定する、といった設計の変更が有効と考えられる。</li>
+</ul>
+</div>
+<figure><img src="charts/v5/graph17_required_n.png" alt="グラフ17：件数と、見分けられる最小の総コスト差" width="1600" height="1000" loading="lazy"><figcaption>グラフ17　件数と、見分けられる最小の総コスト差。差の大きい比較（ピンク）は件数とともに下がるが、Opus・Sonnet 単独が絡む比較（青・橙・黄）はほとんど下がらない</figcaption></figure>
+</div>
+</div></section>
+
+<section id="c5"><div class="wrap band">
+<h2>第5章　考察</h2>
+<h3>正答率だけでは分からない違いは確認できたか</h3>
+<p class="ans">一部は確認できた。ただし、論文と同じ形（正答率がほぼ同じでレビュー率がはっきり違う）を、事前登録した仮説として示すことはできなかった。</p>
+<ul>
+<li><b>確認できたこと（事前登録）</b>：確信度順のレビューはランダムより効率が良い（H2）。校正の良さと誤りを見分ける能力は一致しない（H4b）。目標95%では Haiku が最も多くのレビューを要する（H3b）。</li>
+<li><b>確認できたこと（コスト）</b>：API単価が最も安いモデルが、総コストでは最も高くなった。総コストを決めたのは API 単価ではなく必要レビュー率だった。</li>
+<li><b>確認できなかったこと</b>：正答率が近い Opus と Sonnet の、目標90%での必要レビュー率の差（H3a 判定保留）。目標85%・95%では差が見えたが、事前登録外であり、目標95%の差は少数の高確信度の誤答に左右されていた。</li>
+</ul>
+<h3>なぜ論文ほどはっきりしないのか</h3>
+<ol>
+<li><b>件数</b>：500件でも、必要レビュー率の差の区間は ±12pt 程度ある。論文の例（約10pt差）程度の違いを確実に見分けるには、さらに件数が要る。</li>
+<li><b>確信度が粗い</b>：確信度は20種類前後の値に集中しており、しきい値を1段変えるとレビュー率が10pt以上跳ぶことがある（Opus：しきい値0.60→0.70で 17.0%→30.8%）。差の有無が、目標の位置としきい値の段差の関係で決まってしまう。</li>
+<li><b>タスクが単純</b>：分類では誤りやすい問題がモデル間で共通しており（3モデルとも誤答が57件）、確信度の付け方の差が出にくい可能性がある。</li>
+</ol>
+<h3>保証の代償</h3>
+<p>READY の考え方の中心は、開発データで決めた方針を別のデータで統計的に保証することにある。今回の結果では、保証のための安全余裕（δ=0.05）が、目標90%で6〜18pt の追加レビューを生んだ。余裕を外すと、事後的に最適なレビュー率をほぼ正確に選べるが、保証はほとんど通らない。品質保証として出すのか、運用の目安として出すのかで、必要な人手が大きく変わる。これはモデル選定とは別に、契約や SLA の設計で決めるべき点である。</p>
+<h3>振り分け信号を良くすれば人手は減るか（v3）</h3>
+<p>予測を固定して信号だけを変える実験では、正答率が同じでもレビュー率が変わりうることを点推定では示せたが、事前に決めた基準では確かめられなかった。分かったのは次の3点である。同じモデルを同じ条件で繰り返し呼んでも「迷い」は測れない。聞き直し（自己検証）は自己申告と同じ情報しか持たない。信号の<b>細かさ</b>が、段差による過剰レビューを減らすのに効いている可能性がある。信号を改善する余地は、別モデルによる検証や入力の言い換えなど、情報源を変える方向にあると考えられる。</p>
+<h3>強いモデルに検証させる（v4）</h3>
+<p>v4 で、同じ予測のまま必要な人手を大きく減らせる例が得られた。効いたのは、対象より強いモデルによる検証だった。一方で、複数モデルの多数決のような「一致」は、モデル間で誤りが相関しているため信頼性の上限を作ってしまった。実務では、安いモデルで全件を処理し、強いモデルには「検証だけ」をさせて、怪しい案件を人間に回す構成が候補になる。ただし、今回のタスクは単発の分類であり、強いモデルの検証費用が小さく済んだ条件での結果である。v5 では、この構成の総コストは強いモデル単独と同程度で、安いとは言えなかった。また、検証対象を弱いモデルの確信度で絞ると、弱いモデルが自信を持って間違える案件を見逃し、効果が消えた。</p>
+<h3>人間側の精度</h3>
+<p>人間の成功率を90%と仮定すると、目標90%以上はどのモデルでも開発データの段階で達成できなかった。人間の精度は「あれば良い」前提ではなく、達成できる信頼性の上限を決める設計変数である。</p>
+</div></section>
+
+<section id="c6"><div class="wrap band">
+<h2>第6章　SIer業務への応用：モデル選定で追加すべき評価</h2>
+<div class="two">
+<div>
+<ol>
+<li><b>正答率に加えて「目標品質での必要レビュー率」を出す。</b>品質目標を先に決め、そこに必要な人手の割合で比べる。</li>
+<li><b>総コストを人件費込みで比べる。</b>API単価の安さは、必要レビュー率が増えれば簡単に逆転する（今回は Haiku が総コスト最高）。</li>
+<li><b>確信度は「順位付け」で評価する。</b>ECE ではなく、誤り検出の AUROC やリスク・カバレッジ曲線を見る。確信度順のレビューは抜き取り確認より効率が良い。</li>
+<li><b>保証の有無を区別して見積もる。</b>統計的な保証を付けると安全余裕の分だけ人手が増える。品質保証として約束するのか、運用の目安なのかを顧客と合意する。</li>
+<li><b>評価件数を確保する。</b>200件の予備評価では、Haiku のレビュー負荷を過小評価していた。開発・検証それぞれ数百件以上が望ましい。</li>
+<li><b>人間レビューの精度と時間を測る。</b>特に AI が迷った案件について。ここが仮定のままだと、コストも達成可能な品質も決まらない。</li>
+<li><b>確信度は値の細かさも確認する。</b>数種類の値に固まる確信度は、しきい値の段差で過剰レビューを生む。複数の信号の平均で細かくできる（v3）。</li>
+<li><b>同じモデルの再実行で「迷い」を測ろうとしない。</b>現行の設定では答えがほぼ毎回同じになり、一致度は信号にならなかった（v3）。</li>
+<li><b>振り分けには、対象より強いモデルの検証を使う。</b>同じ予測でも必要レビュー率が半分になった例がある。弱いモデルの検証や、複数モデルの多数決は逆効果になりうる（v4）。</li>
+<li><b>「複数のAIが一致したから正しい」とみなさない。</b>紛らわしいケースでは、モデルは同じように間違える（v4）。</li>
+<li><b>検証の対象を、弱いモデル自身の確信度で絞らない。</b>弱いモデルが自信を持って間違える案件こそ、強いモデルの検証が必要（v5）。</li>
+<li><b>構成の比較は区間で行う。</b>点推定だけでは、しきい値の段差による偶然の差を「コスト差」と見誤る（v5）。粗い確信度で振り分ける構成どうしの数円の差は、件数を増やしても見分けにくい（必要件数の見積もり）。</li>
+</ol>
+</div>
+<div class="box">
+<p><b>提案書・評価計画に入れる表の例</b></p>
+<div class="scroll"><table>
+<thead><tr><th>項目</th><th>記載内容</th></tr></thead>
+<tbody>
+<tr><td>品質目標</td><td>業務上許容できる誤り率と、その根拠</td></tr>
+<tr><td>AI単体の正答率</td><td>区間付き</td></tr>
+<tr><td>必要レビュー率</td><td>品質目標ごと。区間と、保証の有無（安全余裕の値）</td></tr>
+<tr><td>振り分け信号</td><td>何を確信度に使うか、AUROC</td></tr>
+<tr><td>1件当たり総コスト</td><td>API＋人件費、前提の単価と時間</td></tr>
+<tr><td>人間側の仮定</td><td>レビュー成功率、レビュー時間（実測か仮定か）</td></tr>
+<tr><td>評価データ</td><td>開発・検証の件数、分け方</td></tr>
+<tr><td>再評価の条件</td><td>モデル更新、入力の傾向変化</td></tr>
+</tbody></table></div>
+</div>
+</div>
+</div></section>
+
+<section id="c7"><div class="wrap band">
+<h2>第7章　結論</h2>
+<p>銀行問い合わせの77分類で、予備実験（200件）と、仮説を事前に固定した追加実験（500件）を行った。</p>
+<ul>
+<li>確信度の低い順にレビューすると、同じ人手でランダムより6.6〜8.1pt 高い信頼性が得られた。</li>
+<li>API単価が最も安い Haiku は、目標90%で必要レビュー率が約53%と最も多く、1件当たり総コストは Opus・Sonnet の約1.7倍だった。</li>
+<li>確信度の校正の良さと、誤りを見分ける能力は一致しなかった。</li>
+<li>正答率が近い Opus と Sonnet の必要レビュー率は、目標90%では差が見られなかった。目標85%・95%では差が見えたが、探索的な観察である。</li>
+<li>統計的な保証のための安全余裕は、それ自体が数pt〜十数pt のレビューを追加した。開発データの下限だけで選ぶと過剰レビューは減るが、別データでの保証は66〜86%しか通らなかった（v3）。</li>
+<li>同じ予測のまま信号を組み合わせると、必要レビュー率は点推定で下がった（Opus 27.4%→12.2%）が、事前の基準では有意でなかった。同じモデルの再実行による一致度は機能しなかった（v3）。</li>
+<li><b>同じ予測（正答率は同一）のまま、Opus に検証させた値で振り分けると、Haiku の必要レビュー率は48.6%から24.8%に下がった（95%区間 −31.6〜−8.6pt、v4）。</b>検証は対象より強いモデルで行う必要があり、複数モデルの一致は誤りの相関のため役に立たなかった。この結果は v5 の新しいデータで再現した（−23.7pt）。</li>
+<li>「安いモデル＋強い検証」は強いモデル単独と同程度の総コストで保証を満たしたが、安いとは言えなかった。検証を弱いモデルの確信度で一部に絞ると効果が消えた（v5）。</li>
+</ul>
+<p>「企業でAIエージェントを導入する際には、正答率だけでなく、必要な信頼性を達成するための人間のレビュー率と総運用コストを評価すべきである」という主張は、今回の結果によって支持される。API単価や正答率の比較だけでは総コストの順位を誤りうること（v2）、そして正答率がまったく同じでも振り分け方で必要な人手が半分になりうること（v4、v5 で再現）を、事前に定めた基準で示せた。一方、別々のモデルどうしで正答率がほぼ同じなのにレビュー率が違うという論文の観察そのものは、事前登録した形では再現できていない（v2）。モデルの一般的な優劣は断定できない。</p>
+</div></section>
+
+<section id="c8"><div class="wrap band">
+<h2>第8章　限界と今後の課題</h2>
+<div class="two">
+<div>
+<h3 style="margin-top:0">今回の実験の限界</h3>
+<ul>
+<li>論文の完全再現ではない。題材はエージェントではなく単発の分類。</li>
+<li>人間のレビュー成功率・時間・人件費はすべて仮定。誤りを見逃したときの損失はコストに入れていない。</li>
+<li>Claude の3モデルのみ。他社モデルは比較していない。</li>
+<li>確信度は自己申告で値が粗く、しきい値の段差が結果を左右した。</li>
+<li>目標95%と δ=0.05 の組み合わせは「開発データで誤答ゼロ」を求める極端な条件になる。</li>
+<li>Temperature を指定できず、再実行によるばらつきは測っていない。</li>
+<li>BANKING77 が事前学習に含まれている可能性があり、ラベル自体が曖昧なケースもある。</li>
+<li>多数の条件（目標×a_h×δ）を出している。事前登録した8仮説以外は探索的な結果として扱うこと。</li>
+</ul>
+</div>
+<div>
+<h3 style="margin-top:0">次に検証すべきこと</h3>
+<ol>
+<li><b>正答率が近い他社モデルとの組</b>で、必要レビュー率に差が出るか（目標90%の差を事前登録して確かめる）。</li>
+<li><b>細かい振り分け信号どうしでの構成比較</b>：必要件数の見積もりから、自己申告のような粗い信号では件数を増やしても構成の差を見分けにくいと分かった。検証などで信号を細かくした構成どうしを、別のデータセットで大きな件数で比べる。</li>
+<li><b>安全余裕の決め方</b>：開発データの下限法は保証を保てなかった（v3）。開発データを分割して交差検証する方法など、保証と過剰レビューの釣り合いを取る選び方。</li>
+<li><b>人間側の実測</b>：AI が迷った案件でのレビュー時間と修正の正確さ。</li>
+<li><b>実業務のエージェントタスク</b>（文書作成、問い合わせ対応の一連の流れ）での成否判定と、途中で人間に確認する方式。</li>
+<li>誤りを見逃したときの損失をコストに入れた比較。</li>
+</ol>
+</div>
+</div>
+</div></section>
+
+<footer><div class="wrap band">
+<p>出典：Chatrath, V. et al. (2026) READY or Not: Reliable Enterprise Agent Deployment. arXiv:2609.02095（CC BY 4.0）。データ：PolyAI BANKING77（Casanueva et al., 2020、CC BY 4.0）。再現手順・コード・全予測結果は ready-evaluation リポジトリの README、<code>results/</code>（v1）、<code>results_v2/</code>（v2）、<code>results_v3/</code>（v3）、<code>results_v4/</code>（v4）、<code>results_v5/</code>（v5）、<code>docs/</code> を参照。グラフはすべて実測値（シミュレーション値は <code>charts/simulation/</code> と <code>charts/v2/simulation/</code> に分けて保存し、本レポートでは使っていない）。v1 のグラフは <code>charts/</code> にある。</p>
+</div></footer>
+
+</body>
+</html>

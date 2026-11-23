@@ -1,0 +1,37 @@
+{
+ "model_key": "opus-5-5",
+ "model_id": "claude-opus-5-5",
+ "provider": "anthropic",
+ "case_id": "test-02511",
+ "split": "test",
+ "label_id": 43,
+ "timestamp": "2026-11-23T08:08:58.282661+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 0
+ },
+ "latency_s": 1.4282909159956034,
+ "response_model": "claude-opus-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKX3KMjcYvFqpwcMmjeW",
+ "usage": {
+  "input_tokens": 25,
+  "output_tokens": 23,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0013788,
+ "raw_text": "{\"predicted_label\":\"country_support\",\"confidence\":0.45}",
+ "status": "ok",
+ "predicted_id": 24,
+ "predicted_label": "country_support",
+ "confidence": 0.45,
+ "confidence_raw": 0.45,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "b342d89ce911ab1d80894b51",
+ "prompt_version": "v1"
+}

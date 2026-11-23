@@ -1,0 +1,37 @@
+{
+ "model_key": "opus-5-5__verify_of__haiku-5-5",
+ "model_id": "claude-opus-5-5",
+ "provider": "anthropic",
+ "case_id": "train-07625",
+ "split": "dev",
+ "label_id": 65,
+ "timestamp": "2026-11-23T09:10:37.771990+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "verify",
+  "sample": 0
+ },
+ "latency_s": 1.6222570829995675,
+ "response_model": "claude-opus-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKbk2KRYwwqR7mZH2VqR",
+ "usage": {
+  "input_tokens": 52,
+  "output_tokens": 132,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 1038
+ },
+ "cost_usd": 0.0032632000000000004,
+ "raw_text": "{\"probability_correct\": 0.15}",
+ "status": "ok",
+ "predicted_id": -1,
+ "predicted_label": "top_up_by_bank_transfer_charge",
+ "confidence": 0.15,
+ "confidence_raw": 0.15,
+ "label_match": null,
+ "parse_note": "",
+ "cache_key": "a9f7aa3ad73d2a403dd38e5e",
+ "prompt_version": "v1"
+}

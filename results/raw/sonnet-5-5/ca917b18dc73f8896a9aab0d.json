@@ -1,0 +1,35 @@
+{
+ "model_key": "sonnet-5-5",
+ "model_id": "claude-sonnet-5-5",
+ "provider": "anthropic",
+ "case_id": "train-01483",
+ "split": "dev",
+ "label_id": 41,
+ "timestamp": "2026-11-23T06:56:44.440783+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default"
+ },
+ "latency_s": 1.4332255000044825,
+ "response_model": "claude-sonnet-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKRXrCx9D55swHgWxP5H",
+ "usage": {
+  "input_tokens": 73,
+  "output_tokens": 30,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0008554,
+ "raw_text": "{\"predicted_label\":\"lost_or_stolen_card\",\"confidence\":0.8}",
+ "status": "ok",
+ "predicted_id": 41,
+ "predicted_label": "lost_or_stolen_card",
+ "confidence": 0.8,
+ "confidence_raw": 0.8,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "ca917b18dc73f8896a9aab0d",
+ "prompt_version": "v1"
+}

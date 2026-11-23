@@ -1,0 +1,37 @@
+{
+ "model_key": "sonnet-5-5",
+ "model_id": "claude-sonnet-5-5",
+ "provider": "anthropic",
+ "case_id": "test-01644",
+ "split": "test",
+ "label_id": 42,
+ "timestamp": "2026-11-23T09:01:44.903231+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 0
+ },
+ "latency_s": 1.6102225409995299,
+ "response_model": "claude-sonnet-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKb4k6mCCFgkbK1AubMv",
+ "usage": {
+  "input_tokens": 33,
+  "output_tokens": 31,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0007853999999999999,
+ "raw_text": "{\"predicted_label\":\"lost_or_stolen_phone\",\"confidence\":0.55}",
+ "status": "ok",
+ "predicted_id": 42,
+ "predicted_label": "lost_or_stolen_phone",
+ "confidence": 0.55,
+ "confidence_raw": 0.55,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "56ceba29cd10b0e4e2de2cde",
+ "prompt_version": "v1"
+}

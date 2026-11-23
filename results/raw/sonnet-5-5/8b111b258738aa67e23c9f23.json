@@ -1,0 +1,35 @@
+{
+ "model_key": "sonnet-5-5",
+ "model_id": "claude-sonnet-5-5",
+ "provider": "anthropic",
+ "case_id": "test-01770",
+ "split": "test",
+ "label_id": 51,
+ "timestamp": "2026-11-23T06:58:57.102875+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default"
+ },
+ "latency_s": 1.638059125005384,
+ "response_model": "claude-sonnet-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKRhdP4gvpUXMGN9QRD5",
+ "usage": {
+  "input_tokens": 37,
+  "output_tokens": 30,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0007834000000000001,
+ "raw_text": "{\"predicted_label\":\"Refund_not_showing_up\",\"confidence\":0.85}",
+ "status": "ok",
+ "predicted_id": 51,
+ "predicted_label": "Refund_not_showing_up",
+ "confidence": 0.85,
+ "confidence_raw": 0.85,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "8b111b258738aa67e23c9f23",
+ "prompt_version": "v1"
+}

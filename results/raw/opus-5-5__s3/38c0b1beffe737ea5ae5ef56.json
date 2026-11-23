@@ -1,0 +1,37 @@
+{
+ "model_key": "opus-5-5__s3",
+ "model_id": "claude-opus-5-5",
+ "provider": "anthropic",
+ "case_id": "train-05721",
+ "split": "dev",
+ "label_id": 51,
+ "timestamp": "2026-11-23T08:14:40.472985+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default",
+  "task": "classify",
+  "sample": 3
+ },
+ "latency_s": 1.0062972080049803,
+ "response_model": "claude-opus-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKXUYGaDcT7QhbtU3hfN",
+ "usage": {
+  "input_tokens": 58,
+  "output_tokens": 30,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0016508,
+ "raw_text": "{\"predicted_label\":\"Refund_not_showing_up\",\"confidence\":0.88}",
+ "status": "ok",
+ "predicted_id": 51,
+ "predicted_label": "Refund_not_showing_up",
+ "confidence": 0.88,
+ "confidence_raw": 0.88,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "38c0b1beffe737ea5ae5ef56",
+ "prompt_version": "v1"
+}

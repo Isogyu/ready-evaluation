@@ -1,0 +1,97 @@
+# 追加実験（v4）の設定：別モデルによる検証と他モデル一致を振り分け信号にする。仮説と判定基準は docs/hypotheses_v4.md（実行前に固定）。
+# 実験設定。数値はすべてここで変更する。
+# コスト関係の値（人件費・レビュー時間・為替）は例示的な仮定であり、実測値ではない。
+
+seed: 20261126
+
+data:
+  hf_base_url: "https://huggingface.co/datasets/PolyAI/banking77/resolve/main"
+  extend_from: "data/splits_v3.csv"  # dev は v2・v3 と同じ500件
+  exclude_test_from: ["data/splits.csv", "data/splits_v2.csv"]  # test は v1〜v3 の test（計1,200件）と重ならないように抽出
+  splits_path: "data/splits_v4.csv"
+  n_dev_new: 0
+  n_test: 500
+
+run:
+  results_dir: "results_v4"       # 実測（API）の出力先
+  raw_dir: "results/raw"          # 生応答のキャッシュは v1 と共有（v1 の dev 100件を再利用）。費用上限もここで累積
+  charts_dir: "charts/v4"
+  chart_note: "（実測：追加実験 v4、test 500件）"
+  sim_results_dir: "results_v4/simulation"  # シミュレーションの出力先（実測と混ぜない）
+  budget_usd: 30.0                # 累積API費用の上限（全実験の合計）。v3 実行時に利用者の承認を得て $30 に設定（2026-11-23）
+  concurrency: 12
+  timeout_s: 120
+  max_retries: 3
+  prompt_version: "v1"
+
+# 比較対象モデル。料金は 1M トークン当たりの USD（2026-11-03 時点の公表値）。
+# 実行時に Models API で ID の実在を確認し、results/run_meta.json に記録する。
+models:
+  - key: opus-5-5
+    provider: anthropic
+    model_id: claude-opus-5-5
+    price_in: 4.00
+    price_out: 20.00
+    max_tokens: 4000
+    effort: low
+  - key: sonnet-5-5
+    provider: anthropic
+    model_id: claude-sonnet-5-5
+    price_in: 2.00
+    price_out: 10.00
+    max_tokens: 4000
+    effort: low
+  - key: haiku-5-5
+    provider: anthropic
+    model_id: claude-haiku-5-5
+    price_in: 0.10
+    price_out: 0.50
+    max_tokens: 4000
+    effort: low
+  # GPT系を追加する場合の例（OPENAI_API_KEY が必要。料金は公式ページで確認して記入）
+  # - key: gpt-x
+  #   provider: openai
+  #   model_id: "<実行時に確認したID>"
+  #   price_in: 0.0
+  #   price_out: 0.0
+  #   max_tokens: 4000
+
+analysis:
+  ece_bins: 10
+  bootstrap_n: 2000
+  random_review_seeds: 100
+  review_rate_grid_step: 0.05
+  target_reliabilities: [0.80, 0.85, 0.90, 0.95]
+  human_success_rates: [0.90, 0.95, 1.00]   # a_h：人間レビューの成功率（仮定）
+  primary_human_success: 1.00               # 初期実験の仮定（理想化）
+  margins: [0.0, 0.05]                      # δ：開発データでの安全余裕。0.05 は論文の値
+  confidence_level: 0.95                    # 片側信頼下限の水準
+  min_errors_for_auroc: 10                  # 誤答がこれ未満なら AUROC 等を「不安定」と表示
+
+cost:
+  usd_jpy: 150.0          # 為替（仮定）
+  wage_jpy_per_hour: 4000 # 人件費（仮定）
+  review_minutes: 2.0     # 1件当たりレビュー時間（仮定）
+  sensitivity:
+    wage_jpy_per_hour: [2000, 4000, 8000]
+    review_minutes: [0.5, 1.0, 2.0, 5.0]
+
+preregistered_docs: ["docs/hypotheses_v4.md"]
+
+signals:
+  n_extra_samples: 4   # 一致度用の追加分類回数
+  primary_target: 0.90
+
+
+# シミュレーションモード用の仮想モデル（APIを使わない。結果は実測ではない）
+simulation:
+  models:
+    - key: sim-A
+      accuracy: 0.88
+      calibration: good
+    - key: sim-B
+      accuracy: 0.87
+      calibration: poor
+    - key: sim-C
+      accuracy: 0.80
+      calibration: good

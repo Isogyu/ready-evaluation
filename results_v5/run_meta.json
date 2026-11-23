@@ -1,0 +1,48 @@
+{
+ "runs": [
+  {
+   "finished_at": "2026-11-23T09:29:31.055480+00:00",
+   "prompt_version": "v1",
+   "models": [
+    {
+     "key": "opus-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-opus-5-5",
+     "price_in": 4.0,
+     "price_out": 20.0,
+     "max_tokens": 4000,
+     "effort": "low"
+    },
+    {
+     "key": "sonnet-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-sonnet-5-5",
+     "price_in": 2.0,
+     "price_out": 10.0,
+     "max_tokens": 4000,
+     "effort": "low"
+    },
+    {
+     "key": "haiku-5-5",
+     "provider": "anthropic",
+     "model_id": "claude-haiku-5-5",
+     "price_in": 0.1,
+     "price_out": 0.5,
+     "max_tokens": 4000,
+     "effort": "low"
+    }
+   ],
+   "budget_usd": 30.0,
+   "seed": 20261127,
+   "python": "3.13.2",
+   "anthropic_sdk": "2.12.0",
+   "preregistered_doc_sha256": {
+    "docs/hypotheses_v5.md": "2211fc4ab1a4c064e16a9e37778b6c534341c1ab834946f359ba8eb3990eef02"
+   },
+   "mode": "pipelines-full",
+   "n_cases": 1000,
+   "stopped_by_budget": false,
+   "spent_usd_total": 23.616380964999454
+  }
+ ]
+}

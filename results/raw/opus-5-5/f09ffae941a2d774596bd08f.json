@@ -1,0 +1,35 @@
+{
+ "model_key": "opus-5-5",
+ "model_id": "claude-opus-5-5",
+ "provider": "anthropic",
+ "case_id": "train-06862",
+ "split": "dev",
+ "label_id": 53,
+ "timestamp": "2026-11-23T06:54:16.588219+00:00",
+ "settings": {
+  "effort": "low",
+  "max_tokens": 4000,
+  "thinking": "model default"
+ },
+ "latency_s": 0.950923459007754,
+ "response_model": "claude-opus-5-5",
+ "stop_reason": "end_turn",
+ "request_id": "req_011ChKRLx57dy3E3LfAo9gwX",
+ "usage": {
+  "input_tokens": 29,
+  "output_tokens": 29,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 2047
+ },
+ "cost_usd": 0.0015148,
+ "raw_text": "{\"predicted_label\":\"reverted_card_payment?\",\"confidence\":0.6}",
+ "status": "ok",
+ "predicted_id": 53,
+ "predicted_label": "reverted_card_payment?",
+ "confidence": 0.6,
+ "confidence_raw": 0.6,
+ "label_match": "exact",
+ "parse_note": "",
+ "cache_key": "f09ffae941a2d774596bd08f",
+ "prompt_version": "v1"
+}

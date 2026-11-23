@@ -1,0 +1,13 @@
+model_key,sample,share_same_label,share_ok
+opus-5-5,opus-5-5__s1,0.985,1.0
+opus-5-5,opus-5-5__s2,0.986,1.0
+opus-5-5,opus-5-5__s3,0.986,1.0
+opus-5-5,opus-5-5__s4,0.988,1.0
+sonnet-5-5,sonnet-5-5__s1,0.987,1.0
+sonnet-5-5,sonnet-5-5__s2,0.987,1.0
+sonnet-5-5,sonnet-5-5__s3,0.989,1.0
+sonnet-5-5,sonnet-5-5__s4,0.99,1.0
+haiku-5-5,haiku-5-5__s1,0.974,1.0
+haiku-5-5,haiku-5-5__s2,0.969,1.0
+haiku-5-5,haiku-5-5__s3,0.971,1.0
+haiku-5-5,haiku-5-5__s4,0.962,1.0
