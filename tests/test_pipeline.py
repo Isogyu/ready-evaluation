@@ -140,3 +140,19 @@ def test_parse_verify():
     assert parse_verify('{"probability_correct": 0.7}') == ("ok", 0.7, "")
     assert parse_verify('{"probability_correct": 70}')[1] == 0.7
     assert parse_verify("nope")[0] == "invalid_output"
+
+
+def test_preregistered_docs_match_recorded_hashes():
+    """docs/hypotheses_v2〜v5.md の追記より前の本文が、実行時に記録した SHA-256 と一致する。"""
+    from ready_eval import prereg
+    from ready_eval.config import ROOT
+    rows = prereg.check(ROOT)
+    assert len(rows) == 4
+    assert all(r["match"] for r in rows), rows
+
+
+def test_prereg_reconstruct_requires_appendix():
+    from ready_eval import prereg
+    assert prereg.reconstruct("本文\n追記日：2026\n結果") == "本文" + prereg.PLACEHOLDER
+    with pytest.raises(ValueError):
+        prereg.reconstruct("追記のない本文")

@@ -329,7 +329,8 @@ def cmd_power(cfg, args):
     req = PW.required_n(sd)
     sd.to_csv(results_dir / "power_sd.csv", index=False)
     req.to_csv(results_dir / "power_required_n.csv", index=False)
-    charts.power_chart(sd, req, PL.PIPE_LABEL, charts_dir / "graph17_required_n.png", cfg["run"].get("chart_note", ""))
+    # 実測値ではなく再標本化による推定なので、run.chart_note（「実測：…」）は使わない
+    charts.power_chart(sd, req, PL.PIPE_LABEL, charts_dir / "graph17_required_n.png", "（v5 の予測から推定）")
     print(req.round(3).to_string(index=False))
 
 
@@ -362,6 +363,18 @@ def cmd_robustness(cfg, args):
     print(ext_bt.round(3).to_string(index=False))
 
 
+def cmd_verify_prereg(cfg, args):
+    """事前登録文書の本文が run_meta.json の記録と一致するか（API なし）。"""
+    from . import prereg
+    rows = prereg.check(ROOT)
+    for r in rows:
+        print(f"{r['doc']}: {'一致' if r['match'] else '不一致'}"
+              f"（記録 {r['recorded_sha256'][:16]}…、復元 {r['reconstructed_sha256'][:16]}…、"
+              f"最初の実行の終了 {r['first_run_finished_at']}）")
+    if not all(r["match"] for r in rows):
+        raise SystemExit(1)
+
+
 def main(argv=None):
     load_dotenv(ROOT / ".env", override=True)
     p = argparse.ArgumentParser(prog="ready_eval")
@@ -391,6 +404,7 @@ def main(argv=None):
     pw.add_argument("--reps", type=int, default=400)
     rb = sub.add_parser("robustness")
     rb.add_argument("--v4-config", default="config_v4.yaml")
+    sub.add_parser("verify-prereg")
     args = p.parse_args(argv)
     cfg = load_config(args.config)
     {"prepare": cmd_prepare, "check": cmd_check, "run": cmd_run,
@@ -399,7 +413,7 @@ def main(argv=None):
      "cross-run": cmd_cross_run, "cross-analyze": cmd_cross_analyze, "cross-simulate": cmd_cross_simulate,
      "pipelines-run": cmd_pipelines_run, "pipelines-analyze": cmd_pipelines_analyze,
      "pipelines-simulate": cmd_pipelines_simulate, "power": cmd_power,
-     "robustness": cmd_robustness}[args.cmd](cfg, args)
+     "robustness": cmd_robustness, "verify-prereg": cmd_verify_prereg}[args.cmd](cfg, args)
 
 
 if __name__ == "__main__":
