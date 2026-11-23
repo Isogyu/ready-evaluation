@@ -9,6 +9,7 @@
 - 方法：[docs/methodology.md](docs/methodology.md)　限界：[docs/limitations.md](docs/limitations.md)　出典：[docs/references.md](docs/references.md)
 - 実行前の計画と費用見積もり：[docs/experiment_plan.md](docs/experiment_plan.md)
 - 構成の差を見分けるのに必要な件数の見積もり（API 費用なし）：[docs/power_analysis.md](docs/power_analysis.md)
+- **読むときの注意**：主分析は「人間のレビューは常に正しい（a_h=100%）」を仮定している。論文の主仮定 a_h=90% では目標90%はどの構成でも達成できず、人間が AI の誤答を見逃すと最も安い構成が入れ替わる。適格判定と総コストの順位はこの仮定つきで読む（report.html 第4章「仮定を変えると結論は変わるか」）。
 - 追加実験の仮説と判定基準（実行前に固定）・判定結果：[v2](docs/hypotheses_v2.md)、[v3](docs/hypotheses_v3.md)、[v4](docs/hypotheses_v4.md)、[v5](docs/hypotheses_v5.md)
 
 ## 実施した実験（2026-11-23）
@@ -154,6 +155,12 @@ API を使わずに全工程を試す（出力は `results/simulation/` と `cha
 .venv/bin/python -m ready_eval --config config_v5.yaml power
 ```
 
+v5 の結論の頑健さの確認（a_h を 90%・95%・100% に変えた判定、人間が AI の誤答を見逃す場合、目標を変えた選定込みブートストラップ、v4 の test を dev にした入れ替え。API を呼ばない、事前登録外）：
+
+```bash
+.venv/bin/python -m ready_eval --config config_v5.yaml robustness
+```
+
 ### キャッシュと中断・再開
 
 - 応答は1件ごとに `results/raw/<model>/<hash>.json` に保存する（v1・v2 で共有。費用上限もここに保存された全応答の合計で判定する）。hash はモデルID・case_id・問い合わせ文・プロンプト版・生成設定から作る。
@@ -191,7 +198,7 @@ ready-evaluation/
 ├── results_v2/          追加実験 v2 の結果（hypotheses.csv、exploratory_margin.csv を含む）
 ├── results_v3/          追加実験 v3 の結果（predictions_signals.csv、method_bootstrap.csv、hypotheses.csv など）
 ├── results_v4/          追加実験 v4 の結果（同上）
-├── results_v5/          追加実験 v5 の結果（pipeline_point.csv、pipeline_bootstrap*.csv、hypotheses.csv など）
+├── results_v5/          追加実験 v5 の結果（pipeline_point.csv、pipeline_bootstrap*.csv、hypotheses.csv、robust_*.csv など）
 ├── charts/              グラフ1〜6（v2/ は追加実験 v2、v3/ はグラフ7〜10、v4/ はグラフ11〜14、v5/ はグラフ15〜17、simulation/ はシミュレーション値）
 ├── docs/                論文レビュー・方法・限界・出典・実験計画
 ├── report.html          レポート

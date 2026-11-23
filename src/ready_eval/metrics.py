@@ -41,7 +41,8 @@ def brier(correct, score) -> float:
 def calibration_table(correct, score, n_bins: int = 10) -> list[dict]:
     """等幅ビン。区間は [lo, hi)、最後のビンのみ [lo, 1.0]。"""
     c, s = np.asarray(correct, float), np.asarray(score, float)
-    edges = np.linspace(0, 1, n_bins + 1)
+    # np.linspace では 0.3 が 0.30000000000000004 になり、境界ちょうどの値が一つ下のビンに入る。整数比で作る。
+    edges = np.arange(n_bins + 1) / n_bins
     idx = np.clip(np.digitize(s, edges[1:-1], right=False), 0, n_bins - 1)
     rows = []
     for b in range(n_bins):

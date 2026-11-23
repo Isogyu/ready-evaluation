@@ -5,6 +5,7 @@
   run [--pilot N]      モデル実行（費用が発生する）。--pilot N は開発用データの先頭N件だけ
   analyze              results/ の実測結果から表とグラフを作る
   simulate             APIを使わずに仮想モデルで全工程を通す（results/simulation/、charts/simulation/）
+  robustness           v5 の結論の頑健さ（a_h 別・人間の見逃し・開発データの入れ替え）。--config config_v5.yaml で使う
 """
 from __future__ import annotations
 
@@ -332,6 +333,35 @@ def cmd_power(cfg, args):
     print(req.round(3).to_string(index=False))
 
 
+def cmd_robustness(cfg, args):
+    """v5 の結論の頑健さ（a_h 別・人間の見逃し・dev の入れ替え）。API なし、事前登録外。"""
+    from . import pipelines as PL
+    from . import robustness as RB
+    from . import signals_v4 as V4
+    results_dir, raw_root, _, splits_path = _paths(cfg)
+    frame, _ = PL.build_frame(cfg, data.load_splits(splits_path), raw_root)
+    cfg4 = load_config(args.v4_config)
+    frame4 = V4.build_frame(cfg4, data.load_splits(_paths(cfg4)[3]), _paths(cfg4)[1])
+    grid = RB.ah_grid(cfg, frame)
+    he = RB.human_error(cfg, frame)
+    ext_pt, ext_bt = RB.external_dev(cfg, frame, frame4)
+    grid.to_csv(results_dir / "robust_ah_grid.csv", index=False)
+    he.to_csv(results_dir / "robust_human_error.csv", index=False)
+    ext_pt.to_csv(results_dir / "robust_external_dev_point.csv", index=False)
+    ext_bt.to_csv(results_dir / "robust_external_dev_bootstrap.csv", index=False)
+    tb = []
+    for Y in (0.85, 0.90, 0.95):  # 元の dev・a_h=1.00 で目標だけを変えた選定込みブートストラップ（90% は主分析と同じ）
+        _, dd = PL.cost_bootstrap(cfg, frame, Y=Y)
+        tb.append(dd.assign(Y=Y))
+    import pandas as pd
+    tb = pd.concat(tb, ignore_index=True)
+    tb.to_csv(results_dir / "robust_target_bootstrap.csv", index=False)
+    print(tb.round(3).to_string(index=False))
+    print(grid.pivot_table(index=["a_h", "Y"], columns="pipeline", values="review_rate").round(3).to_string())
+    print(he.pivot_table(index=["p_correct_kept", "p_wrong_fixed", "Y"], columns="pipeline", values="total_jpy_per_case").round(1).to_string())
+    print(ext_bt.round(3).to_string(index=False))
+
+
 def main(argv=None):
     load_dotenv(ROOT / ".env", override=True)
     p = argparse.ArgumentParser(prog="ready_eval")
@@ -359,6 +389,8 @@ def main(argv=None):
     sub.add_parser("pipelines-simulate")
     pw = sub.add_parser("power")
     pw.add_argument("--reps", type=int, default=400)
+    rb = sub.add_parser("robustness")
+    rb.add_argument("--v4-config", default="config_v4.yaml")
     args = p.parse_args(argv)
     cfg = load_config(args.config)
     {"prepare": cmd_prepare, "check": cmd_check, "run": cmd_run,
@@ -366,7 +398,8 @@ def main(argv=None):
      "signals-analyze": cmd_signals_analyze, "signals-simulate": cmd_signals_simulate,
      "cross-run": cmd_cross_run, "cross-analyze": cmd_cross_analyze, "cross-simulate": cmd_cross_simulate,
      "pipelines-run": cmd_pipelines_run, "pipelines-analyze": cmd_pipelines_analyze,
-     "pipelines-simulate": cmd_pipelines_simulate, "power": cmd_power}[args.cmd](cfg, args)
+     "pipelines-simulate": cmd_pipelines_simulate, "power": cmd_power,
+     "robustness": cmd_robustness}[args.cmd](cfg, args)
 
 
 if __name__ == "__main__":

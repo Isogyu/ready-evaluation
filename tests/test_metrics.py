@@ -120,3 +120,25 @@ def test_lcb_selection_is_conservative():
     assert lcb["feasible"] and lcb["dev_review_rate"] >= pt["dev_review_rate"]
     q = M.qualify(c, s, lcb["tau"], 0.90, 1.0)
     assert q["qualified"]  # 同じデータに当てれば下限は必ず目標以上
+
+
+def test_ece_bin_edges_exact():
+    # 0.7 は [0.7, 0.8) のビンに入る（np.linspace の端点誤差で一つ下のビンに入らない）
+    assert M.ece([1, 0], [0.7, 0.65], 10) == pytest.approx(0.475)
+    rows = M.calibration_table([1, 1, 1], [0.3, 0.6, 0.7], 10)
+    assert [r["n"] for r in rows if r["n"]] == [1, 1, 1]
+    assert [r["bin"] for r in rows if r["n"]] == [3, 6, 7]
+
+
+def test_human_error_selection_matches_ah1_when_perfect():
+    from ready_eval.robustness import _select_pc_pw
+    rng = np.random.default_rng(0)
+    s = np.round(rng.uniform(0, 1, 300), 2)
+    c = (rng.uniform(0, 1, 300) < s).astype(int)
+    for Y in (0.85, 0.9):
+        sel = M.select_threshold(c, s, Y, 1.0, 0.05)
+        assert _select_pc_pw(c, s, Y, 0.05, 1.0, 1.0) == sel["tau"]
+    # 誤答を見逃すほど、同じ目標に必要なレビューは増える（しきい値は下がらない）
+    t1 = _select_pc_pw(c, s, 0.85, 0.05, 1.0, 1.0)
+    t2 = _select_pc_pw(c, s, 0.85, 0.05, 1.0, 0.8)
+    assert np.isnan(t2) or t2 >= t1
