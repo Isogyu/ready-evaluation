@@ -2,7 +2,9 @@
 
 「AIの正答率だけでモデルを選んでいないか？」という問いを、READY 論文（arXiv:2609.02095）の評価の考え方に沿って、銀行問い合わせの77クラス分類（BANKING77）で小規模に検証した。**論文の完全再現ではなく予備実験**である。
 
-- 結果の要約と考察：[report.html](report.html)（社内向けレポート）、[presentation.md](presentation.md)（発表用）
+個人で行った検証で、特定の組織とは関係ない。
+
+- 結果の要約と考察：[report.html](report.html)（レポート）、[presentation.md](presentation.md)（発表用）
 - 論文の整理：[docs/paper_review.md](docs/paper_review.md)
 - 方法：[docs/methodology.md](docs/methodology.md)　限界：[docs/limitations.md](docs/limitations.md)　出典：[docs/references.md](docs/references.md)
 - 実行前の計画と費用見積もり：[docs/experiment_plan.md](docs/experiment_plan.md)
@@ -192,7 +194,7 @@ ready-evaluation/
 ├── results_v5/          追加実験 v5 の結果（pipeline_point.csv、pipeline_bootstrap*.csv、hypotheses.csv など）
 ├── charts/              グラフ1〜6（v2/ は追加実験 v2、v3/ はグラフ7〜10、v4/ はグラフ11〜14、v5/ はグラフ15〜17、simulation/ はシミュレーション値）
 ├── docs/                論文レビュー・方法・限界・出典・実験計画
-├── report.html          社内向けレポート
+├── report.html          レポート
 └── presentation.md      発表用資料
 ```
 
